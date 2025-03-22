@@ -78,7 +78,7 @@ defaultContentLanguage = "zh-cn"
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "/Users/hongshize/猫猫船长个人网站/themes/LoveIt-master/images/WechatIMG55.png"
+      avatarURL = "https://gravatar.com/avatar/028c002bef99db9fd5fc7fc308b7ed01?s=400&d=identicon&r=g"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题 (允许 HTML 格式)
