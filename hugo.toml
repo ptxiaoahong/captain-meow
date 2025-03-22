@@ -33,7 +33,7 @@ defaultContentLanguage = "zh-cn"
     name = "作品"
     url = "/photo series/"
     title = ""
-    [[menu.main]]
+  [[menu.main]]
     weight = 4
     identifier = "categories"
     pre = ""
@@ -105,3 +105,7 @@ defaultContentLanguage = "zh-cn"
  [params.page.share]
       enable = true
        Whatsapp = true
+
+# 作者配置
+  [params.author]
+    name = "pph"

@@ -3,16 +3,58 @@
         <title>猫猫船长blog</title>
         <link>https://example.org/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 22 Mar 2025 14:38:43 &#43;0800</lastBuildDate>
             <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>我的第一篇文章</title>
-    <link>https://example.org/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+    <title>南京回忆</title>
+    <link>https://example.org/posts/%E5%8D%97%E4%BA%AC%E5%9B%9E%E5%BF%86/</link>
+    <pubDate>Sat, 22 Mar 2025 14:38:43 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/posts/%E5%8D%97%E4%BA%AC%E5%9B%9E%E5%BF%86/</guid>
+    <description><![CDATA[<p>
+
+
+
+
+
+
+
+</p>]]></description>
+</item>
+<item>
+    <title>蛾</title>
+    <link>https://example.org/posts/%E8%9B%BE/</link>
     <pubDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</pubDate>
-    <author>xxxx</author>
-    <guid>https://example.org/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-    <description><![CDATA[<h2 id="欢迎阅读">欢迎阅读！</h2>
-<p>这是我的第一篇 Hugo 文章。</p>]]></description>
+    <author>pph</author>
+    <guid>https://example.org/posts/%E8%9B%BE/</guid>
+    <description><![CDATA[<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>]]></description>
 </item>
 </channel>
 </rss>
