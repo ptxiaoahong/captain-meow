@@ -1,10 +1,26 @@
-{{- if .Title -}}
-    <figure>
-        {{- dict "Src" .Destination "Title" .Text "Caption" .Title "Linked" true "Resources" .Page.Resources | partial "plugin/img.html" -}}
-        <figcaption class="image-caption">
-            {{- .Title | safeHTML -}}
-        </figcaption>
-    </figure>
-{{- else -}}
-    {{- dict "Src" .Destination "Title" .Text "Resources" .Page.Resources | partial "plugin/img.html" -}}
-{{- end -}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{{- if .Title -}}</span></p>
+<p class="p1"><span class="s1">{{- dict "Src" .Destination "Title" .Text "Caption" .Title "Linked" true "Resources" .Page.Resources | partial "plugin/img.html" -}}</span></p>
+<p class="p1"><span class="s1">{{- .Title | safeHTML -}}</span></p>
+<p class="p1"><span class="s1">{{- else -}} {{- dict "Src" .Destination "Title" .Text "Resources" .Page.Resources | partial "plugin/img.html" -}} {{- end -}}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;img src="/_vercel/image?url={{ .Destination | safeURL }}&amp;w=1200&amp;q=80&amp;sharp=webp"<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>alt="{{ .Text }}"<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>loading="lazy"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>style="max-width:100%; height:auto;"&gt;</span></p>
+</body>
+</html>
