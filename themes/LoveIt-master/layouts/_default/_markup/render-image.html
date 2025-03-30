@@ -18,9 +18,5 @@
 <p class="p1"><span class="s1">{{- .Title | safeHTML -}}</span></p>
 <p class="p1"><span class="s1">{{- else -}} {{- dict "Src" .Destination "Title" .Text "Resources" .Page.Resources | partial "plugin/img.html" -}} {{- end -}}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;img src="/_vercel/image?url={{ .Destination | safeURL }}&amp;w=1200&amp;q=80&amp;sharp=webp"<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>alt="{{ .Text }}"<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>loading="lazy"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>style="max-width:100%; height:auto;"&gt;</span></p>
 </body>
 </html>
