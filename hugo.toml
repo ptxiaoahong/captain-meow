@@ -94,7 +94,6 @@ defaultContentLanguage = "zh-cn"
 [params.social]
   zhihu = "hong-qiu-ze"
   Email = "hongshize@live.cn"
-  Whatsapp = "HSZ1176670966"
 
  [params.page.share]
       enable = true
