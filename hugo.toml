@@ -71,11 +71,11 @@ defaultContentLanguage = "zh-cn"
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "https://gravatar.com/avatar/028c002bef99db9fd5fc7fc308b7ed01?s=400&d=identicon&r=g"
+      avatarURL = ""
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "这是我的个人网站，欢迎你来！"
+      subtitle = "这里是猫猫船长的个人网站，欢迎你来！"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
