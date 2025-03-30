@@ -25,14 +25,7 @@ defaultContentLanguage = "zh-cn"
     name = "标签"
     url = "/tags/"
     title = ""
-  [[menu.main]]
-    weight = 1
-    identifier = "photo series"
-    pre = ""
-    post = ""
-    name = "作品"
-    url = "/photo series/"
-    title = ""
+  
   [[menu.main]]
     weight = 4
     identifier = "categories"

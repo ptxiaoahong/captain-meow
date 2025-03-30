@@ -3,5 +3,21 @@
         <title>Categories - 分类 - 猫猫船长blog</title>
         <link>https://example.org/categories/</link>
         <description>Categories - 分类 - 猫猫船长blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="https://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 30 Mar 2025 16:11:24 &#43;0800</lastBuildDate><atom:link href="https://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>文章</title>
+    <link>https://example.org/categories/%E6%96%87%E7%AB%A0/</link>
+    <pubDate>Sun, 30 Mar 2025 16:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E6%96%87%E7%AB%A0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>作品</title>
+    <link>https://example.org/categories/%E4%BD%9C%E5%93%81/</link>
+    <pubDate>Sat, 22 Mar 2025 14:38:43 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E4%BD%9C%E5%93%81/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
