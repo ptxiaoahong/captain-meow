@@ -387,11 +387,11 @@
       Twitter = true
       Facebook = true
       Linkedin = false
-      Whatsapp = false
-      Pinterest = false
-      Tumblr = false
+      Whatsapp = true
+      Pinterest = true
+      Tumblr = true
       HackerNews = true
-      Reddit = false
+      Reddit = true
       VK = false
       Buffer = false
       Xing = false
@@ -401,7 +401,7 @@
       Flipboard = false
       Weibo = true
       Blogger = false
-      Baidu = false
+      Baidu = true
       Odnoklassniki = false
       Evernote = false
       Skype = false
