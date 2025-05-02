@@ -3,8 +3,8 @@ backend:
   repo: ptxiaohong/captain-meow  # ← 替换这里
   branch: main  # 或 master
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "/Users/hongshize/猫猫船长个人网站/static/images/uploads"
+public_folder: "/Users/hongshize/猫猫船长个人网站/public/images/uploads"
 
 collections:
   - name: "posts"
