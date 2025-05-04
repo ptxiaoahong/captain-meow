@@ -19,5 +19,61 @@
     <guid>https://example.org/categories/%E4%BD%9C%E5%93%81/</guid>
     <description><![CDATA[]]></description>
 </item>
+<item>
+    <title>大海</title>
+    <link>https://example.org/categories/%E5%A4%A7%E6%B5%B7/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E5%A4%A7%E6%B5%B7/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>电影感</title>
+    <link>https://example.org/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>日系</title>
+    <link>https://example.org/categories/%E6%97%A5%E7%B3%BB/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E6%97%A5%E7%B3%BB/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>小清新</title>
+    <link>https://example.org/categories/%E5%B0%8F%E6%B8%85%E6%96%B0/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E5%B0%8F%E6%B8%85%E6%96%B0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>暗黑</title>
+    <link>https://example.org/categories/%E6%9A%97%E9%BB%91/</link>
+    <pubDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E6%9A%97%E9%BB%91/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>情绪</title>
+    <link>https://example.org/categories/%E6%83%85%E7%BB%AA/</link>
+    <pubDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E6%83%85%E7%BB%AA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>文艺</title>
+    <link>https://example.org/categories/%E6%96%87%E8%89%BA/</link>
+    <pubDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/categories/%E6%96%87%E8%89%BA/</guid>
+    <description><![CDATA[]]></description>
+</item>
 </channel>
 </rss>

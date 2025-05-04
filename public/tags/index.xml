@@ -12,11 +12,75 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>CNU最热</title>
+    <link>https://example.org/tags/cnu%E6%9C%80%E7%83%AD/</link>
+    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/cnu%E6%9C%80%E7%83%AD/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>故事感</title>
+    <link>https://example.org/tags/%E6%95%85%E4%BA%8B%E6%84%9F/</link>
+    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E6%95%85%E4%BA%8B%E6%84%9F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>文艺</title>
+    <link>https://example.org/tags/%E6%96%87%E8%89%BA/</link>
+    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E6%96%87%E8%89%BA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>小清新</title>
+    <link>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</link>
+    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>作品</title>
     <link>https://example.org/tags/%E4%BD%9C%E5%93%81/</link>
     <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
     <author>pph</author>
     <guid>https://example.org/tags/%E4%BD%9C%E5%93%81/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>大海</title>
+    <link>https://example.org/tags/%E5%A4%A7%E6%B5%B7/</link>
+    <pubDate>Mon, 31 Mar 2025 06:16:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E5%A4%A7%E6%B5%B7/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>电影感</title>
+    <link>https://example.org/tags/%E7%94%B5%E5%BD%B1%E6%84%9F/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E7%94%B5%E5%BD%B1%E6%84%9F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>情绪</title>
+    <link>https://example.org/tags/%E6%83%85%E7%BB%AA/</link>
+    <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E6%83%85%E7%BB%AA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>法式</title>
+    <link>https://example.org/tags/%E6%B3%95%E5%BC%8F/</link>
+    <pubDate>Sat, 22 Mar 2025 14:38:43 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E6%B3%95%E5%BC%8F/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
