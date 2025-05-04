@@ -1,9 +1,9 @@
 +++
 date = '2025-03-31T8:16:24+08:00'
 draft = false
-title = '猫猫船摄影探索(文)'
+title = '故事开始后，你也不知道会走向哪里：infj的摄影成人式'
 tags = ["文章"]
-categories = ["文章"]
+categories = ["回忆"]
 featuredImagePreview = ""
 +++
 ![](/8/文件5.jpg)
@@ -72,7 +72,7 @@ featuredImagePreview = ""
 ![](/8/WechatIMG24.jpg/)
 ![](/8/WechatIMG25.jpg/)
 
-双人氛围感，完成度最高的一次，第一次cnu视觉联盟24现实最新榜，原创热门
+双人氛围感，完成度最高的一次，第一次cnu视觉联盟24小时最新榜，原创热门
 ![](/5/文件1.jpg) 
 ![](/5/文件6.jpg)
 ![](/5/文件7.jpg)

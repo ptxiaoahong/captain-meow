@@ -1,9 +1,9 @@
 +++
 date = '2025-03-31T9:16:24+08:00'
 draft = false
-title = '朋友是最好的解药，蚊香组故事（文）'
+title = '从npc到主人翁，朋友就是最好的解药：蚊香猫猫船首航记'
 tags = ["文章"]
-categories = ["文章"]
+categories = ["回忆"]
 featuredImagePreview = ""
 +++
 ![](/9/文件33.jpg)

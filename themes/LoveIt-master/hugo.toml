@@ -51,7 +51,7 @@
       logo = ""
       # title name
       # 标题名称
-      name = "猫猫船长"
+      name = "猫猫船长个人网站"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
@@ -139,7 +139,7 @@
   # Search config
   # 搜索配置
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     # 搜索引擎的类型 ["lunr", "algolia"]
     type = "lunr"
@@ -283,7 +283,7 @@
     TikTok = ""
     TryHackMe = ""
     Codeberg = ""
-    Email = ""
+    Email = "hongshize@live.cn"
     Phone = ""
     RSS = ""
 
@@ -410,7 +410,7 @@
     # Comment config
     # 评论系统设置
     [params.page.comment]
-      enable = false
+      enable = true
       # Disqus comment config (https://disqus.com/)
       # Disqus 评论系统设置 (https://disqus.com/)
       [params.page.comment.disqus]

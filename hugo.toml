@@ -13,12 +13,31 @@ defaultContentLanguage = "zh-cn"
     pre = ""
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
-    name = "文章"
+    name = "所有文章"
     url = "/posts/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
     title = ""
+  
   [[menu.main]]
-    weight = 3
+  weight = 3
+  identifier = "memories"
+  name = "回忆"
+  url = "/categories/回忆/"
+
+  [[menu.main]]
+  weight = 4
+  identifier = "thoughts"
+  name = "心里话"
+  url = "/categories/心里话/"
+
+  [[menu.main]]
+  weight = 5
+  identifier = "works"
+  name = "作品"
+  url = "/categories/作品/"
+  
+  [[menu.main]]
+    weight = 6
     identifier = "tags"
     pre = ""
     post = ""
@@ -27,7 +46,7 @@ defaultContentLanguage = "zh-cn"
     title = ""
   
   [[menu.main]]
-    weight = 4
+    weight = 7
     identifier = "categories"
     pre = ""
     post = ""
@@ -75,7 +94,7 @@ defaultContentLanguage = "zh-cn"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "这里是猫猫船长的个人网站，欢迎你来！"
+      subtitle = "这里是猫猫船长的个人网站，分享摄影回忆与作品，说说心里话，欢迎你来！"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -86,7 +105,7 @@ defaultContentLanguage = "zh-cn"
     [params.home.posts]
       enable = true
       # 主页每页显示文章数量
-      paginate = 6
+      paginate = 10
       # LoveIt 删除 | 0.2.0 被 params.page 中的 hiddenFromHomePage 替代
       # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false
