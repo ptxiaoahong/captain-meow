@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>情绪 - 分类 - 猫猫船长blog</title>
-        <link>http://localhost:1313/categories/%E6%83%85%E7%BB%AA/</link>
+        <link>https://example.org/categories/%E6%83%85%E7%BB%AA/</link>
         <description>情绪 - 分类 - 猫猫船长blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%83%85%E7%BB%AA/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</lastBuildDate><atom:link href="https://example.org/categories/%E6%83%85%E7%BB%AA/" rel="self" type="application/rss+xml" /><item>
     <title>蛾（纯享）</title>
-    <link>http://localhost:1313/posts/%E8%9B%BE/</link>
+    <link>https://example.org/posts/%E8%9B%BE/</link>
     <pubDate>Mon, 24 Feb 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>http://localhost:1313/posts/%E8%9B%BE/</guid>
+    <guid>https://example.org/posts/%E8%9B%BE/</guid>
     <description><![CDATA[<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>

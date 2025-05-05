@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>职业生涯 - 标签 - 猫猫船长blog</title>
-        <link>http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/</link>
+        <link>https://example.org/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/</link>
         <description>职业生涯 - 标签 - 猫猫船长blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 05 May 2025 06:16:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/" rel="self" type="application/rss+xml" /><item>
-    <title></title>
-    <link>http://localhost:1313/posts/%E6%A8%A1%E6%9D%BF/</link>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 05 May 2025 06:16:24 &#43;0800</lastBuildDate><atom:link href="https://example.org/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>救赎、逃避、现实、理想：为什么我又选择了离开</title>
+    <link>https://example.org/posts/%E6%A8%A1%E6%9D%BF/</link>
     <pubDate>Mon, 05 May 2025 06:16:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>http://localhost:1313/posts/%E6%A8%A1%E6%9D%BF/</guid>
+    <guid>https://example.org/posts/%E6%A8%A1%E6%9D%BF/</guid>
     <description><![CDATA[<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
