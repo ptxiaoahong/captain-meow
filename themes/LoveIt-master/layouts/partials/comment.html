@@ -30,32 +30,46 @@
             </noscript>
         {{- end -}}
 
-        {{- /* Valine Comment System */ -}}
-        {{- $valine := $comment.valine | default dict -}}
-        {{- if $valine.enable -}}
-            <div id="valine" class="comment"></div>
-            {{- $options := dict "targetPath" "lib/valine/valine.min.css" -}}
-            {{- dict "Source" "lib/valine/valine.scss" "ToCSS" $options | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
-            {{- $source := $cdn.valineJS | default "lib/valine/Valine.min.js" -}}
-            {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
-            {{- $commentConfig = dict "el" "#valine" "appId" $valine.appId "appKey" $valine.appKey "lang" ($valine.lang | default (T "valineLang")) "visitor" $valine.visitor "recordIP" $valine.recordIP "placeholder" ($valine.placeholder | default (T "valinePlaceholder")) "highlight" (ne $valine.highlight false) "enableQQ" $valine.enableQQ | dict "valine" | merge $commentConfig -}}
-            {{- with $valine.avatar -}}
-                {{- $commentConfig = dict "avatar" . | dict "valine" | merge $commentConfig -}}
-            {{- end -}}
-            {{- with $valine.meta -}}
-                {{- $commentConfig = dict "meta" . | dict "valine" | merge $commentConfig -}}
-            {{- end -}}
-            {{- with $valine.pageSize -}}
-                {{- $commentConfig = dict "pageSize" . | dict "valine" | merge $commentConfig -}}
-            {{- end -}}
-            {{- with $valine.serverURLs -}}
-                {{- $commentConfig = dict "serverURLs" . | dict "valine" | merge $commentConfig -}}
-            {{- end -}}
-            {{- $commentConfig = $valine.emoji | default "google.yml" | printf "lib/valine/emoji/%v" | resources.Get | transform.Unmarshal | dict "valine" | merge $commentConfig -}}
-            <noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
-            </noscript>
+            {{- /* Valine Comment System */ -}}
+        {{- $valine := .Site.Params.page.comment.valine | default dict -}}
+        {{- if and (or (.Params.comment) (not (isset .Params "comment"))) $valine.enable -}}
+        <div id="valine" class="comment"></div>
+
+        {{- /* 加载 Valine 样式（如果你有 lib/valine/valine.scss，可以启用） */ -}}
+        {{- $options := dict "targetPath" "lib/valine/valine.min.css" -}}
+        {{- dict "Source" "lib/valine/valine.scss" "ToCSS" $options | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+
+        {{- /* 加载 Valine JS */ -}}
+        {{- $valineJS := .Site.Params.cdn.valineJS | default "lib/valine/Valine.min.js" -}}
+        {{- dict "Source" $valineJS "Fingerprint" "sha384" | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+        {{- /* 构建 Valine 配置 */ -}}
+        <script>
+            new Valine({
+            el: '#valine',
+            appId: '{{ $valine.appId }}',
+            appKey: '{{ $valine.appKey }}',
+            serverURLs: '{{ $valine.serverURLs }}',
+            placeholder: '{{ $valine.placeholder | default "说点什么吧~" }}',
+            lang: '{{ $valine.lang | default "zh-CN" }}',
+            avatar: '{{ $valine.avatar | default "mp" }}',
+            meta: {{ $valine.meta | default (slice "nick" "mail" "link") | jsonify }},
+            pageSize: {{ $valine.pageSize | default 10 }},
+            visitor: {{ if ne $valine.visitor false }}true{{ else }}false{{ end }},
+            recordIP: {{ if ne $valine.recordIP false }}true{{ else }}false{{ end }},
+            highlight: {{ if ne $valine.highlight false }}true{{ else }}false{{ end }},
+            enableQQ: {{ if ne $valine.enableQQ false }}true{{ else }}false{{ end }},
+            emojiCDN: '',
+            emojiMaps: {{ (printf "lib/valine/emoji/%s" ($valine.emoji | default "google.yml")) | resources.Get | transform.Unmarshal | jsonify }}
+            });
+        </script>
+
+        <noscript>
+            请开启 JavaScript 以查看评论内容。
+            Powered by <a href="https://valine.js.org/" target="_blank">Valine</a>.
+        </noscript>
         {{- end -}}
+
 
         {{- /* Facebook Comment System */ -}}
         {{- $facebook := $comment.facebook | default dict -}}
