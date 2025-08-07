@@ -1,4 +1,96 @@
-// ==============================
-// Custom style
-// 自定义样式
-// ==============================
+/* Valine 完整样式调整 */
+#vcomments-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+#vcomments {
+  --primary-color: #3eaf7c; /* 主题色，可修改 */
+  
+  /* 基础布局 */
+  width: 100%;
+  box-sizing: border-box;
+  
+  /* 输入区 */
+  .vwrap {
+    border: 1px solid #eaecef;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    
+    &:hover {
+      border-color: var(--primary-color);
+    }
+    
+    .vedit {
+      padding: 15px;
+    }
+    
+    .vheader {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      
+      input {
+        flex: 1;
+        min-width: 120px;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    }
+  }
+  
+  /* 按钮 */
+  .vbtn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  
+  /* 评论列表 */
+  .vlist {
+    .vcard {
+      padding: 15px 0;
+      border-bottom: 1px dashed #eee;
+      
+      .vhead {
+        .vnick {
+          color: var(--primary-color);
+          font-weight: bold;
+        }
+      }
+      
+      .vcontent {
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  #vcomments {
+    --primary-color: #3aaf85;
+    
+    .vwrap {
+      border-color: #444;
+      background: #222;
+    }
+    
+    .vlist .vcard {
+      border-color: #444;
+    }
+  }
+}
