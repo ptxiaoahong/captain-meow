@@ -1,0 +1,35 @@
+{{ if .Site.Params.homeComment.enable }}
+<section id="home-comments" class="home-comment-section">
+  <h2 class="home-comment-title">{{ .Site.Params.homeComment.title }}</h2>
+  
+  <div id="vcomments-home" class="valine-container"></div>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 确保Valine已加载
+    if (typeof Valine === 'function') {
+      initHomeValine();
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/valine@1.5/dist/Valine.min.js';
+      script.onload = initHomeValine;
+      document.body.appendChild(script);
+    }
+    
+    function initHomeValine() {
+      new Valine({
+        el: '#vcomments-home',
+        appId: '{{ .Site.Params.homeComment.valine.appId }}',
+        appKey: '{{ .Site.Params.homeComment.valine.appKey }}',
+        path: '/HOME',  // 固定首页标识
+        placeholder: '{{ .Site.Params.homeComment.valine.placeholder }}',
+        avatar: '{{ .Site.Params.homeComment.valine.avatar }}',
+        pageSize: {{ .Site.Params.homeComment.valine.pageSize }},
+        lang: '{{ .Site.Params.homeComment.valine.lang }}',
+        visitor: true  // 开启访问量统计
+      });
+    }
+  });
+  </script>
+</section>
+{{ end }}

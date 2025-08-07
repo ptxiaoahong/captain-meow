@@ -89,7 +89,9 @@
     </div>
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
-    </div><main class="main">
+    </div>
+<link rel="stylesheet" href="/css/home-comment.css">
+<main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://www.zhihu.com/people/hong-qiu-ze" title="知乎" target="_blank" rel="noopener noreffer me"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/zhihu.svg" aria-hidden="true"></i></a><a href="mailto:hongshize@live.cn" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/%E5%8E%A6%E9%97%A8%E4%B8%80%E7%93%B6_%E5%89%AF%E6%9C%AC/">她说暗恋是一场漫长的潮湿（纯享）</a>
@@ -258,7 +260,34 @@
                     <span class="page-link">
                         <a href="/page/3/">3</a>
                     </span>
-                </li></ul></div></div>
+                </li></ul><section id="home-comments" class="home-comment-section">
+            <h2 class="home-comment-title">💬 网站留言板</h2>
+            <div id="vcomments-home" class="valine-container"></div>
+        </section></div><script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        if (typeof Valine === 'undefined') {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/valine@1.5/dist/Valine.min.js';
+            script.onload = initHomeValine;
+            document.body.appendChild(script);
+        } else {
+            initHomeValine();
+        }
+
+        function initHomeValine() {
+            new Valine({
+                el: '#vcomments-home',
+                appId: 'NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI',
+                appKey: 'Z8CtukQGEr0a6QyW0CGWv7NH',
+                path: '/HOME',  
+                placeholder: '欢迎留下对本站的建议~',
+                avatar: 'mp',
+                visitor: true
+            });
+        }
+    });
+    </script></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span></div>
         </div>

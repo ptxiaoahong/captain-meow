@@ -140,4 +140,19 @@ defaultContentLanguage = "zh-cn"
     enableQQ = true
     serverURLs = "https://ndwl3qpk.api.lncldglobal.com"
     emoji = "google.yml"
+
+[params]
+  # 首页评论区独立配置
+  [params.homeComment]
+    enable = true
+    title = "💬 网站留言板"  # 评论区标题
+    
+    # Valine 配置 (可与文章评论区分开)
+    [params.homeComment.valine]
+      appId = "NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI"
+      appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
+      placeholder = "欢迎留下对本站的建议~"
+      avatar = "mp"  # 默认头像类型
+      pageSize = 10   # 每页评论数
+      lang = "zh-CN"  # 语言
       

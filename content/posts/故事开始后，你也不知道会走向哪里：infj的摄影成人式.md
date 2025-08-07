@@ -5,6 +5,7 @@ title = '故事开始后，你也不知道会走向哪里：infj的摄影成人�
 tags = ["文章"]
 categories = ["回忆"]
 featuredImagePreview = ""
+comment= true
 +++
 ![](/8/文件5.2.jpg)
 <!--more-->

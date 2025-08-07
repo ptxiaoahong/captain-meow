@@ -184,3 +184,7 @@
         <div id="search-dropdown-mobile"></div>
     </div>
 {{- end -}}
+
+{{ if .Site.Params.homeComment.enable }}
+<link rel="stylesheet" href="{{ "css/home-comment.css" | relURL }}">
+{{ end }}
