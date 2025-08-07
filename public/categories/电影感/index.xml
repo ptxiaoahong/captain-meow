@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>电影感 - 分类 - 猫猫船长blog</title>
-        <link>https://example.org/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/</link>
-        <description>电影感 - 分类 - 猫猫船长blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</lastBuildDate><atom:link href="https://example.org/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/" rel="self" type="application/rss+xml" /><item>
+        <title>电影感 - 分类 - 猫猫船长</title>
+        <link>http://localhost:1313/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/</link>
+        <description>电影感 - 分类 - 猫猫船长</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%94%B5%E5%BD%B1%E6%84%9F/" rel="self" type="application/rss+xml" /><item>
     <title>青春记忆里的她（纯享）</title>
-    <link>https://example.org/posts/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86%E9%87%8C%E7%9A%84%E5%A5%B9/</link>
+    <link>http://localhost:1313/posts/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86%E9%87%8C%E7%9A%84%E5%A5%B9/</link>
     <pubDate>Mon, 31 Mar 2025 06:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>https://example.org/posts/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86%E9%87%8C%E7%9A%84%E5%A5%B9/</guid>
+    <guid>http://localhost:1313/posts/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86%E9%87%8C%E7%9A%84%E5%A5%B9/</guid>
     <description><![CDATA[<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>

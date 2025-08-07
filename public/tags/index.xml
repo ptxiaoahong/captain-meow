@@ -1,17 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - 标签 - 猫猫船长blog</title>
+        <title>Tags - 标签 - 猫猫船长</title>
         <link>https://example.org/tags/</link>
-        <description>Tags - 标签 - 猫猫船长blog</description>
+        <description>Tags - 标签 - 猫猫船长</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 May 2025 06:16:24 &#43;0800</lastBuildDate><atom:link href="https://example.org/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>理想</title>
-    <link>https://example.org/tags/%E7%90%86%E6%83%B3/</link>
-    <pubDate>Sun, 04 May 2025 06:16:24 &#43;0800</pubDate>
-    <author>pph</author>
-    <guid>https://example.org/tags/%E7%90%86%E6%83%B3/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>心里话</title>
     <link>https://example.org/tags/%E5%BF%83%E9%87%8C%E8%AF%9D/</link>
     <pubDate>Sun, 04 May 2025 06:16:24 &#43;0800</pubDate>
@@ -44,43 +36,51 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>CNU最热</title>
-    <link>https://example.org/tags/cnu%E6%9C%80%E7%83%AD/</link>
-    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <title>清新</title>
+    <link>https://example.org/tags/%E6%B8%85%E6%96%B0/</link>
+    <pubDate>Mon, 10 Mar 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>https://example.org/tags/cnu%E6%9C%80%E7%83%AD/</guid>
+    <guid>https://example.org/tags/%E6%B8%85%E6%96%B0/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>故事感</title>
-    <link>https://example.org/tags/%E6%95%85%E4%BA%8B%E6%84%9F/</link>
-    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <title>糖水</title>
+    <link>https://example.org/tags/%E7%B3%96%E6%B0%B4/</link>
+    <pubDate>Mon, 10 Mar 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>https://example.org/tags/%E6%95%85%E4%BA%8B%E6%84%9F/</guid>
+    <guid>https://example.org/tags/%E7%B3%96%E6%B0%B4/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>文艺</title>
     <link>https://example.org/tags/%E6%96%87%E8%89%BA/</link>
-    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <pubDate>Mon, 10 Mar 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
     <guid>https://example.org/tags/%E6%96%87%E8%89%BA/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>小清新</title>
-    <link>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</link>
-    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <title>作品</title>
+    <link>https://example.org/tags/%E4%BD%9C%E5%93%81/</link>
+    <pubDate>Mon, 10 Mar 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</guid>
+    <guid>https://example.org/tags/%E4%BD%9C%E5%93%81/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>作品</title>
-    <link>https://example.org/tags/%E4%BD%9C%E5%93%81/</link>
-    <pubDate>Mon, 31 Mar 2025 06:20:24 &#43;0800</pubDate>
+    <title>情绪</title>
+    <link>https://example.org/tags/%E6%83%85%E7%BB%AA/</link>
+    <pubDate>Sun, 09 Mar 2025 16:11:24 &#43;0800</pubDate>
     <author>pph</author>
-    <guid>https://example.org/tags/%E4%BD%9C%E5%93%81/</guid>
+    <guid>https://example.org/tags/%E6%83%85%E7%BB%AA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>夏天</title>
+    <link>https://example.org/tags/%E5%A4%8F%E5%A4%A9/</link>
+    <pubDate>Sat, 08 Mar 2025 16:11:24 &#43;0800</pubDate>
+    <author>pph</author>
+    <guid>https://example.org/tags/%E5%A4%8F%E5%A4%A9/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
