@@ -152,5 +152,5 @@ defaultContentLanguage = "zh-cn"
         # 位于 "themes/LoveIt/assets/lib/valine/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件:
         # "assets/lib/valine/emoji/"
-        emoji = "qq.yml"
+        emoji = ""
       
