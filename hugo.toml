@@ -130,7 +130,7 @@ defaultContentLanguage = "zh-cn"
     appId = "NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI"
     appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
     placeholder = "说点什么吧~"
-    avatar = "mp"
+    avatar = "hide"
     meta = ["nick", "mail", "link"]
     pageSize = 10
     lang = "zh-CN"
@@ -153,7 +153,7 @@ defaultContentLanguage = "zh-cn"
       appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
       serverURLs = "https://ndwl3qpk.api.lncldglobal.com"
       placeholder = "欢迎留下对本站的建议~"
-      avatar = "mp"  # 默认头像类型
+      avatar = "hide"  # 默认头像类型
       pageSize = 10   # 每页评论数
       lang = "zh-CN"  # 语言
       
