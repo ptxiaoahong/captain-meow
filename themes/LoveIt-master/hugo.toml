@@ -430,8 +430,8 @@
       # Valine 评论系统设置 (https://github.com/xCss/Valine)
       [params.page.comment.valine]
         enable = true
-        appId = "Wq4lMAKFpMIcPbThthluCOwH-gzGzoHsz"
-        appKey = "nrPVsBAyo3R19JxTUnojEKqy"
+        appId = "NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI"
+        appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
         placeholder = "说点什么吧~"
         avatar = "mp"
         meta= ["nick", "mail", "link"]
@@ -443,7 +443,7 @@
         recordIP = true
         highlight = true
         enableQQ = true
-        serverURLs = "https://wq4lmakf.lc-cn-n1-shared.com"
+        serverURLs = "https://ndwl3qpk.api.lncldglobal.com"
         # emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # located in "themes/LoveIt/assets/lib/valine/emoji/" directory
