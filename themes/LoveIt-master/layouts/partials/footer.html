@@ -17,6 +17,14 @@
                 </div>
             {{- end -}}
 
+            {{- /* Valine 访问统计 */ -}}
+            {{- if .Site.Params.valine.enable -}}
+                <div class="footer-line">
+                    <span id="valine-visitor-count">加载中...</span> 次访问 | 
+                    <span id="valine-uniq-visitor-count">加载中...</span> 位访客
+                </div>
+            {{- end -}}
+
             <div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork">
                 {{- /* Copyright year */ -}}
                 {{- if ne .Site.Params.footer.copyright false -}}
@@ -47,5 +55,22 @@
                 {{- end -}}
             </div>
         </div>
+
+        {{- /* Valine 统计脚本 */ -}}
+        {{- if .Site.Params.valine.enable -}}
+        <script src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <script>
+            new Valine({
+                appId: '{{ .Site.Params.valine.appId }}',
+                appKey: '{{ .Site.Params.valine.appKey }}',
+                {{- with .Site.Params.valine.serverURLs }}
+                serverURLs: '{{ . }}',
+                {{- end }}
+                visitor: true,
+                recordIP: false,
+                enableQQ: false
+            });
+        </script>
+        {{- end -}}
     </footer>
 {{- end -}}
