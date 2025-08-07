@@ -438,11 +438,11 @@
         pageSize = 10
         # automatically adapt the current theme i18n configuration when empty
         # 为空时自动适配当前主题 i18n 配置
-        lang = ""
+        lang = "zh-CN"
         visitor = true
         recordIP = true
         highlight = true
-        enableQQ = false
+        enableQQ = true
         serverURLs = "https://wq4lmakf.lc-cn-n1-shared.com"
         # emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
