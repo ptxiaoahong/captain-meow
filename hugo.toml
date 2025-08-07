@@ -156,4 +156,13 @@ defaultContentLanguage = "zh-cn"
       avatar = "hide"  # 默认头像类型
       pageSize = 10   # 每页评论数
       lang = "zh-CN"  # 语言
+
+ [params.analytics]
+    enable = true
+    # Google Analytics
+    [params.analytics.google]
+      id = "G-8L5LC1T72B"
+      # whether to anonymize IP
+      # 是否匿名化用户 IP
+      anonymizeIP = true
       
