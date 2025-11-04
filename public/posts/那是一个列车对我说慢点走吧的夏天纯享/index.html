@@ -730,26 +730,62 @@
         let timeout = null; 
         
         try {
+            console.log('[Waline Debug] 开始初始化 Waline...');
+            console.log('[Waline Debug] 配置:', config);
+            
             const walineInstance = Waline.init(config);
             
             
             if (walineInstance) {
+                console.log('[Waline Debug] Waline 初始化成功，实例:', walineInstance);
+                
+                
+                const checkWalineStatus = function() {
+                    const walineEl = document.querySelector('#waline .wl-count, #waline .wl-list, #waline .wl-header, #waline .wl-form');
+                    const hasContent = walineEl && (
+                        walineEl.children.length > 0 || 
+                        walineEl.textContent.trim().length > 0 ||
+                        document.querySelector('#waline .wl-comment')
+                    );
+                    
+                    console.log('[Waline Debug] 检查状态 - 元素:', walineEl);
+                    console.log('[Waline Debug] 检查状态 - 有内容:', hasContent);
+                    console.log('[Waline Debug] 检查状态 - 容器HTML:', walineContainer.innerHTML.substring(0, 200));
+                    
+                    return hasContent;
+                };
+                
+                
+                setTimeout(function() {
+                    if (!checkWalineStatus()) {
+                        console.warn('[Waline Debug] 初始化后立即检查：暂无内容');
+                    }
+                }, 1000);
+                
                 
                 timeout = setTimeout(function() {
-                    const walineEl = document.querySelector('#waline .wl-count, #waline .wl-list');
-                    if (!walineEl || walineEl.children.length === 0) {
+                    if (!checkWalineStatus()) {
                         console.error('[Waline Debug] 加载超时：5秒内未检测到评论内容');
-                        console.error('[Waline Debug] 配置:', config);
+                        console.error('[Waline Debug] 容器完整HTML:', walineContainer.innerHTML);
                         console.error('[Waline Debug] 服务器URL:', config.serverURL);
+                        console.error('[Waline Debug] 请检查 Network 标签中是否有失败的请求');
                         walineContainer.style.display = 'none';
+                    } else {
+                        console.log('[Waline Debug] 加载成功！');
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
                     }
                 }, 5000);
             } else {
                 console.error('[Waline Debug] Waline.init() 返回 null 或 undefined');
                 console.error('[Waline Debug] 配置:', config);
+                walineContainer.style.display = 'none';
             }
         } catch (error) {
             console.error('[Waline Debug] Waline 初始化失败:', error);
+            console.error('[Waline Debug] 错误堆栈:', error.stack);
             console.error('[Waline Debug] 配置:', config);
             walineContainer.style.display = 'none';
             
