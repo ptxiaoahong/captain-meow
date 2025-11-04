@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" ">
 <title>蝶（纯享）</title>
 
-<link rel='canonical' href='http://localhost:1313/posts/%E8%9D%B6%E7%BA%AF%E4%BA%AB/'>
+<link rel='canonical' href='https://example.org/posts/%E8%9D%B6%E7%BA%AF%E4%BA%AB/'>
 
-<link rel="stylesheet" href="/scss/style.min.b8da043e3c60cf1c62560f64d12d0036758fb461f7e68df0e9802915abe28b4a.css"><meta property='og:title' content="蝶（纯享）">
+<link rel="stylesheet" href="/scss/style.min.a459c4aa738e42a14f736471d3413d719a45d657504ba1ee30f5eb69039cdf19.css"><meta property='og:title' content="蝶（纯享）">
 <meta property='og:description' content=" ">
-<meta property='og:url' content='http://localhost:1313/posts/%E8%9D%B6%E7%BA%AF%E4%BA%AB/'>
+<meta property='og:url' content='https://example.org/posts/%E8%9D%B6%E7%BA%AF%E4%BA%AB/'>
 <meta property='og:site_name' content='猫猫船长'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='作品' /><meta property='article:tag' content='暗黑' /><meta property='article:tag' content='情绪' /><meta property='article:tag' content='文艺' /><meta property='article:published_time' content='2025-03-07T16:11:24&#43;08:00'/><meta property='article:modified_time' content='2025-03-07T16:11:24&#43;08:00'/><meta property='og:image' content='http://localhost:1313/%E6%88%90%E7%89%87/%E6%96%87%E4%BB%B62.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='作品' /><meta property='article:tag' content='暗黑' /><meta property='article:tag' content='情绪' /><meta property='article:tag' content='文艺' /><meta property='article:published_time' content='2025-03-07T16:11:24&#43;08:00'/><meta property='article:modified_time' content='2025-03-07T16:11:24&#43;08:00'/><meta property='og:image' content='https://example.org/%E6%88%90%E7%89%87/%E6%96%87%E4%BB%B62.jpg' />
 <meta name="twitter:title" content="蝶（纯享）">
 <meta name="twitter:description" content=" "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/%E6%88%90%E7%89%87/%E6%96%87%E4%BB%B62.jpg' />
+    <meta name="twitter:image" content='https://example.org/%E6%88%90%E7%89%87/%E6%96%87%E4%BB%B62.jpg' />
     </head>
     <body class="
     article-page
@@ -1112,6 +1112,50 @@
         const elements = [];
         
         
+        function getImageSize(img) {
+            
+            const widthAttr = parseInt(img.getAttribute('width'));
+            const heightAttr = parseInt(img.getAttribute('height'));
+            
+            if (widthAttr && heightAttr) {
+                return {
+                    width: widthAttr,
+                    height: heightAttr
+                };
+            }
+            
+            
+            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                return {
+                    width: img.naturalWidth,
+                    height: img.naturalHeight
+                };
+            }
+            
+            
+            
+            const srcset = img.getAttribute('srcset');
+            if (srcset) {
+                
+                const matches = srcset.match(/(\d+)w/);
+                if (matches) {
+                    const maxWidth = parseInt(matches[1]);
+                    
+                    return {
+                        width: maxWidth,
+                        height: Math.round(maxWidth * 0.75) 
+                    };
+                }
+            }
+            
+            
+            return {
+                width: widthAttr || 1200,
+                height: heightAttr || 800
+            };
+        }
+        
+        
         figures.forEach((figure) => {
             const link = figure.querySelector('a');
             const img = figure.querySelector('img');
@@ -1119,16 +1163,16 @@
             if (!img) return;
             
             const imageSrc = link ? link.getAttribute('href') : img.src;
-            let width = parseInt(img.getAttribute('width')) || img.naturalWidth || 1200;
-            let height = parseInt(img.getAttribute('height')) || img.naturalHeight || 800;
-            
             const figcaption = figure.querySelector('figcaption');
             const title = figcaption ? figcaption.textContent.trim() : '';
             
+            
+            const size = getImageSize(img);
+            
             items.push({
                 src: imageSrc,
-                w: width,
-                h: height,
+                w: size.width,
+                h: size.height,
                 title: title,
                 msrc: img.src,
                 el: figure
@@ -1142,15 +1186,15 @@
             
             if (img.closest('figure.gallery-image')) return;
             
-            let width = parseInt(img.getAttribute('width')) || img.naturalWidth || 1200;
-            let height = parseInt(img.getAttribute('height')) || img.naturalHeight || 800;
-            
             const alt = img.getAttribute('alt') || '';
+            
+            
+            const size = getImageSize(img);
             
             items.push({
                 src: img.src,
-                w: width,
-                h: height,
+                w: size.width,
+                h: size.height,
                 title: alt,
                 msrc: img.src,
                 el: img
@@ -1217,6 +1261,8 @@
                 escKey: true,
                 arrowKeys: true,
                 history: false,
+                allowUpscale: false, 
+                maxSpreadZoom: 3, 
                 getThumbBoundsFn: function(idx) {
                     const item = items[idx];
                     if (!item || !item.el) return null;
@@ -1272,7 +1318,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.d14f2599a008c708bcc4e7c322bbec72782dc85022887dfd9bf245c7c936abd6.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

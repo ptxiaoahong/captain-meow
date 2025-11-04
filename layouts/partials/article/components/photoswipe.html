@@ -149,6 +149,50 @@
         const items = [];
         const elements = [];
         
+        // 获取图片真实尺寸的辅助函数（同步版本）
+        function getImageSize(img) {
+            // 优先从 HTML 属性获取（这些是 Hugo 渲染时设置的原始尺寸）
+            const widthAttr = parseInt(img.getAttribute('width'));
+            const heightAttr = parseInt(img.getAttribute('height'));
+            
+            if (widthAttr && heightAttr) {
+                return {
+                    width: widthAttr,
+                    height: heightAttr
+                };
+            }
+            
+            // 如果图片已加载，使用 naturalWidth/naturalHeight
+            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                return {
+                    width: img.naturalWidth,
+                    height: img.naturalHeight
+                };
+            }
+            
+            // 如果都获取不到，从 srcset 或使用默认值
+            // 尝试从 srcset 解析尺寸提示
+            const srcset = img.getAttribute('srcset');
+            if (srcset) {
+                // 简单解析，假设最大尺寸在最后
+                const matches = srcset.match(/(\d+)w/);
+                if (matches) {
+                    const maxWidth = parseInt(matches[1]);
+                    // 假设宽高比，使用默认比例
+                    return {
+                        width: maxWidth,
+                        height: Math.round(maxWidth * 0.75) // 假设 4:3 比例
+                    };
+                }
+            }
+            
+            // 最后使用默认值
+            return {
+                width: widthAttr || 1200,
+                height: heightAttr || 800
+            };
+        }
+        
         // 处理 figure 元素
         figures.forEach((figure) => {
             const link = figure.querySelector('a');
@@ -157,16 +201,16 @@
             if (!img) return;
             
             const imageSrc = link ? link.getAttribute('href') : img.src;
-            let width = parseInt(img.getAttribute('width')) || img.naturalWidth || 1200;
-            let height = parseInt(img.getAttribute('height')) || img.naturalHeight || 800;
-            
             const figcaption = figure.querySelector('figcaption');
             const title = figcaption ? figcaption.textContent.trim() : '';
             
+            // 获取图片尺寸
+            const size = getImageSize(img);
+            
             items.push({
                 src: imageSrc,
-                w: width,
-                h: height,
+                w: size.width,
+                h: size.height,
                 title: title,
                 msrc: img.src,
                 el: figure
@@ -180,15 +224,15 @@
             // 跳过已经被包装在 figure 中的图片
             if (img.closest('figure.gallery-image')) return;
             
-            let width = parseInt(img.getAttribute('width')) || img.naturalWidth || 1200;
-            let height = parseInt(img.getAttribute('height')) || img.naturalHeight || 800;
-            
             const alt = img.getAttribute('alt') || '';
+            
+            // 获取图片尺寸
+            const size = getImageSize(img);
             
             items.push({
                 src: img.src,
-                w: width,
-                h: height,
+                w: size.width,
+                h: size.height,
                 title: alt,
                 msrc: img.src,
                 el: img
@@ -255,6 +299,8 @@
                 escKey: true,
                 arrowKeys: true,
                 history: false,
+                allowUpscale: false, // 不允许放大超出原始尺寸
+                maxSpreadZoom: 3, // 最大缩放倍数
                 getThumbBoundsFn: function(idx) {
                     const item = items[idx];
                     if (!item || !item.el) return null;
