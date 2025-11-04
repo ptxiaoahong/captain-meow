@@ -277,33 +277,62 @@
     }
 }
 
-/* 主页卡片样式调整 */
+/* 主页卡片样式调整 - 左图右字布局 */
 .article-list {
     article {
-        /* 加宽封面图，不改变卡片大小 */
+        /* 改为横向布局 */
+        flex-direction: row !important;
+        
+        /* 确保在小屏幕上也能正常显示 */
+        @media (max-width: 767px) {
+            flex-direction: column !important;
+        }
+        
+        .article-header {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            
+            @media (max-width: 767px) {
+                flex-direction: column !important;
+            }
+        }
+        
+        /* 图片在左侧 */
         .article-image {
-            margin-left: calc((var(--card-padding)) * -1) !important;
-            margin-right: calc((var(--card-padding)) * -1) !important;
-            width: calc(100% + var(--card-padding) * 2) !important;
+            flex-shrink: 0 !important;
+            width: 40% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            
+            @media (max-width: 767px) {
+                width: 100% !important;
+            }
             
             img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
+                width: 100% !important;
+                height: 100% !important;
+                min-height: 200px !important;
+                object-fit: cover !important;
                 
                 @media (min-width: 768px) {
-                    height: 250px;
+                    min-height: 250px !important;
                 }
                 
                 @media (min-width: 1280px) {
-                    height: 300px;
+                    min-height: 300px !important;
                 }
             }
         }
         
-        /* 分类和时间在同一行，都在左侧 */
+        /* 文字内容在右侧 */
         .article-details {
+            flex: 1 !important;
+            padding: var(--card-padding) !important;
             gap: 10px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
             
             /* 调整标题和元数据之间的间距 */
             .article-title-wrapper {
