@@ -876,24 +876,36 @@
         }
         
         
+        let timeout = null; 
+        
         try {
             const walineInstance = Waline.init(config);
             
             
             if (walineInstance) {
                 
-                const timeout = setTimeout(function() {
+                timeout = setTimeout(function() {
                     const walineEl = document.querySelector('#waline .wl-count, #waline .wl-list');
                     if (!walineEl || walineEl.children.length === 0) {
-                        console.warn('Waline failed to load, hiding comment section');
+                        console.error('[Waline Debug] 加载超时：5秒内未检测到评论内容');
+                        console.error('[Waline Debug] 配置:', config);
+                        console.error('[Waline Debug] 服务器URL:', config.serverURL);
                         walineContainer.style.display = 'none';
                     }
-                    clearTimeout(timeout);
                 }, 5000);
+            } else {
+                console.error('[Waline Debug] Waline.init() 返回 null 或 undefined');
+                console.error('[Waline Debug] 配置:', config);
             }
         } catch (error) {
-            console.warn('Waline initialization failed:', error);
+            console.error('[Waline Debug] Waline 初始化失败:', error);
+            console.error('[Waline Debug] 配置:', config);
             walineContainer.style.display = 'none';
+            
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
         }
         
         
@@ -905,7 +917,10 @@
                 (reason.name === 'TypeError' && (reason.message.includes('fetch') || reason.message.includes('CORS'))) ||
                 (reason.message && reason.message.includes('Access-Control'))
             )) {
-                console.warn('Comment system fetch error (including CORS), hiding comment section');
+                console.error('[Waline Debug] Promise 拒绝错误:', reason);
+                console.error('[Waline Debug] 错误类型:', reason.name);
+                console.error('[Waline Debug] 错误消息:', reason.message);
+                console.error('[Waline Debug] 状态码:', reason.status);
                 walineContainer.style.display = 'none';
                 event.preventDefault(); 
             }
@@ -918,7 +933,7 @@
                 event.message.includes('CORS') ||
                 event.message.includes('Access-Control')
             )) {
-                console.warn('Comment system error detected (CORS), hiding comment section');
+                
                 walineContainer.style.display = 'none';
             }
         }, true);
@@ -927,7 +942,7 @@
         window.addEventListener('error', function(event) {
             
             if (event.target && event.target.tagName === 'SCRIPT' && event.target.src && event.target.src.includes('waline')) {
-                console.warn('Comment system script load error, hiding comment section');
+                
                 walineContainer.style.display = 'none';
             }
         }, true);
