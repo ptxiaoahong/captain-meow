@@ -4,7 +4,9 @@
   "description": "猫猫船长个人网站",
   "scripts": {
     "dev": "hugo serve",
-    "build": "hugo",
+    "prebuild": "npm run install-hugo || true",
+    "build": "hugo --gc --minify",
+    "install-hugo": "which hugo || (curl -fsSL https://github.com/gohugoio/hugo/releases/download/v0.144.2/hugo_extended_0.144.2_linux-amd64.tar.gz -o /tmp/hugo.tar.gz && tar -xzf /tmp/hugo.tar.gz -C /tmp && mv /tmp/hugo /usr/local/bin/hugo && chmod +x /usr/local/bin/hugo)",
     "cms:proxy": "npx decap-server"
   },
   "keywords": [
