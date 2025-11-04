@@ -67,24 +67,38 @@
             walineContainer.style.display = 'none';
         }
         
-        // 监听未处理的 Promise 拒绝（网络错误）
+        // 监听未处理的 Promise 拒绝（网络错误，包括 CORS）
         window.addEventListener('unhandledrejection', function(event) {
             const reason = event.reason;
             if (reason && (
-                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed'))) ||
+                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed') || reason.message.includes('CORS'))) ||
                 (reason.status && reason.status >= 400) ||
-                (reason.name === 'TypeError' && reason.message.includes('fetch'))
+                (reason.name === 'TypeError' && (reason.message.includes('fetch') || reason.message.includes('CORS'))) ||
+                (reason.message && reason.message.includes('Access-Control'))
             )) {
-                console.warn('Comment system fetch error, hiding comment section');
+                console.warn('Comment system fetch error (including CORS), hiding comment section');
                 walineContainer.style.display = 'none';
                 event.preventDefault(); // 阻止默认错误处理
             }
         });
         
-        // 监听错误事件
+        // 监听错误事件（包括 CORS 错误）
         window.addEventListener('error', function(event) {
-            if (event.message && event.message.includes('fetch') && event.filename && event.filename.includes('waline')) {
-                console.warn('Comment system error detected, hiding comment section');
+            if (event.message && (
+                (event.message.includes('fetch') && event.filename && event.filename.includes('waline')) ||
+                event.message.includes('CORS') ||
+                event.message.includes('Access-Control')
+            )) {
+                console.warn('Comment system error detected (CORS), hiding comment section');
+                walineContainer.style.display = 'none';
+            }
+        }, true);
+        
+        // 监听网络错误（CORS 通常在网络层面被拦截）
+        window.addEventListener('error', function(event) {
+            // 检查是否是 CORS 错误
+            if (event.target && event.target.tagName === 'SCRIPT' && event.target.src && event.target.src.includes('waline')) {
+                console.warn('Comment system script load error, hiding comment section');
                 walineContainer.style.display = 'none';
             }
         }, true);

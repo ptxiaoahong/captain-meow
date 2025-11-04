@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://example.org/tags/%E5%9B%9E%E5%BF%86/'>
 
-<link rel="stylesheet" href="/scss/style.min.0403bee37aea420bbb255e0d326500f6768a4580952233137417e9ba154379c3.css"><meta property='og:title' content="Tag: 回忆 - 猫猫船长">
+<link rel="stylesheet" href="/scss/style.min.dc9ccf9251981ec0fbb48e2c1b929d4c865915073ea74480a3bac882311ce43d.css"><meta property='og:title' content="Tag: 回忆 - 猫猫船长">
 <meta property='og:description' content="这里是猫猫船长的个人网站，分享摄影回忆与作品，说说心里话，小红书id'猫猫船长'，微信1176670966，欢迎来找我玩！">
 <meta property='og:url' content='https://example.org/tags/%E5%9B%9E%E5%BF%86/'>
 <meta property='og:site_name' content='猫猫船长'>
@@ -344,6 +344,98 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+<button id="back-to-top" class="back-to-top" aria-label="回到顶部">
+    <svg class="back-to-top-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="back-to-top-progress" viewBox="0 0 24 24">
+        <circle class="back-to-top-progress-circle" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+</button>
+
+
+<button id="scroll-to-comments" class="scroll-to-comments" aria-label="跳转评论区">
+    <svg class="scroll-to-comments-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script>
+(function() {
+    'use strict';
+    
+    const backToTopBtn = document.getElementById('back-to-top');
+    const progressCircle = backToTopBtn.querySelector('.back-to-top-progress-circle');
+    const scrollToCommentsBtn = document.getElementById('scroll-to-comments');
+    
+    if (!backToTopBtn || !progressCircle) return;
+    
+    
+    function updateProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) : 0;
+        
+        
+        const circumference = 2 * Math.PI * 10; 
+        const offset = circumference * (1 - scrollPercent);
+        
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        
+        
+        if (scrollTop > 300) {
+            backToTopBtn.classList.add('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.add('visible');
+            }
+        } else {
+            backToTopBtn.classList.remove('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.remove('visible');
+            }
+        }
+    }
+    
+    
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    
+    function scrollToComments() {
+        const commentSection = document.getElementById('waline');
+        if (commentSection) {
+            const offset = 80; 
+            const elementPosition = commentSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    
+    backToTopBtn.addEventListener('click', scrollToTop);
+    if (scrollToCommentsBtn) {
+        scrollToCommentsBtn.addEventListener('click', scrollToComments);
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    
+    
+    updateProgress();
+})();
+</script>
+
+
+
 
     </body>
 </html>

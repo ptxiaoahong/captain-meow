@@ -1,0 +1,90 @@
+<!-- 回到顶部按钮 -->
+<button id="back-to-top" class="back-to-top" aria-label="回到顶部">
+    <svg class="back-to-top-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="back-to-top-progress" viewBox="0 0 24 24">
+        <circle class="back-to-top-progress-circle" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+</button>
+
+<!-- 跳转评论区按钮 -->
+<button id="scroll-to-comments" class="scroll-to-comments" aria-label="跳转评论区">
+    <svg class="scroll-to-comments-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script>
+(function() {
+    'use strict';
+    
+    const backToTopBtn = document.getElementById('back-to-top');
+    const progressCircle = backToTopBtn.querySelector('.back-to-top-progress-circle');
+    const scrollToCommentsBtn = document.getElementById('scroll-to-comments');
+    
+    if (!backToTopBtn || !progressCircle) return;
+    
+    // 计算滚动进度
+    function updateProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) : 0;
+        
+        // 更新进度条（使用 stroke-dasharray 和 stroke-dashoffset）
+        const circumference = 2 * Math.PI * 10; // r = 10
+        const offset = circumference * (1 - scrollPercent);
+        
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        
+        // 显示/隐藏按钮（滚动超过 300px 时显示）
+        if (scrollTop > 300) {
+            backToTopBtn.classList.add('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.add('visible');
+            }
+        } else {
+            backToTopBtn.classList.remove('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.remove('visible');
+            }
+        }
+    }
+    
+    // 回到顶部
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    // 跳转到评论区
+    function scrollToComments() {
+        const commentSection = document.getElementById('waline');
+        if (commentSection) {
+            const offset = 80; // 偏移量，避免被固定导航栏遮挡
+            const elementPosition = commentSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // 绑定事件
+    backToTopBtn.addEventListener('click', scrollToTop);
+    if (scrollToCommentsBtn) {
+        scrollToCommentsBtn.addEventListener('click', scrollToComments);
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    
+    // 初始化
+    updateProgress();
+})();
+</script>
+

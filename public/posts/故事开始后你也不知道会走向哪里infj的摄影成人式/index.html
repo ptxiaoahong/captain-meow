@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://example.org/posts/%E6%95%85%E4%BA%8B%E5%BC%80%E5%A7%8B%E5%90%8E%E4%BD%A0%E4%B9%9F%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BC%9A%E8%B5%B0%E5%90%91%E5%93%AA%E9%87%8Cinfj%E7%9A%84%E6%91%84%E5%BD%B1%E6%88%90%E4%BA%BA%E5%BC%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.0403bee37aea420bbb255e0d326500f6768a4580952233137417e9ba154379c3.css"><meta property='og:title' content="故事开始后，你也不知道会走向哪里：infj的摄影成人式">
+<link rel="stylesheet" href="/scss/style.min.dc9ccf9251981ec0fbb48e2c1b929d4c865915073ea74480a3bac882311ce43d.css"><meta property='og:title' content="故事开始后，你也不知道会走向哪里：infj的摄影成人式">
 <meta property='og:description' content=" ">
 <meta property='og:url' content='https://example.org/posts/%E6%95%85%E4%BA%8B%E5%BC%80%E5%A7%8B%E5%90%8E%E4%BD%A0%E4%B9%9F%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BC%9A%E8%B5%B0%E5%90%91%E5%93%AA%E9%87%8Cinfj%E7%9A%84%E6%91%84%E5%BD%B1%E6%88%90%E4%BA%BA%E5%BC%8F/'>
 <meta property='og:site_name' content='猫猫船长'>
@@ -1277,11 +1277,12 @@
         window.addEventListener('unhandledrejection', function(event) {
             const reason = event.reason;
             if (reason && (
-                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed'))) ||
+                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed') || reason.message.includes('CORS'))) ||
                 (reason.status && reason.status >= 400) ||
-                (reason.name === 'TypeError' && reason.message.includes('fetch'))
+                (reason.name === 'TypeError' && (reason.message.includes('fetch') || reason.message.includes('CORS'))) ||
+                (reason.message && reason.message.includes('Access-Control'))
             )) {
-                console.warn('Comment system fetch error, hiding comment section');
+                console.warn('Comment system fetch error (including CORS), hiding comment section');
                 walineContainer.style.display = 'none';
                 event.preventDefault(); 
             }
@@ -1289,8 +1290,21 @@
         
         
         window.addEventListener('error', function(event) {
-            if (event.message && event.message.includes('fetch') && event.filename && event.filename.includes('waline')) {
-                console.warn('Comment system error detected, hiding comment section');
+            if (event.message && (
+                (event.message.includes('fetch') && event.filename && event.filename.includes('waline')) ||
+                event.message.includes('CORS') ||
+                event.message.includes('Access-Control')
+            )) {
+                console.warn('Comment system error detected (CORS), hiding comment section');
+                walineContainer.style.display = 'none';
+            }
+        }, true);
+        
+        
+        window.addEventListener('error', function(event) {
+            
+            if (event.target && event.target.tagName === 'SCRIPT' && event.target.src && event.target.src.includes('waline')) {
+                console.warn('Comment system script load error, hiding comment section');
                 walineContainer.style.display = 'none';
             }
         }, true);
@@ -1690,6 +1704,98 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+<button id="back-to-top" class="back-to-top" aria-label="回到顶部">
+    <svg class="back-to-top-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="back-to-top-progress" viewBox="0 0 24 24">
+        <circle class="back-to-top-progress-circle" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+</button>
+
+
+<button id="scroll-to-comments" class="scroll-to-comments" aria-label="跳转评论区">
+    <svg class="scroll-to-comments-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script>
+(function() {
+    'use strict';
+    
+    const backToTopBtn = document.getElementById('back-to-top');
+    const progressCircle = backToTopBtn.querySelector('.back-to-top-progress-circle');
+    const scrollToCommentsBtn = document.getElementById('scroll-to-comments');
+    
+    if (!backToTopBtn || !progressCircle) return;
+    
+    
+    function updateProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) : 0;
+        
+        
+        const circumference = 2 * Math.PI * 10; 
+        const offset = circumference * (1 - scrollPercent);
+        
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = offset;
+        
+        
+        if (scrollTop > 300) {
+            backToTopBtn.classList.add('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.add('visible');
+            }
+        } else {
+            backToTopBtn.classList.remove('visible');
+            if (scrollToCommentsBtn) {
+                scrollToCommentsBtn.classList.remove('visible');
+            }
+        }
+    }
+    
+    
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    
+    
+    function scrollToComments() {
+        const commentSection = document.getElementById('waline');
+        if (commentSection) {
+            const offset = 80; 
+            const elementPosition = commentSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    
+    backToTopBtn.addEventListener('click', scrollToTop);
+    if (scrollToCommentsBtn) {
+        scrollToCommentsBtn.addEventListener('click', scrollToComments);
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    
+    
+    updateProgress();
+})();
+</script>
+
+
+
 
     </body>
 </html>
