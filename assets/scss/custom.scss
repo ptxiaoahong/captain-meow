@@ -346,15 +346,34 @@
                 gap: 15px !important;
                 margin-top: 0 !important;
                 margin-bottom: 0 !important;
+                flex-wrap: wrap !important; /* 允许换行 */
+                max-width: 100% !important; /* 确保不超出容器 */
+                
+                @media (max-width: 767px) {
+                    gap: 10px !important; /* 移动端减小间距 */
+                }
                 
                 .article-category {
                     margin: 0 !important;
-                    flex-shrink: 0;
+                    flex-shrink: 1 !important; /* 允许收缩 */
+                    min-width: 0 !important;
                 }
                 
                 .article-time {
                     margin: 0 !important;
-                    flex-shrink: 0;
+                    flex-shrink: 1 !important; /* 允许收缩 */
+                    min-width: 0 !important;
+                    font-size: 1.3rem !important; /* 移动端稍微缩小字体 */
+                    
+                    @media (max-width: 767px) {
+                        font-size: 1.2rem !important;
+                        
+                        /* 确保时间内容不超出 */
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                    }
                 }
             }
         }
