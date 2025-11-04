@@ -1,0 +1,94 @@
+<script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style>
+
+{{- with .Site.Params.comments.waline -}}
+{{- $config := dict "el" "#waline" "dark" `html[data-scheme="dark"]` -}}
+{{- $replaceKeys := dict "serverurl" "serverURL" "requiredmeta" "requiredMeta" "wordlimit" "wordLimit" "pagesize" "pageSize" "imageuploader" "imageUploader" "texrenderer" "texRenderer" "turnstilekey" "turnstileKey" -}}
+
+{{- range $key, $val := . -}}
+    {{- if ne $val nil -}}  
+        {{- $replaceKey := index $replaceKeys $key -}}
+        {{- $k := default $key $replaceKey -}}
+
+        {{- $config = merge $config (dict $k $val) -}}
+    {{- end -}}
+{{- end -}}
+
+<script>
+    /// Waline client configuration see: https://waline.js.org/en/reference/client.html
+    (function() {
+        const walineContainer = document.getElementById('waline');
+        if (!walineContainer) return;
+        
+        // 检查是否是本地开发环境
+        const isLocalhost = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1' ||
+                           window.location.hostname === '';
+        
+        // 本地开发时，如果 serverURL 看起来不可用，隐藏评论
+        const config = {{ $config | jsonify | safeJS }};
+        if (isLocalhost && config.serverURL && config.serverURL.includes('lncldglobal.com')) {
+            console.log('Comment system disabled in local development');
+            walineContainer.style.display = 'none';
+            return;
+        }
+        
+        // 添加错误处理，避免显示错误信息
+        try {
+            const walineInstance = Waline.init(config);
+            
+            // 监听 Waline 的错误事件
+            if (walineInstance) {
+                // 设置超时，如果 5 秒内无法加载，隐藏评论区域
+                const timeout = setTimeout(function() {
+                    const walineEl = document.querySelector('#waline .wl-count, #waline .wl-list');
+                    if (!walineEl || walineEl.children.length === 0) {
+                        console.warn('Waline failed to load, hiding comment section');
+                        walineContainer.style.display = 'none';
+                    }
+                    clearTimeout(timeout);
+                }, 5000);
+            }
+        } catch (error) {
+            console.warn('Waline initialization failed:', error);
+            walineContainer.style.display = 'none';
+        }
+        
+        // 监听未处理的 Promise 拒绝（网络错误）
+        window.addEventListener('unhandledrejection', function(event) {
+            const reason = event.reason;
+            if (reason && (
+                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed'))) ||
+                (reason.status && reason.status >= 400) ||
+                (reason.name === 'TypeError' && reason.message.includes('fetch'))
+            )) {
+                console.warn('Comment system fetch error, hiding comment section');
+                walineContainer.style.display = 'none';
+                event.preventDefault(); // 阻止默认错误处理
+            }
+        });
+        
+        // 监听错误事件
+        window.addEventListener('error', function(event) {
+            if (event.message && event.message.includes('fetch') && event.filename && event.filename.includes('waline')) {
+                console.warn('Comment system error detected, hiding comment section');
+                walineContainer.style.display = 'none';
+            }
+        }, true);
+    })();
+</script>
+{{- end -}}
+

@@ -1102,7 +1102,66 @@
     }
 </style><script>
     
-    Waline.init({"avatar":"hide","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"管理员","placeholder":"说点什么吧~"},"requiredMeta":["nick","mail"],"serverURL":"https://ndwl3qpk.api.lncldglobal.com","visitor":true});
+    (function() {
+        const walineContainer = document.getElementById('waline');
+        if (!walineContainer) return;
+        
+        
+        const isLocalhost = window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1' ||
+                           window.location.hostname === '';
+        
+        
+        const config = {"avatar":"hide","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.1/weibo"],"lang":"zh-CN","locale":{"admin":"管理员","placeholder":"说点什么吧~"},"requiredMeta":["nick","mail"],"serverURL":"https://waline-iota-beryl.vercel.app","visitor":true};
+        if (isLocalhost && config.serverURL && config.serverURL.includes('lncldglobal.com')) {
+            console.log('Comment system disabled in local development');
+            walineContainer.style.display = 'none';
+            return;
+        }
+        
+        
+        try {
+            const walineInstance = Waline.init(config);
+            
+            
+            if (walineInstance) {
+                
+                const timeout = setTimeout(function() {
+                    const walineEl = document.querySelector('#waline .wl-count, #waline .wl-list');
+                    if (!walineEl || walineEl.children.length === 0) {
+                        console.warn('Waline failed to load, hiding comment section');
+                        walineContainer.style.display = 'none';
+                    }
+                    clearTimeout(timeout);
+                }, 5000);
+            }
+        } catch (error) {
+            console.warn('Waline initialization failed:', error);
+            walineContainer.style.display = 'none';
+        }
+        
+        
+        window.addEventListener('unhandledrejection', function(event) {
+            const reason = event.reason;
+            if (reason && (
+                (reason.message && (reason.message.includes('fetch') || reason.message.includes('Failed'))) ||
+                (reason.status && reason.status >= 400) ||
+                (reason.name === 'TypeError' && reason.message.includes('fetch'))
+            )) {
+                console.warn('Comment system fetch error, hiding comment section');
+                walineContainer.style.display = 'none';
+                event.preventDefault(); 
+            }
+        });
+        
+        
+        window.addEventListener('error', function(event) {
+            if (event.message && event.message.includes('fetch') && event.filename && event.filename.includes('waline')) {
+                console.warn('Comment system error detected, hiding comment section');
+                walineContainer.style.display = 'none';
+            }
+        }, true);
+    })();
 </script>
 
     

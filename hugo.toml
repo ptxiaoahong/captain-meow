@@ -111,7 +111,7 @@ defaultContentLanguage = "zh-cn"
     provider = "waline"
 
     [params.comments.waline]
-      serverURL = "https://ndwl3qpk.api.lncldglobal.com"
+      serverURL = "https://waline-iota-beryl.vercel.app"
       lang = "zh-CN"
       visitor = true
       avatar = "hide"
