@@ -1,34 +1,213 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>夏天 - 标签 - 猫猫船长</title>
-        <link>http://localhost:1313/tags/%E5%A4%8F%E5%A4%A9/</link>
-        <description>夏天 - 标签 - 猫猫船长</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 08 Mar 2025 16:11:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%A4%8F%E5%A4%A9/" rel="self" type="application/rss+xml" /><item>
-    <title>那是一个列车对我说“慢点走吧”的夏天（纯享）</title>
-    <link>http://localhost:1313/posts/%E9%82%A3%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%97%E8%BD%A6%E5%AF%B9%E6%88%91%E8%AF%B4%E6%85%A2%E7%82%B9%E8%B5%B0%E5%90%A7%E7%9A%84%E5%A4%8F%E5%A4%A9/</link>
-    <pubDate>Sat, 08 Mar 2025 16:11:24 &#43;0800</pubDate>
-    <author>pph</author>
-    <guid>http://localhost:1313/posts/%E9%82%A3%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%97%E8%BD%A6%E5%AF%B9%E6%88%91%E8%AF%B4%E6%85%A2%E7%82%B9%E8%B5%B0%E5%90%A7%E7%9A%84%E5%A4%8F%E5%A4%A9/</guid>
-    <description><![CDATA[<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1"></span></p>
-<p class="p2"><span class="s1"></span><br></p>
-</body>
-</html>
-</p>]]></description>
-</item>
-</channel>
+        <title>夏天 on 猫猫船长</title>
+        <link>https://example.org/tags/%E5%A4%8F%E5%A4%A9/</link>
+        <description>Recent content in 夏天 on 猫猫船长</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate>Sat, 08 Mar 2025 16:11:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E5%A4%8F%E5%A4%A9/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>那是一个列车对我说“慢点走吧”的夏天（纯享）</title>
+        <link>https://example.org/posts/%E9%82%A3%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%97%E8%BD%A6%E5%AF%B9%E6%88%91%E8%AF%B4%E6%85%A2%E7%82%B9%E8%B5%B0%E5%90%A7%E7%9A%84%E5%A4%8F%E5%A4%A9%E7%BA%AF%E4%BA%AB/</link>
+        <pubDate>Sat, 08 Mar 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/posts/%E9%82%A3%E6%98%AF%E4%B8%80%E4%B8%AA%E5%88%97%E8%BD%A6%E5%AF%B9%E6%88%91%E8%AF%B4%E6%85%A2%E7%82%B9%E8%B5%B0%E5%90%A7%E7%9A%84%E5%A4%8F%E5%A4%A9%E7%BA%AF%E4%BA%AB/</guid>
+        <description>&lt;img src="https://example.org/10/%E6%96%87%E4%BB%B6-8.jpg" alt="Featured image of post 那是一个列车对我说“慢点走吧”的夏天（纯享）" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-8.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-3.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-1.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-2.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-4.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-5.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-6.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-7.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-8.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-9.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-10.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-11.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+
+&lt;img src=&#34;https://example.org/10/%e6%96%87%e4%bb%b6-12.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34;
+		data-flex-grow=&#34;100&#34;
+			data-flex-basis=&#34;240px&#34;
+		
+	
+&gt;
+
+&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

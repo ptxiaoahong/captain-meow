@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>内容管理 - 猫猫船长</title>
+</head>
+<body>
+  <!-- 本地开发时不加载任何 Identity 脚本 -->
+  <script>
+    // 检测是否为本地环境
+    const isLocal = window.location.hostname === 'localhost' || 
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.hostname === '';
+    
+    if (!isLocal) {
+      // 只在生产环境加载 Identity
+      var script = document.createElement('script');
+      script.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+      document.head.appendChild(script);
+    }
+  </script>
+  
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // 本地开发时，强制设置后端为本地模式
+    if (window.location.hostname === 'localhost' || 
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname === '') {
+      
+      console.log('本地开发模式：已禁用身份验证');
+      
+      // 等待 CMS 加载后，强制设置认证状态
+      window.addEventListener('load', function() {
+        if (window.CMS && window.CMS.init) {
+          // 尝试覆盖认证逻辑
+          setTimeout(function() {
+            if (window.CMS && window.CMS.auth) {
+              // 如果已经有认证系统，尝试跳过
+              console.log('CMS 已加载，检查认证状态');
+            }
+          }, 1000);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

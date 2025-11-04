@@ -1,1 +1,17 @@
-{}
+{
+  "name": "maomao-captain-website",
+  "version": "1.0.0",
+  "description": "猫猫船长个人网站",
+  "scripts": {
+    "dev": "hugo serve",
+    "build": "hugo",
+    "cms:proxy": "npx decap-server"
+  },
+  "keywords": [
+    "hugo",
+    "blog",
+    "photography"
+  ],
+  "author": "猫猫船长",
+  "license": "MIT"
+}

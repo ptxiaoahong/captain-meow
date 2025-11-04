@@ -3,166 +3,180 @@ languageCode = "zh-CN"
 languageName = "简体中文"
 hasCJKLanguage = true
 title = "猫猫船长"
-theme = 'LoveIt-master'
+theme = 'hugo-theme-stack'
 defaultContentLanguage = "zh-cn"
+
+# 分页配置
+[pagination]
+  pagerSize = 10
+
+# 永久链接配置
+[permalinks]
+  posts = "/posts/:slug/"
+
+# 菜单配置
 [menu]
+  # 主菜单
   [[menu.main]]
-    weight = 2
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
     identifier = "posts"
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
-    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    post = ""
     name = "全部"
     url = "/posts/"
-    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-    title = ""
-  
-  [[menu.main]]
-  weight = 3
-  identifier = "memories"
-  name = "回忆"
-  url = "/categories/回忆/"
+    weight = 2
 
   [[menu.main]]
-  weight = 4
-  identifier = "thoughts"
-  name = "心里话"
-  url = "/categories/心里话/"
+    identifier = "works"
+    name = "作品"
+    url = "/categories/作品/"
+    weight = 3
 
   [[menu.main]]
-  weight = 5
-  identifier = "works"
-  name = "作品"
-  url = "/categories/作品/"
-  
+    identifier = "memories"
+    name = "回忆"
+    url = "/categories/回忆/"
+    weight = 4
+
   [[menu.main]]
-    weight = 6
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "标签"
-    url = "/tags/"
-    title = ""
-  
-  [[menu.main]]
-    weight = 7
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分类"
-    url = "/categories/"
-    title = ""
+    identifier = "thoughts"
+    name = "心里话"
+    url = "/categories/心里话/"
+    weight = 5
 
+  # 社交链接
+  [[menu.social]]
+    identifier = "xiaohongshu"
+    name = "小红书"
+    url = "https://www.xiaohongshu.com/user/profile/猫猫船长"
+    params = { icon = "link" }
 
-[params.footer]
-  hugo = false
-  author = false
-  since = 2025
+  [[menu.social]]
+    identifier = "wechat"
+    name = "微信"
+    url = "#"
+    params = { icon = "link" }
 
-[params.search]
-    enable = true
-    # 搜索引擎的类型 ["lunr", "algolia"]
-    type = "lunr"
-    # 文章内容最长索引长度
-    contentLength = 4000
-    # 搜索框的占位提示语
-    placeholder = ""
-    # LoveIt 新增 | 0.2.1 最大结果数目
-    maxResultLength = 10
-    # LoveIt 新增 | 0.2.3 结果内容片段长度
-    snippetLength = 50
-    # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
-    highlightTag = "em"
-    # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
-    absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+  [[menu.social]]
+    identifier = "email"
+    name = "Email"
+    url = "mailto:hongshize@live.cn"
+    params = { icon = "link" }
 
-[params.home]
-    # LoveIt 新增 | 0.2.0 RSS 文章数目
-    rss = 5
-    # 主页个人信息
-    [params.home.profile]
-      enable = true
-      # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = ""
-      # 主页显示头像的 URL
-      avatarURL = ""
-      # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
-      title = ""
-      # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "这里是猫猫船长的个人网站，分享摄影回忆与作品，说说心里话，小红书id“猫猫船长”，微信1176670966，欢迎来找我玩！"
-      # 是否为副标题显示打字机动画
-      typeit = true
-      # 是否显示社交账号
-      social = true
-      # LoveIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)
-      disclaimer = ""
-    # 主页文章列表
-    [params.home.posts]
-      enable = true
-      # 主页每页显示文章数量
-      paginate = 10
-      # LoveIt 删除 | 0.2.0 被 params.page 中的 hiddenFromHomePage 替代
-      # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
-      defaultHiddenFromHomePage = false
+# 服务配置
+[services]
+  [services.googleAnalytics]
+    id = "G-8L5LC1T72B"
 
-[params.social]
-  zhihu = "hong-qiu-ze"
-  Email = "hongshize@live.cn"
-
- [params.page.share]
-      enable = true
-       Whatsapp = true
-
-# 作者配置
-  [params.author]
-    name = "pph"
-
-[params.page.comment]
-  enable = true
-  
-  [params.page.comment.valine]
-    enable = true
-    appId = "NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI"
-    appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
-    placeholder = "说点什么吧~"
-    avatar = "hide"
-    meta = ["nick", "mail", "link"]
-    pageSize = 10
-    lang = "zh-CN"
-    visitor = true
-    recordIP = true
-    highlight = true
-    enableQQ = true
-    serverURLs = "https://ndwl3qpk.api.lncldglobal.com"
-    emoji = "google.yml"
-
+# 主题参数配置
 [params]
-  # 首页评论区独立配置
-  [params.homeComment]
-    enable = true
-    title = "💬 网站留言板"  # 评论区标题
-    
-    # Valine 配置 (可与文章评论区分开)
-    [params.homeComment.valine]
-      appId = "NDWL3qpKAKEz828DCpRfVLfE-MdYXbMMI"
-      appKey = "Z8CtukQGEr0a6QyW0CGWv7NH"
-      serverURLs = "https://ndwl3qpk.api.lncldglobal.com"
-      placeholder = "欢迎留下对本站的建议~"
-      avatar = "hide"  # 默认头像类型
-      pageSize = 10   # 每页评论数
-      lang = "zh-CN"  # 语言
+  mainSections = ["posts"]
+  featuredImageField = "image"
+  rssFullContent = true
 
- [params.analytics]
-    enable = true
-    # Google Analytics
-    [params.analytics.google]
-      id = "G-8L5LC1T72B"
-      # whether to anonymize IP
-      # 是否匿名化用户 IP
-      anonymizeIP = true
-      
+  # 页脚配置
+  [params.footer]
+    since = 2025
+    customText = ""
+
+  # 日期格式
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02 15:04"
+
+  # 侧边栏配置
+  [params.sidebar]
+    emoji = ""
+    subtitle = "这里是猫猫船长的个人网站，分享摄影回忆与作品，说说心里话，小红书id'猫猫船长'，微信1176670966，欢迎来找我玩！"
+    [params.sidebar.avatar]
+      enabled = true
+      local = true
+      src = "img/avatar.jpg"
+
+  # 文章配置
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+    [params.article.license]
+      enabled = false
+      default = ""
+
+  # 评论配置 - 使用 Valine（Waline 兼容 Valine API）
+  [params.comments]
+    enabled = true
+    provider = "waline"
+
+    [params.comments.waline]
+      serverURL = "https://ndwl3qpk.api.lncldglobal.com"
+      lang = "zh-CN"
+      visitor = true
+      avatar = "hide"
+      emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.1/weibo"]
+      requiredMeta = ["nick", "mail"]
+      locale = { admin = "管理员", placeholder = "说点什么吧~" }
+
+  # 小部件配置（已禁用右侧栏）
+  [params.widgets]
+    homepage = []
+    page = []
+
+  # OpenGraph 配置
+  [params.opengraph]
+    [params.opengraph.twitter]
+      card = "summary_large_image"
+
+  # 默认图片配置
+  [params.defaultImage]
+    [params.defaultImage.opengraph]
+      enabled = false
+      local = false
+      src = ""
+
+  # 颜色方案
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  # 图片处理
+  [params.imageProcessing]
+    [params.imageProcessing.cover]
+      enabled = true
+    [params.imageProcessing.content]
+      enabled = true
+
+# 相关文章配置
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = false
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 200
+
+# Markup 配置
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = false
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = true
+    startLevel = 2
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 4

@@ -1,0 +1,132 @@
+{{ $result := dict "exists" false "permalink" nil "resource" nil "isDefault" false }}
+{{ $imageField := default "image" .Context.Site.Params.featuredImageField }}
+{{ $imageValue := index .Context.Params $imageField }}
+
+{{ if $imageValue }}
+    <!-- If page has `image` field set -->
+    {{ $result = merge $result (dict "exists" true) }}
+    {{ $url := urls.Parse $imageValue }}
+
+    {{ if or (eq $url.Scheme "http") (eq $url.Scheme "https") }}
+        <!-- Is an external image -->
+        {{ $result = merge $result (dict "permalink" $imageValue) }}
+    {{ else }}
+        {{ $pageResourceImage := .Context.Resources.GetMatch (printf "%s" ($imageValue | safeURL)) }}
+        
+        {{ if $pageResourceImage }}
+            <!-- If image is found under page bundle -->
+            {{ $result = merge $result (dict "permalink" $pageResourceImage.RelPermalink) }}
+
+            <!-- Disable SVG image processing, not supported by Hugo -->
+            {{ if ne (path.Ext $imageValue) ".svg" }}
+                {{ $result = merge $result (dict "resource" $pageResourceImage) }}
+            {{ end }}
+        {{ else }}
+            <!-- Can not find the image under page bundle. Could be a relative linked image -->
+            {{ $staticImage := resources.Get ($imageValue | strings.TrimPrefix "/") }}
+            {{ if $staticImage }}
+                {{ $result = merge $result (dict "permalink" $staticImage.RelPermalink) }}
+                {{ if ne (path.Ext $imageValue) ".svg" }}
+                    {{ $result = merge $result (dict "resource" $staticImage) }}
+                {{ end }}
+            {{ else }}
+                {{ $result = merge $result (dict "permalink" (relURL $imageValue)) }}
+            {{ end }}
+        {{ end }}
+
+    {{ end }}
+
+{{ else }}
+    {{- /* 从文章内容中提取第一张图片 */ -}}
+    {{- $firstImage := "" -}}
+    
+    {{- /* 方法1: 从 Summary 获取（摘要通常包含第一张图片，且是 HTML 格式） */ -}}
+    {{- if .Context.Summary -}}
+        {{- $summary := .Context.Summary -}}
+        {{- /* 尝试匹配 HTML img 标签 */ -}}
+        {{- $htmlImageRegex := `<img[^>]+src=["']([^"']+)["']` -}}
+        {{- $htmlMatches := findRE $htmlImageRegex $summary -}}
+        {{- if $htmlMatches -}}
+            {{- $firstImageMatch := index $htmlMatches 0 -}}
+            {{- $firstImagePath := replaceRE $htmlImageRegex "$1" $firstImageMatch -}}
+            {{- $firstImage = trim $firstImagePath " " -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- /* 方法2: 从 Content 获取（HTML 格式） */ -}}
+    {{- if not $firstImage -}}
+        {{- if .Context.Content -}}
+            {{- $content := .Context.Content -}}
+            {{- /* 尝试匹配 HTML img 标签 */ -}}
+            {{- $htmlImageRegex := `<img[^>]+src=["']([^"']+)["']` -}}
+            {{- $htmlMatches := findRE $htmlImageRegex $content -}}
+            {{- if $htmlMatches -}}
+                {{- $firstImageMatch := index $htmlMatches 0 -}}
+                {{- $firstImagePath := replaceRE $htmlImageRegex "$1" $firstImageMatch -}}
+                {{- $firstImage = trim $firstImagePath " " -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- if $firstImage -}}
+        {{- $result = merge $result (dict "exists" true) -}}
+        {{- $url := urls.Parse $firstImage -}}
+
+        {{- if or (eq $url.Scheme "http") (eq $url.Scheme "https") -}}
+            {{- $result = merge $result (dict "permalink" $firstImage) -}}
+        {{- else -}}
+            {{- /* 尝试作为页面资源 */ -}}
+            {{- $pageResourceImage := .Context.Resources.GetMatch (printf "%s" ($firstImage | safeURL)) -}}
+            
+            {{- if $pageResourceImage -}}
+                {{- $result = merge $result (dict "permalink" $pageResourceImage.RelPermalink) -}}
+                {{- if ne (path.Ext $firstImage) ".svg" -}}
+                    {{- $result = merge $result (dict "resource" $pageResourceImage) -}}
+                {{- end -}}
+            {{- else -}}
+                {{- /* 处理 static 目录中的图片 */ -}}
+                {{- $staticPath := $firstImage | strings.TrimPrefix "/" -}}
+                {{- $staticImage := resources.Get $staticPath -}}
+                {{- if $staticImage -}}
+                    {{- $result = merge $result (dict "permalink" $staticImage.RelPermalink) -}}
+                    {{- if ne (path.Ext $firstImage) ".svg" -}}
+                        {{- $result = merge $result (dict "resource" $staticImage) -}}
+                    {{- end -}}
+                {{- else -}}
+                    {{- /* 如果找不到资源，直接使用相对路径 */ -}}
+                    {{- $result = merge $result (dict "permalink" (relURL $firstImage)) -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- else if and (ne .Type nil) (index .Context.Site.Params.defaultImage .Type) }}
+        <!-- Type arg is set, check for defaultImage setting -->
+        {{ $defaultImageSetting := index .Context.Site.Params.defaultImage .Type }}
+
+        {{ if $defaultImageSetting.enabled }}
+            {{ $result = merge $result (dict "isDefault" true) }}
+            {{ $result = merge $result (dict "exists" true) }}
+
+            {{ if $defaultImageSetting.local }}
+                {{ $siteResourceImage := resources.GetMatch (printf "%s" ($defaultImageSetting.src | safeURL)) }}
+
+                {{ if $siteResourceImage }}
+                    <!-- Try search image under site's assets folder -->
+                    {{ $result = merge $result (dict "permalink" $siteResourceImage.RelPermalink) }}
+                    {{ $result = merge $result (dict "resource" $siteResourceImage) }}
+                {{ else }}
+                    <!-- Can not find the image -->
+                    {{ errorf "Failed loading image: %q" $defaultImageSetting.src }}
+                    {{ $result = merge $result (dict "exists" false) }}
+                {{ end }}
+
+            {{ else }}
+                <!-- External image -->
+                {{ $result = merge $result (dict "permalink" (relURL $defaultImageSetting.src)) }}
+            {{ end }}
+            
+        {{ end }}
+
+    {{- end -}}
+{{ end }}
+
+{{ return $result }}

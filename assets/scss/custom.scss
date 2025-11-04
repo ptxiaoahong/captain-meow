@@ -1,0 +1,313 @@
+/* 自定义样式 */
+
+/* 调整布局：删除右侧栏，优化布局 */
+.container.main-container {
+    /* 确保没有右侧栏 */
+    .right-sidebar {
+        display: none !important;
+    }
+    
+    /* 使用 compact 布局（无右侧栏时） */
+    &.extended {
+        @media (min-width: 768px) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 30%;
+        }
+
+        @media (min-width: 1024px) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 25%;
+        }
+
+        @media (min-width: 1280px) {
+            max-width: 1536px;
+            --left-sidebar-max-width: 20%;
+        }
+    }
+}
+
+/* 调整左侧栏副标题行距 */
+.left-sidebar {
+    .site-description {
+        line-height: 1.6 !important;
+    }
+}
+
+/* 统一分类颜色为网页背景色 */
+
+/* 覆盖文章列表中的分类颜色 */
+.article-list {
+    article {
+        .article-category a {
+            background-color: var(--body-background) !important;
+            color: var(--body-text-color) !important;
+            
+            &:hover {
+                background-color: var(--body-background) !important;
+                color: var(--accent-color) !important;
+            }
+        }
+    }
+}
+
+/* 覆盖单篇文章中的分类颜色 */
+.article-category {
+    a {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+        
+        &:hover {
+            background-color: var(--body-background) !important;
+            color: var(--accent-color) !important;
+        }
+    }
+}
+
+/* 文章页面：分类和时间同一行 */
+.main-article {
+    .article-details {
+        .article-meta {
+            display: flex !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            gap: 15px !important;
+            margin-top: 8px !important;
+            margin-bottom: 0 !important;
+            
+            .article-category {
+                margin: 0 !important;
+                flex-shrink: 0;
+            }
+            
+            .article-time {
+                margin: 0 !important;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+/* 覆盖紧凑列表中的分类颜色 */
+.article-list--compact {
+    .article-category a {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+        
+        &:hover {
+            background-color: var(--body-background) !important;
+            color: var(--accent-color) !important;
+        }
+    }
+}
+
+/* 覆盖瓦片列表中的分类颜色 */
+.article-list--tile {
+    .article-category a {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+        
+        &:hover {
+            background-color: var(--body-background) !important;
+            color: var(--accent-color) !important;
+        }
+    }
+}
+
+/* 统一文章中的标签颜色为网页背景色 */
+.article-tags {
+    a {
+        background-color: var(--body-background) !important;
+        color: var(--body-text-color) !important;
+        
+        &:hover {
+            background-color: var(--body-background) !important;
+            color: var(--accent-color) !important;
+        }
+    }
+}
+
+/* 左侧栏标签云样式 */
+.left-sidebar {
+    .tagCloud {
+        margin-top: auto;
+        padding-top: var(--sidebar-element-separation);
+        
+        .widget-icon {
+            display: none;
+        }
+        
+        .widget-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .tagCloud-tags {
+            a {
+                background-color: var(--body-background) !important;
+                color: var(--body-text-color) !important;
+                border: 0.5px solid var(--body-text-color) !important;
+                box-shadow: none !important;
+                padding: 6px 12px !important;
+                font-size: 1.3rem !important;
+                
+                &:hover {
+                    background-color: var(--body-background) !important;
+                    color: var(--accent-color) !important;
+                    border-color: var(--accent-color) !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
+
+/* 首页按钮加粗 */
+#main-menu {
+    li {
+        a[href="/"] {
+            font-weight: bold !important;
+        }
+    }
+}
+
+/* 单篇文章页面隐藏封面图 */
+.article-page {
+    .article-header {
+        .article-header-image {
+            display: none !important;
+        }
+    }
+}
+
+/* 调整正文内容与图片之间的行距 */
+.article-content {
+    /* 段落间距 */
+    p {
+        margin: 1em 0 !important;
+    }
+    
+    /* 图片和图片前后的间距 */
+    figure {
+        margin-top: 0.8em !important;
+        margin-bottom: 0.8em !important;
+    }
+    
+    /* 段落后面紧跟图片时，减少间距 */
+    p + figure {
+        margin-top: 0.5em !important;
+    }
+    
+    /* 图片后面紧跟段落时，减少间距 */
+    figure + p {
+        margin-top: 0.5em !important;
+    }
+    
+    /* gallery 容器 - 改为纵向排列，每张图片全宽显示 */
+    .gallery {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.8em !important;
+        margin-top: 0.8em !important;
+        margin-bottom: 0.8em !important;
+        
+        figure {
+            width: 100% !important;
+            margin: 0 !important;
+            
+            img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
+    
+    /* 段落后面是 gallery */
+    p + .gallery {
+        margin-top: 0.5em !important;
+    }
+    
+    /* gallery 后面是段落 */
+    .gallery + p {
+        margin-top: 0.5em !important;
+    }
+    
+    /* 包含图片的段落（通过 no-text 类识别） */
+    p.no-text {
+        margin: 0.8em 0 !important;
+    }
+    
+    p.no-text + p {
+        margin-top: 0.5em !important;
+    }
+    
+    p + p.no-text {
+        margin-top: 0.5em !important;
+    }
+    
+    /* 单独的 figure 图片也全宽显示 */
+    figure.gallery-image {
+        width: 100% !important;
+        
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+
+/* 主页卡片样式调整 */
+.article-list {
+    article {
+        /* 加宽封面图，不改变卡片大小 */
+        .article-image {
+            margin-left: calc((var(--card-padding)) * -1) !important;
+            margin-right: calc((var(--card-padding)) * -1) !important;
+            width: calc(100% + var(--card-padding) * 2) !important;
+            
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                
+                @media (min-width: 768px) {
+                    height: 250px;
+                }
+                
+                @media (min-width: 1280px) {
+                    height: 300px;
+                }
+            }
+        }
+        
+        /* 分类和时间在同一行，都在左侧 */
+        .article-details {
+            gap: 10px !important;
+            
+            /* 调整标题和元数据之间的间距 */
+            .article-title-wrapper {
+                margin-bottom: 8px !important;
+            }
+            
+            .article-meta {
+                display: flex !important;
+                justify-content: flex-start !important;
+                align-items: center !important;
+                gap: 15px !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                
+                .article-category {
+                    margin: 0 !important;
+                    flex-shrink: 0;
+                }
+                
+                .article-time {
+                    margin: 0 !important;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+}
+
+

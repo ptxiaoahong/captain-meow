@@ -1,0 +1,72 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $Permalink := .Destination | relURL | safeURL -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $Width := 0 -}}
+{{- $Height := 0 -}}
+{{- $Srcset := "" -}}
+{{- $galleryImage := false -}}
+{{- $staticImage := false -}}
+{{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
+
+{{- if $image -}}
+	{{- $Permalink = $image.RelPermalink -}}
+
+	{{- if $notSVG -}}
+		{{- $Width = $image.Width -}}
+		{{- $Height = $image.Height -}}
+		{{- $galleryImage = true -}}
+
+		{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+			{{- $small := $image.Resize `480x` -}}
+			{{- $big := $image.Resize `1024x` -}}
+			{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+		{{- end -}}
+	{{- end -}}
+{{- else -}}
+	{{- /* 处理 static 目录中的图片 */ -}}
+	{{- $staticPath := .Destination | strings.TrimPrefix "/" -}}
+	{{- $staticImage = resources.Get $staticPath -}}
+	{{- if $staticImage -}}
+		{{- $Permalink = $staticImage.RelPermalink -}}
+		
+		{{- if $notSVG -}}
+			{{- $Width = $staticImage.Width -}}
+			{{- $Height = $staticImage.Height -}}
+			{{- $galleryImage = true -}}
+
+			{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+				{{- $small := $staticImage.Resize `480x` -}}
+				{{- $big := $staticImage.Resize `1024x` -}}
+				{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+			{{- end -}}
+		{{- end -}}
+	{{- else -}}
+		{{- /* 如果 resources.Get 找不到，使用直接路径，仍然标记为画廊图片 */ -}}
+		{{- if $notSVG -}}
+			{{- $galleryImage = true -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+<img src="{{ $Permalink }}"
+	{{ with $Width }}width="{{ . }}"{{ end }}
+	{{ with $Height }}height="{{ . }}"{{ end }}
+	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
+	loading="lazy"
+	{{ with $alt }}alt="{{ . }}"{{ end }}
+	{{ if $galleryImage }}
+		class="gallery-image"
+		{{ if $image }}
+			data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
+			data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
+		{{ else if $staticImage }}
+			data-flex-grow="{{ div (mul $staticImage.Width 100) $staticImage.Height }}"
+			data-flex-basis="{{ div (mul $staticImage.Width 240) $staticImage.Height }}px"
+		{{ else }}
+			{{- /* 如果没有尺寸信息，使用默认值，但保留 gallery-image class */ -}}
+			data-flex-grow="100"
+			data-flex-basis="240px"
+		{{ end }}
+	{{ end }}
+>
+

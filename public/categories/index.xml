@@ -1,31 +1,35 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories - 分类 - 猫猫船长</title>
-        <link>http://localhost:1313/categories/</link>
-        <description>Categories - 分类 - 猫猫船长</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 May 2025 06:16:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>心里话</title>
-    <link>http://localhost:1313/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</link>
-    <pubDate>Sun, 04 May 2025 06:16:24 &#43;0800</pubDate>
-    <author>pph</author>
-    <guid>http://localhost:1313/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>回忆</title>
-    <link>http://localhost:1313/categories/%E5%9B%9E%E5%BF%86/</link>
-    <pubDate>Mon, 31 Mar 2025 09:16:24 &#43;0800</pubDate>
-    <author>pph</author>
-    <guid>http://localhost:1313/categories/%E5%9B%9E%E5%BF%86/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>作品</title>
-    <link>http://localhost:1313/categories/%E4%BD%9C%E5%93%81/</link>
-    <pubDate>Mon, 10 Mar 2025 16:11:24 &#43;0800</pubDate>
-    <author>pph</author>
-    <guid>http://localhost:1313/categories/%E4%BD%9C%E5%93%81/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+        <title>Categories on 猫猫船长</title>
+        <link>https://example.org/categories/</link>
+        <description>Recent content in Categories on 猫猫船长</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate>Sun, 04 May 2025 06:16:24 +0800</lastBuildDate><atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>心里话</title>
+        <link>https://example.org/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</link>
+        <pubDate>Sun, 04 May 2025 06:16:24 +0800</pubDate>
+        
+        <guid>https://example.org/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>回忆</title>
+        <link>https://example.org/categories/%E5%9B%9E%E5%BF%86/</link>
+        <pubDate>Mon, 31 Mar 2025 09:16:24 +0800</pubDate>
+        
+        <guid>https://example.org/categories/%E5%9B%9E%E5%BF%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>作品</title>
+        <link>https://example.org/categories/%E4%BD%9C%E5%93%81/</link>
+        <pubDate>Wed, 12 Mar 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/categories/%E4%BD%9C%E5%93%81/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>
