@@ -5,10 +5,12 @@
 {{- $Height := 0 -}}
 {{- $Srcset := "" -}}
 {{- $galleryImage := false -}}
+{{- $assetsImage := false -}}
 {{- $staticImage := false -}}
 {{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
 
 {{- if $image -}}
+	{{- /* 页面资源中的图片 */ -}}
 	{{- $Permalink = $image.RelPermalink -}}
 
 	{{- if $notSVG -}}
@@ -17,33 +19,69 @@
 		{{- $galleryImage = true -}}
 
 		{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
-			{{- $small := $image.Resize `480x` -}}
-			{{- $big := $image.Resize `1024x` -}}
-			{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+			{{- /* 限制最大尺寸为 1000px，确保文件大小不超过 1MB */ -}}
+				{{- $small := $image.Resize `600x` -}}
+				{{- $big := $image.Resize `1000x` -}}
+				{{- $Srcset = printf `%s 600w, %s 1000w` $small.RelPermalink $big.RelPermalink -}}
+				{{- /* 使用 1000px 版本作为默认 src */ -}}
+				{{- $Permalink = $big.RelPermalink -}}
+				{{- $Width = $big.Width -}}
+				{{- $Height = $big.Height -}}
 		{{- end -}}
 	{{- end -}}
 {{- else -}}
-	{{- /* 处理 static 目录中的图片 */ -}}
-	{{- $staticPath := .Destination | strings.TrimPrefix "/" -}}
-	{{- $staticImage = resources.Get $staticPath -}}
-	{{- if $staticImage -}}
-		{{- $Permalink = $staticImage.RelPermalink -}}
+	{{- /* 优先从 assets/images 获取图片（支持自动压缩） */ -}}
+	{{- $assetsPath := .Destination | strings.TrimPrefix "/" -}}
+	{{- $assetsImage = resources.Get (printf "images/%s" $assetsPath) -}}
+	
+	{{- if $assetsImage -}}
+		{{- /* 从 assets/images 找到图片 */ -}}
+		{{- $Permalink = $assetsImage.RelPermalink -}}
 		
 		{{- if $notSVG -}}
-			{{- $Width = $staticImage.Width -}}
-			{{- $Height = $staticImage.Height -}}
+			{{- $Width = $assetsImage.Width -}}
+			{{- $Height = $assetsImage.Height -}}
 			{{- $galleryImage = true -}}
 
 			{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
-				{{- $small := $staticImage.Resize `480x` -}}
-				{{- $big := $staticImage.Resize `1024x` -}}
-				{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+				{{- /* 限制最大尺寸为 1000px，确保文件大小不超过 1MB */ -}}
+				{{- $small := $assetsImage.Resize `600x` -}}
+				{{- $big := $assetsImage.Resize `1000x` -}}
+				{{- $Srcset = printf `%s 600w, %s 1000w` $small.RelPermalink $big.RelPermalink -}}
+				{{- /* 使用 1000px 版本作为默认 src */ -}}
+				{{- $Permalink = $big.RelPermalink -}}
+				{{- $Width = $big.Width -}}
+				{{- $Height = $big.Height -}}
 			{{- end -}}
 		{{- end -}}
 	{{- else -}}
-		{{- /* 如果 resources.Get 找不到，使用直接路径，仍然标记为画廊图片 */ -}}
-		{{- if $notSVG -}}
-			{{- $galleryImage = true -}}
+		{{- /* 后备：从 static 目录获取 */ -}}
+		{{- $staticPath := .Destination | strings.TrimPrefix "/" -}}
+		{{- $staticImage = resources.Get $staticPath -}}
+		{{- if $staticImage -}}
+			{{- $Permalink = $staticImage.RelPermalink -}}
+			
+			{{- if $notSVG -}}
+				{{- $Width = $staticImage.Width -}}
+				{{- $Height = $staticImage.Height -}}
+				{{- $galleryImage = true -}}
+
+				{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+					{{- /* 限制最大尺寸为 1000px，确保文件大小不超过 1MB */ -}}
+					{{- $small := $staticImage.Resize `600x` -}}
+					{{- $big := $staticImage.Resize `1000x` -}}
+					{{- $Srcset = printf `%s 600w, %s 1000w` $small.RelPermalink $big.RelPermalink -}}
+					{{- /* 使用 1000px 版本作为默认 src */ -}}
+					{{- $Permalink = $big.RelPermalink -}}
+					{{- $Width = $big.Width -}}
+					{{- $Height = $big.Height -}}
+				{{- end -}}
+			{{- end -}}
+		{{- else -}}
+			{{- /* 如果都找不到，使用直接路径，仍然标记为画廊图片 */ -}}
+			{{- if $notSVG -}}
+				{{- $galleryImage = true -}}
+			{{- end -}}
 		{{- end -}}
 	{{- end -}}
 {{- end -}}
@@ -59,6 +97,9 @@
 		{{ if $image }}
 			data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
 			data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
+		{{ else if $assetsImage }}
+			data-flex-grow="{{ div (mul $assetsImage.Width 100) $assetsImage.Height }}"
+			data-flex-basis="{{ div (mul $assetsImage.Width 240) $assetsImage.Height }}px"
 		{{ else if $staticImage }}
 			data-flex-grow="{{ div (mul $staticImage.Width 100) $staticImage.Height }}"
 			data-flex-basis="{{ div (mul $staticImage.Width 240) $staticImage.Height }}px"

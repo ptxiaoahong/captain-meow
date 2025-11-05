@@ -1,8 +1,6 @@
 {{- $gaID := "" -}}
-{{- if isset .Site.Config.Services "googleAnalytics" -}}
-  {{- if isset .Site.Config.Services.GoogleAnalytics "id" -}}
-    {{- $gaID = index .Site.Config.Services.GoogleAnalytics "id" -}}
-  {{- end -}}
+{{- with .Site.Config.Services.GoogleAnalytics -}}
+  {{- $gaID = .ID -}}
 {{- end -}}
 {{- if $gaID -}}
 <!-- Google Analytics -->

@@ -6,6 +6,9 @@ title = "猫猫船长"
 theme = 'hugo-theme-stack'
 defaultContentLanguage = "zh-cn"
 
+# 增加模板超时时间（处理大量图片时需要）
+timeout = 300
+
 # 分页配置
 [pagination]
   pagerSize = 10
@@ -147,6 +150,12 @@ defaultContentLanguage = "zh-cn"
       enabled = true
     [params.imageProcessing.content]
       enabled = true
+
+# 图片压缩配置 - 限制每张图片不超过 1MB
+[imaging]
+  quality = 70
+  resampleFilter = "CatmullRom"
+  anchor = "Center"
 
 # 相关文章配置
 [related]

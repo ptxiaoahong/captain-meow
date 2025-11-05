@@ -6,7 +6,71 @@
         <description>Recent content in Tags on 猫猫船长</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 04 May 2025 06:16:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 12 May 2025 16:11:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>抽象</title>
+        <link>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</link>
+        <pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>情绪</title>
+        <link>https://example.org/tags/%E6%83%85%E7%BB%AA/</link>
+        <pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E6%83%85%E7%BB%AA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>文艺</title>
+        <link>https://example.org/tags/%E6%96%87%E8%89%BA/</link>
+        <pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E6%96%87%E8%89%BA/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>作品</title>
+        <link>https://example.org/tags/%E4%BD%9C%E5%93%81/</link>
+        <pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E4%BD%9C%E5%93%81/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CNU编辑精选</title>
+        <link>https://example.org/tags/cnu%E7%BC%96%E8%BE%91%E7%B2%BE%E9%80%89/</link>
+        <pubDate>Sun, 11 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/cnu%E7%BC%96%E8%BE%91%E7%B2%BE%E9%80%89/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>清新</title>
+        <link>https://example.org/tags/%E6%B8%85%E6%96%B0/</link>
+        <pubDate>Sat, 10 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E6%B8%85%E6%96%B0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>糖水</title>
+        <link>https://example.org/tags/%E7%B3%96%E6%B0%B4/</link>
+        <pubDate>Sat, 10 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E7%B3%96%E6%B0%B4/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>暗黑</title>
+        <link>https://example.org/tags/%E6%9A%97%E9%BB%91/</link>
+        <pubDate>Wed, 07 May 2025 16:11:24 +0800</pubDate>
+        
+        <guid>https://example.org/tags/%E6%9A%97%E9%BB%91/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>心里话</title>
         <link>https://example.org/tags/%E5%BF%83%E9%87%8C%E8%AF%9D/</link>
         <pubDate>Sun, 04 May 2025 06:16:24 +0800</pubDate>
@@ -31,70 +95,6 @@
         <description></description>
         </item>
         <item>
-        <title>文章</title>
-        <link>https://example.org/tags/%E6%96%87%E7%AB%A0/</link>
-        <pubDate>Mon, 31 Mar 2025 09:16:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E6%96%87%E7%AB%A0/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>抽象</title>
-        <link>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</link>
-        <pubDate>Wed, 12 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>情绪</title>
-        <link>https://example.org/tags/%E6%83%85%E7%BB%AA/</link>
-        <pubDate>Wed, 12 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E6%83%85%E7%BB%AA/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>文艺</title>
-        <link>https://example.org/tags/%E6%96%87%E8%89%BA/</link>
-        <pubDate>Wed, 12 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E6%96%87%E8%89%BA/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>作品</title>
-        <link>https://example.org/tags/%E4%BD%9C%E5%93%81/</link>
-        <pubDate>Wed, 12 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E4%BD%9C%E5%93%81/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>CNU编辑精选</title>
-        <link>https://example.org/tags/cnu%E7%BC%96%E8%BE%91%E7%B2%BE%E9%80%89/</link>
-        <pubDate>Tue, 11 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/cnu%E7%BC%96%E8%BE%91%E7%B2%BE%E9%80%89/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>清新</title>
-        <link>https://example.org/tags/%E6%B8%85%E6%96%B0/</link>
-        <pubDate>Mon, 10 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E6%B8%85%E6%96%B0/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>糖水</title>
-        <link>https://example.org/tags/%E7%B3%96%E6%B0%B4/</link>
-        <pubDate>Mon, 10 Mar 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/tags/%E7%B3%96%E6%B0%B4/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>夏天</title>
         <link>https://example.org/tags/%E5%A4%8F%E5%A4%A9/</link>
         <pubDate>Sat, 08 Mar 2025 16:11:24 +0800</pubDate>
@@ -103,11 +103,11 @@
         <description></description>
         </item>
         <item>
-        <title>暗黑</title>
-        <link>https://example.org/tags/%E6%9A%97%E9%BB%91/</link>
-        <pubDate>Fri, 07 Mar 2025 16:11:24 +0800</pubDate>
+        <title>文章</title>
+        <link>https://example.org/tags/%E6%96%87%E7%AB%A0/</link>
+        <pubDate>Fri, 07 Mar 2025 09:16:24 +0800</pubDate>
         
-        <guid>https://example.org/tags/%E6%9A%97%E9%BB%91/</guid>
+        <guid>https://example.org/tags/%E6%96%87%E7%AB%A0/</guid>
         <description></description>
         </item>
         <item>
