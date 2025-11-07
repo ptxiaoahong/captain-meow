@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/posts/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-2025%E5%B9%B411%E6%9C%887-8%E6%97%A5/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/qa-pipeline-%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2025-11-07T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/qa-pipeline-%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%BA%A6%E6%83%85%E5%86%B5/</loc>
+    <lastmod>2025-11-08T00:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://example.org/categories/</loc>
-    <lastmod>2025-05-12T16:11:24+08:00</lastmod>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-11-08T14:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/der-doppelgaenger/</loc>
     <lastmod>2025-05-12T16:11:24+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2025-05-12T16:11:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/</loc>
-    <lastmod>2025-05-12T16:11:24+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</loc>
-    <lastmod>2025-05-12T16:11:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/</loc>
     <lastmod>2025-05-12T16:11:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/%E6%83%85%E7%BB%AA/</loc>

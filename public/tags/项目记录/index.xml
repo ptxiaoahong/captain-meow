@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>项目记录 on 猫猫船长</title>
+        <link>https://example.org/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</link>
+        <description>Recent content in 项目记录 on 猫猫船长</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate></lastBuildDate><atom:link href="https://example.org/tags/%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

@@ -554,4 +554,73 @@
     }
 }
 
+/* 项目记录卡片样式 */
+.project-record-card {
+    margin-bottom: var(--card-margin);
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.project-record-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.project-record-content {
+    padding: var(--card-padding);
+    text-align: center;
+}
+
+.project-record-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: var(--body-text-color);
+}
+
+.project-record-description {
+    font-size: 1.5rem;
+    color: var(--body-text-color);
+    opacity: 0.8;
+    margin: 0 0 12px 0;
+    line-height: 1.6;
+}
+
+.project-record-count {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    background-color: var(--body-background);
+    border: 1px solid var(--card-border-color);
+}
+
+@media (max-width: 767px) {
+    .project-record-title {
+        font-size: 2rem;
+    }
+    
+    .project-record-description {
+        font-size: 1.4rem;
+    }
+    
+    .project-record-count {
+        font-size: 1.2rem;
+    }
+}
+
 

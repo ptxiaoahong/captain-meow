@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>状态 on 猫猫船长</title>
+        <link>https://example.org/tags/%E7%8A%B6%E6%80%81/</link>
+        <description>Recent content in 状态 on 猫猫船长</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://example.org/tags/%E7%8A%B6%E6%80%81/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>QA Pipeline 项目进度情况</title>
+        <link>https://example.org/posts/qa-pipeline-%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%BA%A6%E6%83%85%E5%86%B5/</link>
+        <pubDate>Sat, 08 Nov 2025 00:00:00 +0900</pubDate>
+        
+        <guid>https://example.org/posts/qa-pipeline-%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%BA%A6%E6%83%85%E5%86%B5/</guid>
+        <description>&lt;h1 id=&#34;qa-pipeline-项目进度情况&#34;&gt;QA Pipeline 项目进度情况
+&lt;/h1&gt;&lt;h2 id=&#34;总体进度&#34;&gt;总体进度
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;项目状态&lt;/strong&gt;: 🟢 &lt;strong&gt;活跃开发中&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完成度&lt;/strong&gt;: 约 &lt;strong&gt;85%&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;核心功能完成情况&#34;&gt;核心功能完成情况
+&lt;/h2&gt;&lt;h3 id=&#34;-已完成-100&#34;&gt;✅ 已完成 (100%)
+&lt;/h3&gt;&lt;h4 id=&#34;1-文档处理流程&#34;&gt;1. 文档处理流程
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ PDF 清理与预处理 (&lt;code&gt;apps/cleaner/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;✅ 语义分块 + Capsule 生成 (&lt;code&gt;apps/chunker/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;✅ 向量索引构建 (&lt;code&gt;apps/index_builder/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;✅ 知识图谱构建 (&lt;code&gt;apps/edge_builder/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;✅ 知识库管理 (&lt;code&gt;apps/library_manager/&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-检索系统&#34;&gt;2. 检索系统
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ 多路检索（Dense + Sparse + TOC + Graph）&lt;/li&gt;
+&lt;li&gt;✅ 动态阈值和动态融合权重&lt;/li&gt;
+&lt;li&gt;✅ 重排与融合&lt;/li&gt;
+&lt;li&gt;✅ 上下文生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-前端界面&#34;&gt;3. 前端界面
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ Streamlit 应用（完整功能）&lt;/li&gt;
+&lt;li&gt;✅ NiceGUI 应用（核心功能）&lt;/li&gt;
+&lt;li&gt;✅ 桌面应用支持（PyQt + Electron）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-高级功能&#34;&gt;4. 高级功能
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ 独立 TOC 召回通道&lt;/li&gt;
+&lt;li&gt;✅ TreeKG 建图策略改进&lt;/li&gt;
+&lt;li&gt;✅ 12 个高级检索优化功能占位框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-进行中-70-90&#34;&gt;🟡 进行中 (70-90%)
+&lt;/h3&gt;&lt;h4 id=&#34;1-nicegui-前端迁移&#34;&gt;1. NiceGUI 前端迁移
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ 核心框架和布局&lt;/li&gt;
+&lt;li&gt;✅ QA 页面（完整功能）&lt;/li&gt;
+&lt;li&gt;✅ 设置页面（完整功能）&lt;/li&gt;
+&lt;li&gt;🟡 其他前台页面（框架已就绪，功能逐步迁移）&lt;/li&gt;
+&lt;li&gt;🟡 后端管理页面（占位）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-高级检索优化&#34;&gt;2. 高级检索优化
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;✅ 占位框架已创建&lt;/li&gt;
+&lt;li&gt;🟡 具体实现进行中
+&lt;ul&gt;
+&lt;li&gt;词项加权稀疏表示&lt;/li&gt;
+&lt;li&gt;多向量检索（ColBERTv2）&lt;/li&gt;
+&lt;li&gt;RRF 融合&lt;/li&gt;
+&lt;li&gt;分数校准（Platt/Isotonic）&lt;/li&gt;
+&lt;li&gt;学习到融合（LambdaMART/LightGBM）&lt;/li&gt;
+&lt;li&gt;GBDT 分数补全&lt;/li&gt;
+&lt;li&gt;查询分解&lt;/li&gt;
+&lt;li&gt;计划检索&lt;/li&gt;
+&lt;li&gt;自查询&lt;/li&gt;
+&lt;li&gt;Graph/TOC 学习化&lt;/li&gt;
+&lt;li&gt;评测器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-待完成-0-30&#34;&gt;🔴 待完成 (0-30%)
+&lt;/h3&gt;&lt;h4 id=&#34;1-测试与优化&#34;&gt;1. 测试与优化
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;🔴 完整功能测试&lt;/li&gt;
+&lt;li&gt;🔴 性能优化&lt;/li&gt;
+&lt;li&gt;🔴 错误处理完善&lt;/li&gt;
+&lt;li&gt;🔴 用户体验优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-文档完善&#34;&gt;2. 文档完善
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;🟡 核心文档已完成&lt;/li&gt;
+&lt;li&gt;🔴 API 文档&lt;/li&gt;
+&lt;li&gt;🔴 教程和示例&lt;/li&gt;
+&lt;li&gt;🔴 视频教程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-部署与分发&#34;&gt;3. 部署与分发
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;🟡 桌面应用打包（Electron）&lt;/li&gt;
+&lt;li&gt;🔴 生产环境部署&lt;/li&gt;
+&lt;li&gt;🔴 Docker 容器化&lt;/li&gt;
+&lt;li&gt;🔴 云服务集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本发布计划&#34;&gt;版本发布计划
+&lt;/h2&gt;&lt;h3 id=&#34;v54-当前版本---nicegui-前端迁移&#34;&gt;v5.4 (当前版本) - NiceGUI 前端迁移
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;: 🟡 开发中&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;已完成&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ NiceGUI 应用框架&lt;/li&gt;
+&lt;li&gt;✅ PyQt 开发包装器&lt;/li&gt;
+&lt;li&gt;✅ Electron 项目配置&lt;/li&gt;
+&lt;li&gt;✅ QA 和设置页面迁移&lt;/li&gt;
+&lt;li&gt;✅ 项目文件整理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;进行中&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🟡 其他页面迁移&lt;/li&gt;
+&lt;li&gt;🟡 响应式更新优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;预计完成&lt;/strong&gt;: 2025-11-15&lt;/p&gt;
+&lt;h3 id=&#34;v53-已发布---独立-toc-召回通道--treekg-改进&#34;&gt;v5.3 (已发布) - 独立 TOC 召回通道 + TreeKG 改进
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;: ✅ 已完成&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 独立 TOC 召回通道（对齐论文 2025.acl-long.907）&lt;/li&gt;
+&lt;li&gt;✅ TreeKG 建图策略改进&lt;/li&gt;
+&lt;li&gt;✅ Bottom-Up Summarization&lt;/li&gt;
+&lt;li&gt;✅ LLM-based TOC 判边&lt;/li&gt;
+&lt;li&gt;✅ Iterative Expansion（6 个操作符）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;v55-计划中---高级检索优化&#34;&gt;v5.5 (计划中) - 高级检索优化
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;: 🔴 计划中&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要功能&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🔴 12 个高级检索优化功能完整实现&lt;/li&gt;
+&lt;li&gt;🔴 性能优化&lt;/li&gt;
+&lt;li&gt;🔴 评测框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;预计开始&lt;/strong&gt;: 2025-11-20&lt;/p&gt;
+&lt;h2 id=&#34;模块完成度详情&#34;&gt;模块完成度详情
+&lt;/h2&gt;&lt;h3 id=&#34;核心模块&#34;&gt;核心模块
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模块&lt;/th&gt;
+          &lt;th&gt;完成度&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;清理器&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整功能&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;分块器&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;v2.14，支持 TOC&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;索引构建器&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;v2.7，支持 TOC 摘要&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;边构建器&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;v3.7，支持 TreeKG 扩展&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;库管理器&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;v2.6，支持 TOC 库&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;检索核心&lt;/td&gt;
+          &lt;td&gt;95%&lt;/td&gt;
+          &lt;td&gt;🟡&lt;/td&gt;
+          &lt;td&gt;核心功能完成，优化进行中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;融合与重排&lt;/td&gt;
+          &lt;td&gt;90%&lt;/td&gt;
+          &lt;td&gt;🟡&lt;/td&gt;
+          &lt;td&gt;核心功能完成，高级功能占位&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;前端模块&#34;&gt;前端模块
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;模块&lt;/th&gt;
+          &lt;th&gt;完成度&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Streamlit UI&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整功能&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;NiceGUI UI&lt;/td&gt;
+          &lt;td&gt;70%&lt;/td&gt;
+          &lt;td&gt;🟡&lt;/td&gt;
+          &lt;td&gt;核心页面完成，其他页面迁移中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;桌面应用&lt;/td&gt;
+          &lt;td&gt;80%&lt;/td&gt;
+          &lt;td&gt;🟡&lt;/td&gt;
+          &lt;td&gt;PyQt 包装器完成，Electron 打包中&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;高级功能&#34;&gt;高级功能
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+          &lt;th&gt;完成度&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;TOC 召回通道&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整实现&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;TreeKG 改进&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整实现&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;动态阈值&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整实现&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;动态融合权重&lt;/td&gt;
+          &lt;td&gt;100%&lt;/td&gt;
+          &lt;td&gt;✅&lt;/td&gt;
+          &lt;td&gt;完整实现&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;高级检索优化&lt;/td&gt;
+          &lt;td&gt;20%&lt;/td&gt;
+          &lt;td&gt;🔴&lt;/td&gt;
+          &lt;td&gt;占位框架完成，实现进行中&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;技术债务&#34;&gt;技术债务
+&lt;/h2&gt;&lt;h3 id=&#34;高优先级&#34;&gt;高优先级
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;🔴 完整测试覆盖&lt;/li&gt;
+&lt;li&gt;🔴 错误处理完善&lt;/li&gt;
+&lt;li&gt;🔴 性能优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;中优先级&#34;&gt;中优先级
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;🟡 文档完善&lt;/li&gt;
+&lt;li&gt;🟡 代码重构&lt;/li&gt;
+&lt;li&gt;🟡 用户体验优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;低优先级&#34;&gt;低优先级
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;🟢 功能扩展&lt;/li&gt;
+&lt;li&gt;🟢 新特性添加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;下一步计划&#34;&gt;下一步计划
+&lt;/h2&gt;&lt;h3 id=&#34;短期-1-2-周&#34;&gt;短期 (1-2 周)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;完成 NiceGUI 前端迁移&lt;/li&gt;
+&lt;li&gt;完善测试覆盖&lt;/li&gt;
+&lt;li&gt;性能优化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;中期-1-个月&#34;&gt;中期 (1 个月)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;高级检索优化功能实现&lt;/li&gt;
+&lt;li&gt;文档完善&lt;/li&gt;
+&lt;li&gt;用户体验优化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;长期-3-个月&#34;&gt;长期 (3 个月)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;生产环境部署&lt;/li&gt;
+&lt;li&gt;Docker 容器化&lt;/li&gt;
+&lt;li&gt;云服务集成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;贡献者&#34;&gt;贡献者
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;QA Pipeline Team&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;更新日志&#34;&gt;更新日志
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2025-11-08&lt;/strong&gt;: 项目文件整理完成，NiceGUI 迁移进行中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2025-11-07&lt;/strong&gt;: v5.3 发布，独立 TOC 召回通道完成&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2025-10-XX&lt;/strong&gt;: v5.2 发布，高级检索优化占位框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;最后更新&lt;/strong&gt;: 2025-11-08&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
