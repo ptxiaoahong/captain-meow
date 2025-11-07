@@ -54,20 +54,20 @@ timeout = 300
   [[menu.social]]
     identifier = "xiaohongshu"
     name = "小红书"
-    url = "https://www.xiaohongshu.com/user/profile/猫猫船长"
-    params = { icon = "link" }
+    url = "/image.png"
+    params = { icon = "brand-xiaohongshu", qrcode = true }
 
   [[menu.social]]
     identifier = "wechat"
     name = "微信"
-    url = "#"
-    params = { icon = "link" }
+    url = "/wechat-qrcode.png"
+    params = { icon = "brand-wechat", qrcode = true }
 
   [[menu.social]]
     identifier = "email"
     name = "Email"
     url = "mailto:hongshize@live.cn"
-    params = { icon = "link" }
+    params = { icon = "mail" }
 
 # 服务配置
 [services]

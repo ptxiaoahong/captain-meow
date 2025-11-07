@@ -1,0 +1,141 @@
+<!-- 二维码预览模态框 -->
+<div id="qrcode-modal" class="qrcode-modal" style="display: none;">
+    <div class="qrcode-modal-overlay"></div>
+    <div class="qrcode-modal-content">
+        <button class="qrcode-modal-close" aria-label="关闭">&times;</button>
+        <img class="qrcode-modal-image" src="" alt="二维码">
+    </div>
+</div>
+
+<style>
+.qrcode-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrcode-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+.qrcode-modal-content {
+    position: relative;
+    z-index: 10001;
+    background-color: var(--body-background);
+    border: 0.5px solid var(--body-text-color);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qrcode-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: var(--body-text-color);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    z-index: 10002;
+}
+
+.qrcode-modal-close:hover {
+    background-color: var(--body-background);
+    color: var(--accent-color);
+}
+
+.qrcode-modal-image {
+    width: 400px;
+    height: 400px;
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .qrcode-modal-content {
+        padding: 15px;
+        max-width: 95%;
+    }
+    
+    .qrcode-modal-image {
+        width: 300px;
+        height: 300px;
+        max-height: 70vh;
+    }
+}
+</style>
+
+<script>
+(function() {
+    'use strict';
+    
+    const modal = document.getElementById('qrcode-modal');
+    const modalImage = modal.querySelector('.qrcode-modal-image');
+    const modalClose = modal.querySelector('.qrcode-modal-close');
+    const modalOverlay = modal.querySelector('.qrcode-modal-overlay');
+    
+    function openQrcodeModal(imageSrc) {
+        modalImage.src = imageSrc;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // 防止背景滚动
+    }
+    
+    function closeQrcodeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // 恢复滚动
+    }
+    
+    // 绑定关闭事件
+    modalClose.addEventListener('click', closeQrcodeModal);
+    modalOverlay.addEventListener('click', closeQrcodeModal);
+    
+    // ESC 键关闭
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeQrcodeModal();
+        }
+    });
+    
+    // 拦截二维码链接的点击
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[data-qrcode="true"]');
+        if (link) {
+            e.preventDefault();
+            e.stopPropagation();
+            const imageSrc = link.getAttribute('href');
+            openQrcodeModal(imageSrc);
+            return false;
+        }
+    }, true); // 使用 capture 阶段确保优先执行
+})();
+</script>
+

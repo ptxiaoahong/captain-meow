@@ -483,6 +483,19 @@
     }
 }
 
+/* 社交媒体图标样式 - 与标签颜色一致 */
+.menu-social {
+    svg {
+        stroke: var(--body-text-color) !important;
+        color: var(--body-text-color) !important;
+        
+        text {
+            fill: var(--body-text-color) !important;
+            font-family: var(--base-font-family) !important;
+        }
+    }
+}
+
 /* 跳转评论区按钮 */
 .scroll-to-comments {
     position: fixed;
