@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CNU最热 on 猫猫船长</title>
-        <link>https://example.org/tags/cnu%E6%9C%80%E7%83%AD/</link>
+        <link>http://localhost:1313/tags/cnu%E6%9C%80%E7%83%AD/</link>
         <description>Recent content in CNU最热 on 猫猫船长</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 06 Mar 2025 06:20:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/cnu%E6%9C%80%E7%83%AD/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 06 Mar 2025 06:20:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/cnu%E6%9C%80%E7%83%AD/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>我又拧不开瓶盖了</title>
-        <link>https://example.org/posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/</link>
+        <link>http://localhost:1313/posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/</link>
         <pubDate>Thu, 06 Mar 2025 06:20:24 +0800</pubDate>
         
-        <guid>https://example.org/posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/</guid>
-        <description>&lt;img src="https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_54d6cd4234ed2ba1.jpg" alt="Featured image of post 我又拧不开瓶盖了" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_54d6cd4234ed2ba1.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_eedb82b9ae1ca094.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_54d6cd4234ed2ba1.jpg 1000w&#34;
+        <guid>http://localhost:1313/posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/</guid>
+        <description>&lt;img src="http://localhost:1313/images/7/%E6%96%87%E4%BB%B616.jpg" alt="Featured image of post 我又拧不开瓶盖了" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B616.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -28,10 +28,10 @@
 &gt;
 
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B61_hu_d025a85a229d3d34.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B61_hu_10bed7762ba0fb31.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B61_hu_d025a85a229d3d34.jpg 1000w&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B61.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -44,10 +44,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B62_hu_a2248ac5478389f8.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B62_hu_a2091455a49f8d9f.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B62_hu_a2248ac5478389f8.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B62.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2161&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -60,10 +60,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B63_hu_8bba9b940b159b3e.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B63_hu_e7016368f0bf52f7.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B63_hu_8bba9b940b159b3e.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B63.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -76,10 +76,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B64_hu_227d626368fa2083.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B64_hu_ff9116ba373efc08.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B64_hu_227d626368fa2083.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B64.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -92,10 +92,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B65_hu_32e411dfcff45261.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B65_hu_1cf548083b11a80a.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B65_hu_32e411dfcff45261.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B65.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -108,10 +108,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B66_hu_d113f277ff69130a.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B66_hu_537a73553fc00327.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B66_hu_d113f277ff69130a.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B66.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -124,10 +124,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B67_hu_1fbdf082e33b0294.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B67_hu_752a2b6c1b2019a9.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B67_hu_1fbdf082e33b0294.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B67.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -140,10 +140,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B68_hu_3067a3a5f734720e.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B68_hu_567b57222e5db873.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B68_hu_3067a3a5f734720e.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B68.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -156,10 +156,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B69_hu_7a8e7305d12f5c0.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B69_hu_6624b8c75d09398c.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B69_hu_7a8e7305d12f5c0.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B69.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -172,10 +172,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B610_hu_e03748aeada0d891.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B610_hu_b683a291f5e8a599.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B610_hu_e03748aeada0d891.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B610.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -188,10 +188,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B611_hu_36b2f354fa66a78e.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B611_hu_89617682ca46f086.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B611_hu_36b2f354fa66a78e.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B611.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2161&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -204,10 +204,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B612_hu_725a59fddd629f6d.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;562&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B612_hu_a4c4920086a5d6d2.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B612_hu_725a59fddd629f6d.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B612.jpg&#34;
+	width=&#34;2850&#34;
+	height=&#34;1603&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -220,10 +220,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B613_hu_6de5fecaec01aba3.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B613_hu_2bd059f44acb8dce.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B613_hu_6de5fecaec01aba3.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B613.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -236,10 +236,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B614_hu_b0967c5cf3317fd8.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B614_hu_d2a06102890069f9.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B614_hu_b0967c5cf3317fd8.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B614.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -252,10 +252,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B615_hu_5259acfa3c8ea09.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;562&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B615_hu_2486f14676bc5807.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B615_hu_5259acfa3c8ea09.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B615.jpg&#34;
+	width=&#34;3117&#34;
+	height=&#34;1753&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -268,10 +268,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_54d6cd4234ed2ba1.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_eedb82b9ae1ca094.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B616_hu_54d6cd4234ed2ba1.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B616.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -284,10 +284,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B617_hu_8bb2a9328e6c21cd.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B617_hu_f8a703871120514e.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B617_hu_8bb2a9328e6c21cd.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B617.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2161&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -300,10 +300,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B618_hu_b6447389a2fad21b.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;562&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B618_hu_27cbb93fe999cf11.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B618_hu_b6447389a2fad21b.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B618.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2159&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -316,10 +316,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B619_hu_9db139e0662552c8.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B619_hu_216e0507ff659c05.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B619_hu_9db139e0662552c8.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B619.jpg&#34;
+	width=&#34;3044&#34;
+	height=&#34;1713&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -332,10 +332,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B620_hu_f4a12165c8fffe03.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B620_hu_62d95d9a6b85f7e6.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B620_hu_f4a12165c8fffe03.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B620.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -348,10 +348,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B621_hu_17c3d2781274f37.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B621_hu_f3140c4f6fb8b50.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B621_hu_17c3d2781274f37.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B621.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -364,10 +364,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B622_hu_3c96627df04f2498.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B622_hu_e99ee84390450098.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B622_hu_3c96627df04f2498.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B622.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -380,10 +380,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B623_hu_56ea208957bad1c9.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;562&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B623_hu_9cc7c7a9c414c8bb.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B623_hu_56ea208957bad1c9.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B623.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2159&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -396,10 +396,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B624_hu_83107f8a07363288.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B624_hu_3d364abe7a0e58c3.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B624_hu_83107f8a07363288.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B624.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	
@@ -412,10 +412,10 @@
 &gt;
 
 
-&lt;img src=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B625_hu_3d33911262543e74.jpg&#34;
-	width=&#34;1000&#34;
-	height=&#34;563&#34;
-	srcset=&#34;https://example.org/images/7/%E6%96%87%E4%BB%B625_hu_1b8a66a23875f9ba.jpg 600w, https://example.org/images/7/%E6%96%87%E4%BB%B625_hu_3d33911262543e74.jpg 1000w&#34;
+&lt;img src=&#34;http://localhost:1313/images/7/%E6%96%87%E4%BB%B625.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
 	loading=&#34;lazy&#34;
 	
 	

@@ -149,9 +149,17 @@
         const items = [];
         const elements = [];
         
-        // 获取图片真实尺寸的辅助函数（同步版本）
+        // 获取图片真实尺寸的辅助函数（使用原始尺寸）
         function getImageSize(img) {
-            // 优先从 HTML 属性获取（这些是 Hugo 渲染时设置的原始尺寸）
+            // 优先使用图片的真实尺寸（naturalWidth/naturalHeight），这是原始图片的尺寸
+            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                return {
+                    width: img.naturalWidth,
+                    height: img.naturalHeight
+                };
+            }
+            
+            // 如果图片还没加载，从 HTML 属性获取（现在这些是原始尺寸了）
             const widthAttr = parseInt(img.getAttribute('width'));
             const heightAttr = parseInt(img.getAttribute('height'));
             
@@ -162,36 +170,15 @@
                 };
             }
             
-            // 如果图片已加载，使用 naturalWidth/naturalHeight
-            if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
-                return {
-                    width: img.naturalWidth,
-                    height: img.naturalHeight
-                };
-            }
-            
-            // 如果都获取不到，从 srcset 或使用默认值
-            // 尝试从 srcset 解析尺寸提示
-            const srcset = img.getAttribute('srcset');
-            if (srcset) {
-                // 简单解析，假设最大尺寸在最后
-                const matches = srcset.match(/(\d+)w/);
-                if (matches) {
-                    const maxWidth = parseInt(matches[1]);
-                    // 假设宽高比，使用默认比例
-                    return {
-                        width: maxWidth,
-                        height: Math.round(maxWidth * 0.75) // 假设 4:3 比例
-                    };
-                }
-            }
-            
-            // 最后使用默认值
+            // 如果都获取不到，使用足够大的默认值，确保全屏显示
+            const screenWidth = window.innerWidth || 1920;
+            const screenHeight = window.innerHeight || 1080;
             return {
-                width: widthAttr || 1200,
-                height: heightAttr || 800
+                width: Math.max(screenWidth * 2, 1920),
+                height: Math.max(screenHeight * 2, 1080)
             };
         }
+        
         
         // 处理 figure 元素
         figures.forEach((figure) => {
@@ -200,7 +187,13 @@
             
             if (!img) return;
             
-            const imageSrc = link ? link.getAttribute('href') : img.src;
+            // 使用原始图片（已禁用压缩，直接使用原始图片）
+            let imageSrc = link ? link.getAttribute('href') : img.src;
+            // 如果链接不存在或为空，使用图片的原始 src
+            if (!imageSrc || imageSrc === '#') {
+                imageSrc = img.src;
+            }
+            
             const figcaption = figure.querySelector('figcaption');
             const title = figcaption ? figcaption.textContent.trim() : '';
             
@@ -226,11 +219,14 @@
             
             const alt = img.getAttribute('alt') || '';
             
+            // 使用原始图片（已禁用压缩）
+            const imageSrc = img.src;
+            
             // 获取图片尺寸
             const size = getImageSize(img);
             
             items.push({
-                src: img.src,
+                src: imageSrc,
                 w: size.width,
                 h: size.height,
                 title: alt,
@@ -299,8 +295,8 @@
                 escKey: true,
                 arrowKeys: true,
                 history: false,
-                allowUpscale: false, // 不允许放大超出原始尺寸
-                maxSpreadZoom: 3, // 最大缩放倍数
+                allowUpscale: true, // 允许放大，确保全屏显示
+                maxSpreadZoom: 5, // 增加最大缩放倍数
                 getThumbBoundsFn: function(idx) {
                     const item = items[idx];
                     if (!item || !item.el) return null;
