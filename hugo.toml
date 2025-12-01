@@ -51,12 +51,7 @@ timeout = 300
     weight = 5
 
   # 社交链接
-  [[menu.social]]
-    identifier = "xiaohongshu"
-    name = "小红书"
-    url = "/image.png"
-    params = { icon = "brand-xiaohongshu", qrcode = true }
-
+  
   [[menu.social]]
     identifier = "wechat"
     name = "微信"
