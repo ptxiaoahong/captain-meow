@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>职业生涯 on 猫猫船长</title>
-        <link>http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/</link>
+        <link>https://example.org/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/</link>
         <description>Recent content in 职业生涯 on 猫猫船长</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 04 May 2025 06:16:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 04 May 2025 06:16:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>救赎、逃避、现实、理想：为什么我又选择了离开</title>
-        <link>http://localhost:1313/posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/</link>
+        <link>https://example.org/posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/</link>
         <pubDate>Sun, 04 May 2025 06:16:24 +0800</pubDate>
         
-        <guid>http://localhost:1313/posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/</guid>
-        <description>&lt;img src="http://localhost:1313/images/WechatIMG76.2.jpg" alt="Featured image of post 救赎、逃避、现实、理想：为什么我又选择了离开" /&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/WechatIMG76.2.jpg&#34;
+        <guid>https://example.org/posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/</guid>
+        <description>&lt;img src="https://example.org/images/WechatIMG76.2.jpg" alt="Featured image of post 救赎、逃避、现实、理想：为什么我又选择了离开" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/images/WechatIMG76.2.jpg&#34;
 	width=&#34;2275&#34;
 	height=&#34;969&#34;
 	
