@@ -342,7 +342,31 @@
             img {
                 width: 100% !important;
                 height: 100% !important; /* 填充容器 */
+                max-height: 100% !important; /* 确保不超过容器 */
                 object-fit: cover !important; /* 裁剪填充，保持比例 */
+            }
+        }
+        
+        /* 确保所有文章的图片容器高度一致 */
+        &:nth-child(1) .article-image,
+        &:nth-child(2) .article-image {
+            height: 300px !important;
+            
+            @media (min-width: 768px) {
+                height: 350px !important;
+            }
+            
+            @media (min-width: 1280px) {
+                height: 400px !important;
+            }
+            
+            @media (max-width: 767px) {
+                height: 300px !important;
+            }
+            
+            img {
+                height: 100% !important;
+                max-height: 100% !important;
             }
         }
         
