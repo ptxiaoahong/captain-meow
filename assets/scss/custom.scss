@@ -323,15 +323,29 @@
             width: 40% !important;
             margin: 0 !important;
             padding: 0 !important;
+            overflow: hidden !important;
+            display: flex !important;
+            align-items: center !important;
+            max-height: 300px !important; /* 限制容器最大高度 */
+            
+            @media (min-width: 768px) {
+                max-height: 350px !important; /* 中等屏幕限制高度 */
+            }
+            
+            @media (min-width: 1280px) {
+                max-height: 400px !important; /* 大屏幕限制高度 */
+            }
             
             @media (max-width: 767px) {
                 width: 100% !important;
+                max-height: 300px !important; /* 移动端限制高度 */
             }
             
             img {
                 width: 100% !important;
                 height: 100% !important;
                 min-height: 170px !important;
+                max-height: 100% !important; /* 不超过容器高度 */
                 object-fit: cover !important;
                 
                 @media (min-width: 768px) {
