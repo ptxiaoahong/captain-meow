@@ -343,11 +343,12 @@
                 width: 100% !important;
                 height: 100% !important; /* 填充容器 */
                 max-height: 100% !important; /* 确保不超过容器 */
+                min-height: 0 !important; /* 移除最小高度限制 */
                 object-fit: cover !important; /* 裁剪填充，保持比例 */
             }
         }
         
-        /* 确保所有文章的图片容器高度一致 */
+        /* 确保所有文章的图片容器高度一致，特别是前两篇 */
         &:nth-child(1) .article-image,
         &:nth-child(2) .article-image {
             height: 300px !important;
@@ -367,6 +368,8 @@
             img {
                 height: 100% !important;
                 max-height: 100% !important;
+                min-height: 0 !important;
+                object-fit: cover !important;
             }
         }
         
