@@ -324,19 +324,19 @@
             margin: 0 !important;
             padding: 0 !important;
             overflow: hidden !important;
-            height: 300px !important; /* 固定容器高度 */
+            height: 200px !important; /* 固定容器高度 */
             
             @media (min-width: 768px) {
-                height: 350px !important; /* 中等屏幕固定高度 */
+                height: 220px !important; /* 中等屏幕固定高度 */
             }
             
             @media (min-width: 1280px) {
-                height: 400px !important; /* 大屏幕固定高度 */
+                height: 250px !important; /* 大屏幕固定高度 */
             }
             
             @media (max-width: 767px) {
                 width: 100% !important;
-                height: 300px !important; /* 移动端固定高度 */
+                height: 200px !important; /* 移动端固定高度 */
             }
             
             img {
@@ -351,18 +351,18 @@
         /* 确保所有文章的图片容器高度一致，特别是前两篇 */
         &:nth-child(1) .article-image,
         &:nth-child(2) .article-image {
-            height: 300px !important;
+            height: 200px !important;
             
             @media (min-width: 768px) {
-                height: 350px !important;
+                height: 220px !important;
             }
             
             @media (min-width: 1280px) {
-                height: 400px !important;
+                height: 250px !important;
             }
             
             @media (max-width: 767px) {
-                height: 300px !important;
+                height: 200px !important;
             }
             
             img {
