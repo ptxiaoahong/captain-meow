@@ -1,338 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>抽象 on 猫猫船长</title>
-        <link>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</link>
-        <description>Recent content in 抽象 on 猫猫船长</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-CN</language>
-        <lastBuildDate>Mon, 12 May 2025 16:11:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E6%8A%BD%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Der Doppelgaenger</title>
-        <link>https://example.org/posts/der-doppelgaenger/</link>
-        <pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate>
-        
-        <guid>https://example.org/posts/der-doppelgaenger/</guid>
-        <description>&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-2.jpg" alt="Featured image of post Der Doppelgaenger" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-2.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-1.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-3.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-4.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-5.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-6.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-7.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-8.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-9.jpg&#34;
-	width=&#34;2261&#34;
-	height=&#34;1272&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-10.jpg&#34;
-	width=&#34;3639&#34;
-	height=&#34;2047&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-11.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-12.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-13.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-14.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-15.jpg&#34;
-	width=&#34;3790&#34;
-	height=&#34;2132&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-16.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-17.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-18.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-19.jpg&#34;
-	width=&#34;3175&#34;
-	height=&#34;1786&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-
-&lt;img src=&#34;https://example.org/images/14/%E6%96%87%E4%BB%B6-20.jpg&#34;
-	width=&#34;3840&#34;
-	height=&#34;2160&#34;
-	
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34;
-		
-			data-flex-grow=&#34;177&#34;
-			data-flex-basis=&#34;426px&#34;
-		
-	
-&gt;
-
-&lt;/p&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>抽象 on 猫猫船长</title><link>https://example.org/tags/%E6%8A%BD%E8%B1%A1/</link><description>Recent content in 抽象 on 猫猫船长</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 12 May 2025 16:11:24 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E6%8A%BD%E8%B1%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>Der Doppelgaenger</title><link>https://example.org/posts/der-doppelgaenger/</link><pubDate>Mon, 12 May 2025 16:11:24 +0800</pubDate><guid>https://example.org/posts/der-doppelgaenger/</guid><description>&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-2.jpg" alt="Featured image of post Der Doppelgaenger" />&lt;p>&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-2.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;/p>
+&lt;p>&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-1.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-3.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-4.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-5.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-6.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-7.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-8.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-9.jpg"
+width="2261"
+height="1272"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-10.jpg"
+width="3639"
+height="2047"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-11.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-12.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-13.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-14.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-15.jpg"
+width="3790"
+height="2132"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-16.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-17.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-18.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-19.jpg"
+width="3175"
+height="1786"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;img src="https://example.org/images/14/%E6%96%87%E4%BB%B6-20.jpg"
+width="3840"
+height="2160"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;/p></description></item></channel></rss>

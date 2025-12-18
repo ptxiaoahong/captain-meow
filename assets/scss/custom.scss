@@ -652,4 +652,19 @@
     }
 }
 
+/* PhotoSwipe 图片保持比例，不拉伸 */
+.pswp__img {
+    object-fit: contain !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.pswp__zoom-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
 

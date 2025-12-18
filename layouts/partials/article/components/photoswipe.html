@@ -297,6 +297,7 @@
                 history: false,
                 allowUpscale: true, // 允许放大，确保全屏显示
                 maxSpreadZoom: 5, // 增加最大缩放倍数
+                fit: 'contain', // 保持图片比例，不拉伸
                 getThumbBoundsFn: function(idx) {
                     const item = items[idx];
                     if (!item || !item.el) return null;
