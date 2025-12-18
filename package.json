@@ -7,7 +7,11 @@
     "prebuild": "npm run install-hugo || true",
     "build": "hugo --gc --minify",
     "install-hugo": "which hugo || (curl -fsSL https://github.com/gohugoio/hugo/releases/download/v0.144.2/hugo_extended_0.144.2_linux-amd64.tar.gz -o /tmp/hugo.tar.gz && tar -xzf /tmp/hugo.tar.gz -C /tmp && mv /tmp/hugo /usr/local/bin/hugo && chmod +x /usr/local/bin/hugo)",
-    "cms:proxy": "npx decap-server"
+    "cms:proxy": "npx decap-server",
+    "compress-images": "node scripts/compress-images.js",
+    "upload-images": "node scripts/upload-to-cloudbase.js",
+    "import-data": "node scripts/import-to-cloudbase.js",
+    "deploy-miniprogram": "npm run compress-images && npm run upload-images && node scripts/convert-to-miniprogram.js && node scripts/prepare-cloudbase-data.js"
   },
   "keywords": [
     "hugo",
@@ -15,5 +19,12 @@
     "photography"
   ],
   "author": "猫猫船长",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^10.3.10",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "@cloudbase/cli": "^1.5.0"
+  }
 }
