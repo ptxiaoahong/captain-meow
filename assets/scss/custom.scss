@@ -249,21 +249,10 @@
     .gallery + p {
         margin-top: 0.5em !important;
     }
-    
-    /* 包含图片的段落（通过 no-text 类识别） */
-    p.no-text {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
 
     /* 彻底隐藏文章中多余的空行段落 */
     p:empty {
         display: none !important;
-    }
-
-    /* 针对旧文章的兜底：如果相邻段落都包含图片，压缩它们之间的间距 */
-    p:has(img) + p:has(img) {
-        margin-top: 0 !important;
     }
 
     p.no-text img.gallery-image {
@@ -310,38 +299,57 @@
             }
         }
     }
-
 }
-
-@media (max-width: 767px) {
+/* ============================================================
+   手机端图片间距深度优化 (终极修复方案)
+   ============================================================ */
+@media (max-width: 1024px) {
     .article-content {
+        /* 1. 基础段落间距压缩 */
         p {
             margin: 0.5em 0 !important;
         }
-        
-        figure {
-            margin-top: 0.3em !important;
-            margin-bottom: 0.3em !important;
-        }
-        
+
+        /* 2. 核心：包含图片的容器间距设为极小 */
+        p:has(img), 
+        p:has(figure), 
+        p.no-text, 
+        figure.gallery-image,
         .gallery {
-            gap: 0.3em !important;
-            margin-top: 0.3em !important;
-            margin-bottom: 0.3em !important;
+            margin-top: 0 !important;
+            margin-bottom: 4px !important; /* 统一设置 4px 的下边距 */
+            padding: 0 !important;
         }
-        
-        /* 减小相邻元素之间的顶部间距 */
-        p + figure, 
-        figure + p, 
+
+        /* 3. 画廊内部图片间距 */
+        .gallery {
+            gap: 4px !important;
+            
+            figure {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+        /* 4. 消除相邻元素之间的顶部间距叠加 (彻底解决间隔大问题) */
+        p + p, 
         p + .gallery, 
         .gallery + p, 
-        p.no-text + p, 
-        p + p.no-text,
-        figure + figure {
-            margin-top: 0.2em !important;
+        figure + figure, 
+        .gallery + .gallery,
+        p + figure,
+        figure + p {
+            margin-top: 0 !important;
+        }
+
+        /* 5. 确保图片块状显示，消除行内间隙 */
+        img.gallery-image {
+            display: block !important;
+            margin: 0 !important;
         }
     }
 }
+
 
 /* 主页卡片样式调整 - 左图右字布局 */
 .article-list {
