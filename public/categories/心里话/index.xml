@@ -12,12 +12,14 @@
         <pubDate>Mon, 01 Dec 2025 13:00:00 +0800</pubDate>
         
         <guid>https://example.org/posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A5/</guid>
-        <description>&lt;img src="https://example.org/images/P1280436.JPG" alt="Featured image of post 近况汇报" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/images/P1280436.JPG&#34;
+        <description>&lt;img src="https://example.org/images/P1280436.JPG" alt="Featured image of post 近况汇报" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/compressed/medium/P1280436.JPG&#34;
 	width=&#34;4592&#34;
 	height=&#34;3448&#34;
 	
 	loading=&#34;lazy&#34;
+	decoding=&#34;async&#34;
 	
+	data-pswp-src=&#34;https://example.org/images/P1280436.JPG&#34;
 	
 		class=&#34;gallery-image&#34;
 		
@@ -26,7 +28,6 @@
 		
 	
 &gt;
-
 &lt;/p&gt;
 &lt;p&gt;最近这个月一直在憋，憋一个奠定之后所有想做的事情基础的工具。&lt;/p&gt;
 &lt;p&gt;这个工具很久很久以前就在就在构思了。甚至大模型还没有进入大众视野的时候，就已经在有酝酿。chatgpt模型刚出先在我的视野里的时候，我就觉得可能这个玩意儿，能够实现我的某些想法。只是刚开始的ai，与其说是人工智能，不如说是人工智障。但谁也没预料到ai的迭代会那么得快，几个月就是一副新模样。还是在去年冬天，偶然发现gpt可以上传文档了，就发了一本教材给它看，结果还真能回答得有模有样。这是第一次，感觉自己好像能够利用ai把想法落地。那时候刚好deepseek也出名了，而且有人开始说在本地创建知识库。这直接给了我一个可落地的教材啊。当即就开始准备本地部署这个知识库。做了才发现其实完全跟自己想的不一样。大语言模型并不能准确地定位文档里的信息。而且就算回答得好像很正确，实际上底层逻辑仍然是根据训练语料，去&amp;quot;猜&amp;quot;答案，而且换个模型回答就会两个样子。成本也巨高，直接把文档发给deepseek作为上下文进行问答，一个问题就需要耗费2毛人民币的token，以这种回答质量来算，完全是没有性价比的。&lt;/p&gt;
@@ -47,12 +48,14 @@
         <pubDate>Sun, 04 May 2025 06:16:24 +0800</pubDate>
         
         <guid>https://example.org/posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/</guid>
-        <description>&lt;img src="https://example.org/images/WechatIMG76.2.jpg" alt="Featured image of post 救赎、逃避、现实、理想：为什么我又选择了离开" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/images/WechatIMG76.2.jpg&#34;
+        <description>&lt;img src="https://example.org/images/WechatIMG76.2.jpg" alt="Featured image of post 救赎、逃避、现实、理想：为什么我又选择了离开" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.org/compressed/medium/WechatIMG76.2.jpg&#34;
 	width=&#34;2275&#34;
 	height=&#34;969&#34;
 	
 	loading=&#34;lazy&#34;
+	decoding=&#34;async&#34;
 	
+	data-pswp-src=&#34;https://example.org/images/WechatIMG76.2.jpg&#34;
 	
 		class=&#34;gallery-image&#34;
 		
@@ -61,7 +64,6 @@
 		
 	
 &gt;
-
 &lt;/p&gt;
 &lt;p&gt;每个人都有特别的经历，每个人也因为自己的特质把这些经历赋予不同的意义。人的表现不仅取决于自身，也受环境深深的影响。有时候是精神环境，即使在同一个地点，每个人的精神环境也可能极不相同。有时候，即使在不同的地点，精神环境也可能是极其相近的。当然最好是到新的地点体验新的精神环境，不知道新的环境会激发自己的哪一面呢？你是一个怎么样的人，也要放在特定的环境下去将。人本身也可以部分决定自己的环境，腿长在人身上。&lt;/p&gt;
 &lt;p&gt;跟其他的经历一样，在去九院前，我也不知道在九院的日子会对自己产生什么影响。我甚至有些不太满意，因为九院的实习范围有点窄，而且我作为班级综测倒数第二名，几乎没有什么选择权。人很容易根据不完备的信息进行评价，不是亲身经历根本不会懂得，跟自己道听途说的、臆想的根本是两回事。&lt;/p&gt;

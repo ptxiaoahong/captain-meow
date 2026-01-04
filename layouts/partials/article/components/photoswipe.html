@@ -71,6 +71,31 @@
 <script>
 (function() {
     'use strict';
+
+    function tuneImageLoading() {
+        const articleContent = document.querySelector('.article-content');
+        if (!articleContent) return;
+
+        const images = articleContent.querySelectorAll('img.gallery-image');
+        if (!images.length) return;
+
+        const first = images[0];
+        first.setAttribute('loading', 'eager');
+        first.setAttribute('fetchpriority', 'high');
+        first.setAttribute('decoding', 'async');
+
+        for (let i = 1; i < images.length; i++) {
+            images[i].setAttribute('loading', 'lazy');
+            images[i].setAttribute('fetchpriority', 'low');
+            images[i].setAttribute('decoding', 'async');
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tuneImageLoading, { once: true });
+    } else {
+        tuneImageLoading();
+    }
     
     const startTime = Date.now();
     
@@ -189,6 +214,10 @@
             
             // 使用原始图片（已禁用压缩，直接使用原始图片）
             let imageSrc = link ? link.getAttribute('href') : img.src;
+            const pswpSrc = img.getAttribute('data-pswp-src');
+            if (pswpSrc) {
+                imageSrc = pswpSrc;
+            }
             // 如果链接不存在或为空，使用图片的原始 src
             if (!imageSrc || imageSrc === '#') {
                 imageSrc = img.src;
@@ -220,7 +249,11 @@
             const alt = img.getAttribute('alt') || '';
             
             // 使用原始图片（已禁用压缩）
-            const imageSrc = img.src;
+            let imageSrc = img.src;
+            const pswpSrc = img.getAttribute('data-pswp-src');
+            if (pswpSrc) {
+                imageSrc = pswpSrc;
+            }
             
             // 获取图片尺寸
             const size = getImageSize(img);
@@ -344,4 +377,3 @@
     });
 })();
 </script>
-

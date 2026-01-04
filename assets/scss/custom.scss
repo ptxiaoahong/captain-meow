@@ -311,27 +311,29 @@
     body.article-page .article-content {
         /* 1. 基础段落间距压缩 - 进一步减小 */
         p {
-            margin: 0.3em 0 !important;
+            margin: 0.6em 0 !important;
         }
 
-        /* 2. 核心：包含图片的容器间距设为极小 */
+        /* 2. 核心：包含图片的容器间距保留轻度呼吸感 */
         p.no-text, 
         figure,
         figure.gallery-image,
-        .gallery,
-        .gallery-image {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important; /* 进一步压缩到 0 */
+        .gallery {
+            margin-top: 0.5em !important;
+            margin-bottom: 0.5em !important;
             padding: 0 !important;
-            gap: 0 !important; /* 消除 gallery 内部间距 */
             flex-basis: auto !important; /* 核心：防止 JS 内联样式干扰 */
             flex-grow: 0 !important;
+        }
+
+        .gallery {
+            gap: 6px !important; /* 轻度保留图组节奏 */
         }
 
         /* 特别针对 gallery 内部的 figure 消除间距 */
         .gallery figure {
             margin-top: 0 !important;
-            margin-bottom: 2px !important; /* 给一张图留极小的空隙 */
+            margin-bottom: 6px !important; /* 轻度分隔 */
             flex-basis: auto !important; /* 核心：覆盖 JS 设置的内联 flex-basis，防止高度撑开 */
             flex-grow: 0 !important;    /* 核心：覆盖 JS 设置的内联 flex-grow */
             width: 100% !important;
@@ -342,27 +344,14 @@
             display: none !important;
         }
 
-        /* 3. 特殊处理：如果 p 标签内直接包含 gallery-image，则认为它是图片容器 */
-        p:has(img.gallery-image) {
-            margin-top: 0 !important;
-            margin-bottom: 4px !important;
-        }
-
-        /* 4. 消除相邻元素之间的顶部间距叠加 (终极兜底) */
-        /* 只要相邻两个元素中包含图片相关的，间距就设为 4px */
-        p + p, 
+        /* 4. 消除相邻元素之间的顶部间距叠加（轻度兜底） */
         p + .gallery, 
         .gallery + p, 
         figure + figure, 
         .gallery + .gallery,
         p + figure,
-        figure + p,
-        * + p.no-text,
-        p.no-text + *,
-        * + figure,
-        figure + *,
-        p:has(img) + p:has(img) {
-            margin-top: 0 !important;
+        figure + p {
+            margin-top: 0.4em !important;
         }
 
         /* 5. 确保图片块状显示且有最小高度占位，防止加载时布局跳变 */
@@ -374,7 +363,14 @@
             width: 100% !important;
             height: auto !important;
             background-color: rgba(0,0,0,0.03); /* 加载前的浅色占位 */
-            min-height: 50px; /* 减小基础占位高度 */
+            min-height: 24px; /* 更柔和的占位高度 */
+        }
+
+        img.gallery-image[width][height],
+        p img[width][height],
+        figure img[width][height] {
+            min-height: 0 !important;
+            background-color: transparent;
         }
         
         /* 6. 处理 figcaption 间距 */
@@ -387,12 +383,9 @@
             text-align: center; /* 标题居中 */
         }
 
-        /* 7. 针对 PhotoSwipe 增强后的 a 标签处理 */
-        a:has(img.gallery-image) {
+        /* 7. a 标签内图片保持块级，避免行高干扰 */
+        a > img.gallery-image {
             display: block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            line-height: 0 !important; /* 消除 a 标签可能的行高影响 */
         }
     }
 }
@@ -767,4 +760,3 @@
     align-items: center !important;
     justify-content: center !important;
 }
-

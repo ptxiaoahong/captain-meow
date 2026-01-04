@@ -8,6 +8,10 @@
 {{- $assetsImage := false -}}
 {{- $staticImage := false -}}
 {{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
+{{- $OriginalPermalink := $Permalink -}}
+{{- $UseCompressed := false -}}
+{{- $destURL := urls.Parse .Destination -}}
+{{- $isExternal := or (eq $destURL.Scheme "http") (eq $destURL.Scheme "https") -}}
 
 {{- if $image -}}
 	{{- /* 页面资源中的图片 */ -}}
@@ -45,12 +49,25 @@
 	{{- end -}}
 {{- end -}}
 
+{{- $OriginalPermalink = $Permalink -}}
+
+{{- if and (not $isExternal) $notSVG (not $image) -}}
+	{{- $staticRel := .Destination | strings.TrimPrefix "/" -}}
+	{{- $compressedPath := printf "static/compressed/medium/%s" $staticRel -}}
+	{{- if fileExists $compressedPath -}}
+		{{- $Permalink = (printf "/compressed/medium/%s" $staticRel) | relURL | safeURL -}}
+		{{- $UseCompressed = true -}}
+	{{- end -}}
+{{- end -}}
+
 <img src="{{ $Permalink }}"
 	{{ with $Width }}width="{{ . }}"{{ end }}
 	{{ with $Height }}height="{{ . }}"{{ end }}
 	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
 	loading="lazy"
+	decoding="async"
 	{{ with $alt }}alt="{{ . }}"{{ end }}
+	{{ if $UseCompressed }}data-pswp-src="{{ $OriginalPermalink }}"{{ end }}
 	{{ if $galleryImage }}
 		class="gallery-image"
 		{{ if $image }}
@@ -69,4 +86,3 @@
 		{{ end }}
 	{{ end }}
 >
-
