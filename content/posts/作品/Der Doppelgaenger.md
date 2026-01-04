@@ -7,7 +7,7 @@ categories = ["作品"]
 featuredImagePreview = ""
 comment= true
 +++
-![](/14/文件-2.jpg) 
+![](/14/文件-2.jpg)
 <!--more-->
 ![](/14/文件-1.jpg)
 ![](/14/文件-3.jpg)

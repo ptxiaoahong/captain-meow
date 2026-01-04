@@ -256,8 +256,14 @@
         padding: 0 !important;
     }
 
-    p.no-text:empty {
+    /* 彻底隐藏文章中多余的空行段落 */
+    p:empty {
         display: none !important;
+    }
+
+    /* 针对旧文章的兜底：如果相邻段落都包含图片，压缩它们之间的间距 */
+    p:has(img) + p:has(img) {
+        margin-top: 0 !important;
     }
 
     p.no-text img.gallery-image {
