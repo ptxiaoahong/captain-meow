@@ -252,15 +252,25 @@
     
     /* 包含图片的段落（通过 no-text 类识别） */
     p.no-text {
-        margin: 0.8em 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    p.no-text:empty {
+        display: none !important;
+    }
+
+    p.no-text img.gallery-image {
+        display: block;
+        margin: 0 !important;
     }
     
     p.no-text + p {
-        margin-top: 0.5em !important;
+        margin-top: 0.3em !important;
     }
     
     p + p.no-text {
-        margin-top: 0.5em !important;
+        margin-top: 0.3em !important;
     }
     
     /* 单独的 figure 图片也全宽显示，保持原始比例 */
@@ -292,6 +302,37 @@
             img {
                 object-fit: contain !important; /* 保持原始比例，不拉伸 */
             }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .article-content {
+        p {
+            margin: 0.5em 0 !important;
+        }
+        
+        figure {
+            margin-top: 0.3em !important;
+            margin-bottom: 0.3em !important;
+        }
+        
+        .gallery {
+            gap: 0.3em !important;
+            margin-top: 0.3em !important;
+            margin-bottom: 0.3em !important;
+        }
+        
+        /* 减小相邻元素之间的顶部间距 */
+        p + figure, 
+        figure + p, 
+        p + .gallery, 
+        .gallery + p, 
+        p.no-text + p, 
+        p + p.no-text,
+        figure + figure {
+            margin-top: 0.2em !important;
         }
     }
 }
