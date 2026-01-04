@@ -20,38 +20,27 @@
 		{{- /* 使用原始图片，不压缩 */ -}}
 	{{- end -}}
 {{- else -}}
-	{{- /* 优先从 assets/images 获取图片（支持自动压缩） */ -}}
+	{{- /* 无论是否找到资源，只要不是 SVG，就标记为 galleryImage */ -}}
+	{{- if $notSVG -}}
+		{{- $galleryImage = true -}}
+	{{- end -}}
+	
+	{{- /* 尝试从 assets/images 获取图片尺寸 */ -}}
 	{{- $assetsPath := .Destination | strings.TrimPrefix "/" -}}
 	{{- $assetsImage = resources.Get (printf "images/%s" $assetsPath) -}}
 	
 	{{- if $assetsImage -}}
-		{{- /* 从 assets/images 找到图片 */ -}}
 		{{- $Permalink = $assetsImage.RelPermalink -}}
-		
-		{{- if $notSVG -}}
-			{{- $Width = $assetsImage.Width -}}
-			{{- $Height = $assetsImage.Height -}}
-			{{- $galleryImage = true -}}
-			{{- /* 使用原始图片，不压缩 */ -}}
-		{{- end -}}
+		{{- $Width = $assetsImage.Width -}}
+		{{- $Height = $assetsImage.Height -}}
 	{{- else -}}
-		{{- /* 后备：从 static 目录获取 */ -}}
+		{{- /* 尝试从 static 获取图片尺寸 */ -}}
 		{{- $staticPath := .Destination | strings.TrimPrefix "/" -}}
 		{{- $staticImage = resources.Get $staticPath -}}
 		{{- if $staticImage -}}
 			{{- $Permalink = $staticImage.RelPermalink -}}
-			
-			{{- if $notSVG -}}
-				{{- $Width = $staticImage.Width -}}
-				{{- $Height = $staticImage.Height -}}
-				{{- $galleryImage = true -}}
-				{{- /* 使用原始图片，不压缩 */ -}}
-			{{- end -}}
-		{{- else -}}
-			{{- /* 如果都找不到，使用直接路径，仍然标记为画廊图片 */ -}}
-			{{- if $notSVG -}}
-				{{- $galleryImage = true -}}
-			{{- end -}}
+			{{- $Width = $staticImage.Width -}}
+			{{- $Height = $staticImage.Height -}}
 		{{- end -}}
 	{{- end -}}
 {{- end -}}

@@ -371,7 +371,7 @@
     }
     let scrollableNavigation = document.querySelector(tocQuery);
     if (!scrollableNavigation) {
-      console.warn("No toc matched query", tocQuery);
+      if(document.querySelectorAll(".article-content h1[id], .article-content h2[id], .article-content h3[id], .article-content h4[id], .article-content h5[id], .article-content h6[id]").length > 0) console.debug("No toc matched query",tocQuery);
       return;
     }
     let navigation = document.querySelectorAll(navigationQuery);
