@@ -3,30 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.org/categories/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/%E5%8E%BB%E6%B5%B7%E8%BE%B9%E5%90%A7/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E6%96%87%E8%89%BA/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/%E5%86%AC%E5%A6%82%E5%A4%8F%E8%8A%B1/</loc>
     <lastmod>2025-12-18T16:11:24+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/%E6%B8%85%E6%96%B0/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E6%96%87%E8%89%BA/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2025-12-18T16:11:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/categories/%E4%BD%9C%E5%93%81/</loc>
     <lastmod>2025-12-18T16:11:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/colorful-day/</loc>
@@ -114,9 +120,6 @@
     <lastmod>2025-03-06T06:20:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/</loc>
-    <lastmod>2025-03-06T06:20:24+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E5%B0%8F%E6%B8%85%E6%96%B0/</loc>
     <lastmod>2025-03-06T06:20:24+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/%E6%95%85%E4%BA%8B%E5%BC%80%E5%A7%8B%E5%90%8E%E4%BD%A0%E4%B9%9F%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BC%9A%E8%B5%B0%E5%90%91%E5%93%AA%E9%87%8Cinfj%E7%9A%84%E6%91%84%E5%BD%B1%E6%88%90%E4%BA%BA%E5%BC%8F/</loc>
