@@ -2,17 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/tags/ai/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://example.org/categories/</loc>
-    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/</loc>
-    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
-    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A526.1.19/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
-    <lastmod>2026-01-09T16:11:24+08:00</lastmod>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%BF%83%E9%87%8C%E8%AF%9D/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2026-01-19T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/%E5%8E%BB%E6%B5%B7%E8%BE%B9%E5%90%A7/</loc>
     <lastmod>2026-01-09T16:11:24+08:00</lastmod>
@@ -38,25 +59,7 @@
     <loc>https://example.org/posts/colorful-day/</loc>
     <lastmod>2025-12-15T16:11:24+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/ai/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A5/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E5%BF%83%E9%87%8C%E8%AF%9D/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/categories/%E5%BF%83%E9%87%8C%E8%AF%9D/</loc>
-    <lastmod>2025-12-01T13:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-01T13:00:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/der-doppelgaenger/</loc>
