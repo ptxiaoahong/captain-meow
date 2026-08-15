@@ -1,0 +1,41 @@
+{{ if .Site.Params.comments.enabled }}
+{{ with .Site.Params.comments.waline }}
+<div class="comments">
+    <h2 class="comments__title">评论区</h2>
+    <div id="waline" class="waline-container"></div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<script>
+(function () {
+    var el = document.getElementById('waline');
+    if (!el || typeof Waline === 'undefined') { if (el) el.style.display = 'none'; return; }
+
+    var config = {
+        el: '#waline',
+        serverURL: '{{ .serverURL }}',
+        lang: '{{ .lang | default "zh-CN" }}',
+        visitor: {{ .visitor | default true }},
+        requiredMeta: {{ .requiredMeta | jsonify }},
+        emoji: {{ .emoji | jsonify }}
+    };
+
+    try {
+        Waline.init(config);
+    } catch (err) {
+        el.style.display = 'none'; // 网络/配置异常时优雅隐藏
+    }
+})();
+</script>
+<style>
+.waline-container {
+    --waline-font-size: 1.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+}
+</style>
+{{ end }}
+{{ end }}
