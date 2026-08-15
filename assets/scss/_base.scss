@@ -90,3 +90,17 @@ h1, h2, h3, h4 {
         }
     }
 }
+
+/* 兼容旧组件引用的主题变量（back-to-top / qrcode-modal） */
+:root {
+    --card-background: var(--color-surface);
+    --card-border-radius: var(--radius-md);
+    --card-border-color: var(--color-border);
+    --card-padding: var(--space-3);
+    --card-text-color-main: var(--color-text);
+    --card-text-color-secondary: var(--color-text-secondary);
+    --shadow-l1: var(--shadow-1);
+    --accent-color: var(--color-accent);
+    --body-background: var(--color-bg);
+    --body-text-color: var(--color-text);
+}
