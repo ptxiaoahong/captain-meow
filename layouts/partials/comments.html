@@ -12,14 +12,15 @@
     var el = document.getElementById('waline');
     if (!el || typeof Waline === 'undefined') { if (el) el.style.display = 'none'; return; }
 
-    var config = {
-        el: '#waline',
-        serverURL: '{{ .serverURL }}',
-        lang: '{{ .lang | default "zh-CN" }}',
-        visitor: {{ .visitor | default true }},
-        requiredMeta: {{ .requiredMeta | jsonify }},
-        emoji: {{ .emoji | jsonify }}
-    };
+    var config = {{ dict
+        "el" "#waline"
+        "serverURL" .serverURL
+        "lang" (.lang | default "zh-CN")
+        "visitor" (.visitor | default true)
+        "requiredMeta" .requiredMeta
+        "emoji" .emoji
+        | jsonify | safeJS
+    }};
 
     try {
         Waline.init(config);
