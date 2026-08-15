@@ -1,6 +1,10 @@
 /* ============================================================
    设计 Tokens — 浅色杂志式
    ============================================================ */
+/* 断点（SCSS 变量：@media 查询中使用） */
+$bp-mobile: 768px;
+$bp-tablet: 1024px;
+
 :root {
     /* 颜色 */
     --color-bg:            #faf9f7;   /* 暖米白页面背景 */
@@ -12,6 +16,7 @@
     --color-accent:        #b07d3f;   /* 强调色（暖赭石） */
     --color-accent-soft:   #f3ecdf;   /* 强调色浅底 */
     --color-code-bg:       #f4f2ee;
+    --color-code-text:     #4a4a48;
 
     /* 字体 */
     --font-serif:  "Iowan Old Style", "Songti SC", "Noto Serif SC", "Source Han Serif SC", STSong, Georgia, serif;
@@ -39,7 +44,7 @@
     /* 布局 */
     --container-max: 1200px;
     --article-max:   960px;   /* 文章图片容器宽 */
-    --text-max:      760px;   /* 正文阅读宽 */
+    --read-width:    760px;   /* 正文阅读宽 */
     --header-height: 6.4rem;
 
     /* 圆角 / 阴影 */
@@ -56,4 +61,10 @@
     /* 断点 */
     --bp-mobile: 768px;
     --bp-tablet: 1024px;
+
+    /* 层级 / 遮罩（lightbox、sticky header 用） */
+    --z-header: 100;
+    --z-overlay: 900;
+    --z-lightbox: 1000;
+    --color-overlay: rgba(20, 18, 16, 0.85);   /* 灯箱遮罩 */
 }
