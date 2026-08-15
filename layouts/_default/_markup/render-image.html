@@ -1,88 +1,50 @@
-{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
-{{- $Permalink := .Destination | relURL | safeURL -}}
-{{- $alt := .PlainText | safeHTML -}}
-{{- $Width := 0 -}}
-{{- $Height := 0 -}}
-{{- $Srcset := "" -}}
-{{- $galleryImage := false -}}
-{{- $assetsImage := false -}}
-{{- $staticImage := false -}}
-{{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
-{{- $OriginalPermalink := $Permalink -}}
-{{- $UseCompressed := false -}}
-{{- $destURL := urls.Parse .Destination -}}
-{{- $isExternal := or (eq $destURL.Scheme "http") (eq $destURL.Scheme "https") -}}
+{{- /* ============================================================
+     文章内图片渲染：单列全宽、真实尺寸（防布局跳变）、
+     medium 压缩图为主、原图供 GLightbox 放大
+     ============================================================ */ -}}
+{{- $dest := .Destination -}}
+{{- $isExternal := or (hasPrefix $dest "http://") (hasPrefix $dest "https://") -}}
 
-{{- if $image -}}
-	{{- /* 页面资源中的图片 */ -}}
-	{{- $Permalink = $image.RelPermalink -}}
-
-	{{- if $notSVG -}}
-		{{- $Width = $image.Width -}}
-		{{- $Height = $image.Height -}}
-		{{- $galleryImage = true -}}
-		{{- /* 使用原始图片，不压缩 */ -}}
-	{{- end -}}
+{{- if $isExternal -}}
+    <figure class="article-figure">
+        <a href="{{ $dest }}" data-glightbox data-glightbox-title="{{ .Text }}">
+            <img src="{{ $dest }}" alt="{{ .Text }}" loading="lazy" decoding="async">
+        </a>
+        {{ with .Text }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
 {{- else -}}
-	{{- /* 无论是否找到资源，只要不是 SVG，就标记为 galleryImage */ -}}
-	{{- if $notSVG -}}
-		{{- $galleryImage = true -}}
-	{{- end -}}
-	
-	{{- /* 尝试从 assets/images 获取图片尺寸 */ -}}
-	{{- $assetsPath := .Destination | strings.TrimPrefix "/" -}}
-	{{- $assetsImage = resources.Get (printf "images/%s" $assetsPath) -}}
-	
-	{{- if $assetsImage -}}
-		{{- $Permalink = $assetsImage.RelPermalink -}}
-		{{- $Width = $assetsImage.Width -}}
-		{{- $Height = $assetsImage.Height -}}
-	{{- else -}}
-		{{- /* 尝试从 static 获取图片尺寸 */ -}}
-		{{- $staticPath := .Destination | strings.TrimPrefix "/" -}}
-		{{- $staticImage = resources.Get $staticPath -}}
-		{{- if $staticImage -}}
-			{{- $Permalink = $staticImage.RelPermalink -}}
-			{{- $Width = $staticImage.Width -}}
-			{{- $Height = $staticImage.Height -}}
-		{{- end -}}
-	{{- end -}}
+    {{- /* 去掉开头的 /，得到相对 static 的路径 */ -}}
+    {{- $rel := strings.TrimPrefix "/" $dest -}}
+    {{- /* 原图路径（GLightbox 放大用） */ -}}
+    {{- $originalURL := $dest | relURL -}}
+    {{- /* 优先使用 compressed/medium 压缩图作为展示图 */ -}}
+    {{- $displayURL := $originalURL -}}
+    {{- $mediumPath := printf "static/compressed/medium/%s" $rel -}}
+    {{- if fileExists $mediumPath -}}
+        {{- $displayURL = (printf "/compressed/medium/%s" $rel) | relURL -}}
+    {{- end -}}
+
+    {{- /* 读取真实尺寸（防布局跳变）：优先压缩图，回退原图 */ -}}
+    {{- $width := "" -}}
+    {{- $height := "" -}}
+    {{- $cfgPath := $mediumPath -}}
+    {{- if not (fileExists $cfgPath) -}}
+        {{- $cfgPath = printf "static/%s" $rel -}}
+    {{- end -}}
+    {{- if fileExists $cfgPath -}}
+        {{- $cfg := imageConfig $cfgPath -}}
+        {{- $width = $cfg.Width -}}
+        {{- $height = $cfg.Height -}}
+    {{- end -}}
+
+    <figure class="article-figure">
+        <a href="{{ $originalURL }}" data-glightbox data-glightbox-title="{{ .Text }}">
+            <img src="{{ $displayURL }}"
+                 alt="{{ .Text }}"
+                 loading="lazy" decoding="async"
+                 {{ with $width }}width="{{ . }}"{{ end }}
+                 {{ with $height }}height="{{ . }}"{{ end }}>
+        </a>
+        {{ with .Text }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
 {{- end -}}
-
-{{- $OriginalPermalink = $Permalink -}}
-
-{{- if and (not $isExternal) $notSVG (not $image) -}}
-	{{- $staticRel := .Destination | strings.TrimPrefix "/" -}}
-	{{- $compressedPath := printf "static/compressed/medium/%s" $staticRel -}}
-	{{- if fileExists $compressedPath -}}
-		{{- $Permalink = (printf "/compressed/medium/%s" $staticRel) | relURL | safeURL -}}
-		{{- $UseCompressed = true -}}
-	{{- end -}}
-{{- end -}}
-
-<img src="{{ $Permalink }}"
-	{{ with $Width }}width="{{ . }}"{{ end }}
-	{{ with $Height }}height="{{ . }}"{{ end }}
-	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
-	loading="lazy"
-	decoding="async"
-	{{ with $alt }}alt="{{ . }}"{{ end }}
-	{{ if $UseCompressed }}data-pswp-src="{{ $OriginalPermalink }}"{{ end }}
-	{{ if $galleryImage }}
-		class="gallery-image"
-		{{ if $image }}
-			data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
-			data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
-		{{ else if $assetsImage }}
-			data-flex-grow="{{ div (mul $assetsImage.Width 100) $assetsImage.Height }}"
-			data-flex-basis="{{ div (mul $assetsImage.Width 240) $assetsImage.Height }}px"
-		{{ else if $staticImage }}
-			data-flex-grow="{{ div (mul $staticImage.Width 100) $staticImage.Height }}"
-			data-flex-basis="{{ div (mul $staticImage.Width 240) $staticImage.Height }}px"
-		{{ else }}
-			{{- /* 如果没有尺寸信息，使用默认值，但保留 gallery-image class */ -}}
-			data-flex-grow="100"
-			data-flex-basis="240px"
-		{{ end }}
-	{{ end }}
->
