@@ -4,6 +4,11 @@
 <script>
 (function () {
     if (typeof GLightbox === 'undefined') return;
+
+    // 浏览器原生全屏能力检测（iOS Safari 对元素全屏支持有限）
+    var fsSupported = typeof document.documentElement.requestFullscreen === 'function' ||
+        typeof document.documentElement.webkitRequestFullscreen === 'function';
+
     var lightbox = GLightbox({
         selector: '.article-figure a[data-glightbox], .article-content a[data-glightbox]',
         touchNavigation: true,
@@ -13,5 +18,97 @@
         openEffect: 'fade',
         closeEffect: 'fade'
     });
+
+    function getContainer() {
+        return document.querySelector('.glightbox-container');
+    }
+
+    function isLightboxOpen() {
+        var c = getContainer();
+        if (!c) return false;
+        var s = getComputedStyle(c);
+        return s.display !== 'none' && s.visibility !== 'hidden';
+    }
+
+    function enterFullscreen(el) {
+        if (el.requestFullscreen) el.requestFullscreen();
+        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    }
+
+    function exitFullscreen() {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    }
+
+    function isFullscreen() {
+        return !!(document.fullscreenElement || document.webkitFullscreenElement);
+    }
+
+    function toggleFullscreen() {
+        if (isFullscreen()) {
+            exitFullscreen();
+        } else {
+            var c = getContainer();
+            if (c) enterFullscreen(c);
+        }
+    }
+
+    // 添加全屏按钮（灯箱打开时注入）
+    lightbox.on('open', function () {
+        if (!fsSupported) return;
+        var c = getContainer();
+        if (!c || c.querySelector('.gbtn-fullscreen')) return;
+
+        var btn = document.createElement('button');
+        btn.className = 'gbtn gbtn-fullscreen';
+        btn.setAttribute('aria-label', '全屏 (F)');
+        btn.setAttribute('title', '全屏 (F)');
+        btn.innerHTML =
+            '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">' +
+            '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '</svg>';
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleFullscreen();
+        });
+        c.appendChild(btn);
+    });
+
+    // F 键切换全屏（灯箱打开时）
+    document.addEventListener('keydown', function (e) {
+        var k = e.key.toLowerCase();
+        if ((k === 'f') && isLightboxOpen()) {
+            if (fsSupported) {
+                e.preventDefault();
+                toggleFullscreen();
+            }
+        }
+    });
+
+    // 全屏状态变化时更新按钮图标（可选：进入/退出用同一图标即可，简单起见不做切换）
 })();
 </script>
+<style>
+/* 灯箱全屏按钮：右上角，关闭按钮（gbtn-close）左侧 */
+.gbtn-fullscreen {
+    position: absolute;
+    top: 15px;
+    right: 70px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.gbtn-fullscreen:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+</style>
