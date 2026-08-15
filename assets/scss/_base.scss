@@ -1,0 +1,106 @@
+/* ============================================================
+   全局基础样式
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px，方便换算 */
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.75;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--duration) var(--ease);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-3);
+}
+
+::selection {
+    background: var(--color-accent-soft);
+}
+
+.not-found {
+    padding: var(--space-7) 0;
+    text-align: center;
+
+    &__code {
+        font-size: 8rem;
+        font-family: var(--font-serif);
+        color: var(--color-accent);
+    }
+
+    &__text {
+        color: var(--color-text-secondary);
+        margin: var(--space-2) 0 var(--space-3);
+    }
+
+    &__link {
+        display: inline-block;
+        padding: var(--space-1) var(--space-3);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        transition: all var(--duration) var(--ease);
+
+        &:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+    }
+}
+
+/* 兼容旧组件引用的主题变量（back-to-top / qrcode-modal） */
+:root {
+    --card-background: var(--color-surface);
+    --card-border-radius: var(--radius-md);
+    --card-border-color: var(--color-border);
+    --card-padding: var(--space-3);
+    --card-text-color-main: var(--color-text);
+    --card-text-color-secondary: var(--color-text-secondary);
+    --shadow-l1: var(--shadow-1);
+    --accent-color: var(--color-accent);
+    --body-background: var(--color-bg);
+    --body-text-color: var(--color-text);
+}

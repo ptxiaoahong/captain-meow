@@ -1,34 +1,19 @@
-{{ define "body-class" }}
-    article-page
-{{ end }}
+{{ define "body-class" }}article-page{{ end }}
 
 {{ define "main" }}
-    {{ partial "article/components/back-to-list.html" . }}
-    
-    {{ partial "article/article.html" . }}
+    <article class="article">
+        {{ partial "article-header.html" . }}
 
-    {{ if .Params.links }}
-        {{ partial "article/components/links" . }}
-    {{ end }}
+        <div class="article-content">
+            {{ .Content }}
+        </div>
 
-    {{ partial "article/components/related-content" . }}
-     
-    {{ if not (eq .Params.comments false) }}
-        {{ partial "comments/include" . }}
-    {{ end }}
-
-    {{ partialCached "footer/footer" . }}
-
-    {{ partialCached "article/components/photoswipe" . }}
-    
-    {{/* 滚动位置管理脚本 */}}
-    {{ $scrollPosition := resources.Get "js/scroll-position.js" }}
-    {{ if $scrollPosition }}
-        <script>{{ $scrollPosition.Content | safeJS }}</script>
-    {{ end }}
+        {{ if and (not (eq .Params.comments false)) .Site.Params.comments.enabled }}
+            {{ partial "comments.html" . }}
+        {{ end }}
+    </article>
 {{ end }}
 
-{{ define "right-sidebar" }}
-    {{/* 已禁用右侧栏 */}}
+{{ define "scripts" }}
+    {{ partial "lightbox.html" . }}
 {{ end }}
-

@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .Title }}{{ .Title }} · {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.sidebar.subtitle }}{{ end }}{{ end }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ with .Description }}<meta property="og:description" content="{{ . }}">{{ else }}{{ with .Summary }}<meta property="og:description" content="{{ . | plainify | truncate 200 }}">{{ end }}{{ end }}
+{{ if .IsPage }}
+    {{ $img := partial "helper/image" (dict "Context" . "Type" "article") }}
+    {{ if $img.exists }}
+        {{ $ogImage := $img.permalink }}
+        {{ if not (hasPrefix $ogImage "http") }}
+            {{ $ogImage = printf "%s%s" .Site.BaseURL (strings.TrimPrefix "/" $ogImage) }}
+        {{ end }}
+<meta property="og:image" content="{{ $ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+    {{ else }}
+<meta name="twitter:card" content="summary">
+    {{ end }}
+{{ else }}
+<meta name="twitter:card" content="summary">
+{{ end }}
+
+<!-- RSS -->
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
+{{ end }}
+
+<link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#faf9f7">
+
+<!-- 样式管道 -->
+{{ with resources.Get "scss/style.scss" }}
+{{ $style := . | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
+
+<!-- 站点描述 JSON-LD -->
+<script type="application/ld+json">
+{{ if .IsPage }}
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ .Title }}",
+    "url": "{{ .Permalink }}",
+    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+    {{ with .Site.Params.sidebar.subtitle }}"description": "{{ . }}",{{ end }}
+    "author": { "@type": "Person", "name": "{{ .Site.Title }}" },
+    "publisher": { "@type": "Organization", "name": "{{ .Site.Title }}" }
+}
+{{ else }}
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+}
+{{ end }}
+</script>
+
+{{ partial "google_analytics.html" . }}

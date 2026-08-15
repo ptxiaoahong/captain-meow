@@ -1,0 +1,44 @@
+{{/* 文章页头部：返回 + 分类 + 标题 + 日期 */}}
+<div class="article-header">
+    <button class="article-header__back" id="back-to-list" aria-label="返回列表">
+        {{ partial "icon" (dict "name" "arrow-left") }}
+    </button>
+
+    <div class="article-header__meta">
+        {{ with .Params.categories }}
+        <span class="article-header__category">
+            <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
+        </span>
+        {{ end }}
+
+        <h1 class="article-header__title">{{ .Title }}</h1>
+
+        <div class="article-header__details">
+            {{ partial "icon" (dict "name" "calendar") }}
+            <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006.01.02" }}</time>
+
+            {{/* 修复「阅读时长: 0 分钟」：纯图片文章 ReadingTime 为 0 时不显示 */}}
+            {{ $readingTime := .ReadingTime }}
+            {{ if and (gt $readingTime 0) (default true .Site.Params.article.readingTime) }}
+            <span class="article-header__reading">
+                · {{ $readingTime }} 分钟阅读
+            </span>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var backBtn = document.getElementById('back-to-list');
+    if (!backBtn) return;
+    backBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (window.history.length > 1 && document.referrer) {
+            window.history.back();
+        } else {
+            window.location.href = '/';
+        }
+    });
+})();
+</script>

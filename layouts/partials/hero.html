@@ -1,0 +1,24 @@
+{{/* Hero：最新一篇作品的大图 + 信息 */}}
+{{ $works := where .Site.RegularPages "Params.categories" "intersect" (slice "作品") }}
+{{ $featured := index (first 1 $works) 0 }}
+{{ if $featured }}
+    {{ $image := partial "helper/image" (dict "Context" $featured "Type" "article") }}
+    {{ if $image.exists }}
+    <section class="hero">
+        <a class="hero__media" href="{{ $featured.RelPermalink }}">
+            <img class="hero__image"
+                 src="{{ $image.permalink }}"
+                 alt="{{ $featured.Title }}"
+                 loading="eager" fetchpriority="high">
+        </a>
+        <div class="hero__info">
+            <span class="hero__eyebrow">最新作品</span>
+            <h2 class="hero__title"><a href="{{ $featured.RelPermalink }}">{{ $featured.Title }}</a></h2>
+            <p class="hero__date">
+                {{ partial "icon" (dict "name" "calendar") }}
+                <time datetime='{{ $featured.Date.Format "2006-01-02" }}'>{{ $featured.Date.Format "2006.01.02" }}</time>
+            </p>
+        </div>
+    </section>
+    {{ end }}
+{{ end }}

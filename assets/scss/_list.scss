@@ -1,0 +1,27 @@
+.list-page {
+    padding: var(--space-5) 0 var(--space-6);
+
+    &__header {
+        margin-bottom: var(--space-4);
+    }
+
+    &__title {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-1);
+    }
+
+    &__count {
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+    }
+}
+
+@media (max-width: 767px) {
+    .list-page {
+        padding: var(--space-3) 0 var(--space-5);
+    }
+
+    .list-page__title {
+        font-size: var(--text-xl);
+    }
+}

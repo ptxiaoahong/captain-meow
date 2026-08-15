@@ -1,0 +1,70 @@
+/* ============================================================
+   设计 Tokens — 浅色杂志式
+   ============================================================ */
+/* 断点（SCSS 变量：@media 查询中使用） */
+$bp-mobile: 768px;
+$bp-tablet: 1024px;
+
+:root {
+    /* 颜色 */
+    --color-bg:            #faf9f7;   /* 暖米白页面背景 */
+    --color-surface:       #ffffff;   /* 卡片/容器 */
+    --color-text:          #1d1d1f;   /* 主文本（近黑） */
+    --color-text-secondary:#6e6a64;   /* 次级文本 */
+    --color-text-tertiary: #9a958e;   /* 弱文本 */
+    --color-border:        #e8e4dd;   /* 细边框 */
+    --color-accent:        #b07d3f;   /* 强调色（暖赭石） */
+    --color-accent-soft:   #f3ecdf;   /* 强调色浅底 */
+    --color-code-bg:       #f4f2ee;
+    --color-code-text:     #4a4a48;
+
+    /* 字体 */
+    --font-serif:  "Iowan Old Style", "Songti SC", "Noto Serif SC", "Source Han Serif SC", STSong, Georgia, serif;
+    --font-sans:   -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --font-mono:   "SF Mono", Menlo, Consolas, monospace;
+
+    /* 字号（rem，html 16px） */
+    --text-xs:   1.2rem;   /* 12px 标签/元信息 */
+    --text-sm:   1.3rem;   /* 13px */
+    --text-base: 1.6rem;   /* 16px 正文 */
+    --text-lg:   1.8rem;   /* 18px */
+    --text-xl:   2.2rem;   /* 22px */
+    --text-2xl:  3.2rem;   /* 32px 文章标题 */
+    --text-3xl:  4.8rem;   /* 48px Hero 标题 */
+
+    /* 间距（8px 网格） */
+    --space-1: 0.8rem;   /* 8px */
+    --space-2: 1.6rem;   /* 16px */
+    --space-3: 2.4rem;   /* 24px */
+    --space-4: 3.2rem;   /* 32px */
+    --space-5: 4.8rem;   /* 48px */
+    --space-6: 6.4rem;   /* 64px */
+    --space-7: 9.6rem;   /* 96px */
+
+    /* 布局 */
+    --container-max: 1200px;
+    --article-max:   960px;   /* 文章图片容器宽 */
+    --read-width:    760px;   /* 正文阅读宽 */
+    --header-height: 6.4rem;
+
+    /* 圆角 / 阴影 */
+    --radius-sm: 0.8rem;
+    --radius-md: 1.2rem;
+    --radius-lg: 2rem;
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.07);
+
+    /* 动效 */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration: 0.25s;
+
+    /* 断点 */
+    --bp-mobile: 768px;
+    --bp-tablet: 1024px;
+
+    /* 层级 / 遮罩（lightbox、sticky header 用） */
+    --z-header: 100;
+    --z-overlay: 900;
+    --z-lightbox: 1000;
+    --color-overlay: rgba(20, 18, 16, 0.85);   /* 灯箱遮罩 */
+}

@@ -1,0 +1,29 @@
+<footer class="site-footer">
+    <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+            <span class="site-footer__name">{{ .Site.Title }}</span>
+            <p class="site-footer__desc">{{ .Site.Params.sidebar.subtitle }}</p>
+        </div>
+
+        <div class="site-footer__social">
+            {{ range .Site.Menus.social }}
+                {{ if .Params.qrcode }}
+                <a class="site-footer__social-link" href="{{ .URL }}" data-qrcode="true" title="{{ .Name }}">
+                    {{ partial "icon" (dict "name" "wechat" "class" "site-footer__social-icon") }}
+                    <span>{{ .Name }}</span>
+                </a>
+                {{ else }}
+                <a class="site-footer__social-link" href="{{ .URL }}" target="_blank" rel="noopener" title="{{ .Name }}">
+                    {{ partial "icon" (dict "name" "mail" "class" "site-footer__social-icon") }}
+                    <span>{{ .Name }}</span>
+                </a>
+                {{ end }}
+            {{ end }}
+        </div>
+
+        <p class="site-footer__copyright">
+            © {{ with .Site.Params.footer.since }}{{ . }}{{ end }}-{{ now.Format "2006" }} {{ .Site.Title }} ·
+            <a href="/index.xml">RSS</a>
+        </p>
+    </div>
+</footer>

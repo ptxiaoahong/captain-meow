@@ -1,0 +1,17 @@
+{{/* GLightbox 灯箱：https://glightbox.maykar.io */}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+<script>
+(function () {
+    if (typeof GLightbox === 'undefined') return;
+    var lightbox = GLightbox({
+        selector: '.article-figure a[data-glightbox], .article-content a[data-glightbox]',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+        draggable: true,
+        openEffect: 'fade',
+        closeEffect: 'fade'
+    });
+})();
+</script>

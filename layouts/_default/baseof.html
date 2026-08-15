@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    {{ partial "head.html" . }}
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="{{ block "body-class" . }}{{ end }}">
+    {{ partial "header.html" . }}
+
+    <main class="container main" id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ partial "footer/back-to-top.html" . }}
+    {{ partial "qrcode-modal.html" . }}
+
+    {{ block "scripts" . }}{{ end }}
+
+    {{/* 滚动位置恢复脚本 */}}
+    {{ $scrollPosition := resources.Get "js/scroll-position.js" }}
+    {{ if $scrollPosition }}
+        <script>{{ $scrollPosition.Content | safeJS }}</script>
+    {{ end }}
+</body>
+</html>

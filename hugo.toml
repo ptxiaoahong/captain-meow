@@ -3,7 +3,6 @@ languageCode = "zh-CN"
 languageName = "简体中文"
 hasCJKLanguage = true
 title = "猫猫船长"
-theme = 'hugo-theme-stack'
 defaultContentLanguage = "zh-cn"
 
 # 增加模板超时时间（处理大量图片时需要）
@@ -116,35 +115,6 @@ timeout = 300
       emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.1/weibo"]
       requiredMeta = ["nick", "mail"]
       locale = { admin = "管理员", placeholder = "说点什么吧~" }
-
-  # 小部件配置（已禁用右侧栏）
-  [params.widgets]
-    homepage = []
-    page = []
-
-  # OpenGraph 配置
-  [params.opengraph]
-    [params.opengraph.twitter]
-      card = "summary_large_image"
-
-  # 默认图片配置
-  [params.defaultImage]
-    [params.defaultImage.opengraph]
-      enabled = false
-      local = false
-      src = ""
-
-  # 颜色方案
-  [params.colorScheme]
-    toggle = true
-    default = "auto"
-
-  # 图片处理
-  [params.imageProcessing]
-    [params.imageProcessing.cover]
-      enabled = true
-    [params.imageProcessing.content]
-      enabled = false  # 禁用内容图片压缩，使用原始尺寸
 
 # 图片压缩配置 - 限制每张图片不超过 1MB
 [imaging]

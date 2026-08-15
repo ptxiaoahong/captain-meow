@@ -167,29 +167,8 @@
                 clearScrollPosition();
             }
         } else if (pageType === 'article') {
-            // 文章详情页 - 确保有返回按钮
-            setupBackButton();
+            // 返回按钮由 article-header partial 处理，此处无需绑定
         }
-    }
-    
-    /**
-     * 设置返回按钮功能
-     */
-    function setupBackButton() {
-        const backBtn = document.getElementById('back-to-list');
-        if (!backBtn) return;
-        
-        backBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // 如果有历史记录，使用 history.back()
-            if (window.history.length > 1 && document.referrer) {
-                window.history.back();
-            } else {
-                // 否则返回首页
-                window.location.href = '/';
-            }
-        });
     }
     
     // DOM 加载完成后初始化

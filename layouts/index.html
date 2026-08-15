@@ -1,26 +1,20 @@
 {{ define "main" }}
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-    {{ $filtered := ($pages | intersect $notHidden) }}
-    {{ $pag := .Paginate ($filtered) }}
-
-    <section class="article-list">
-        {{ range $index, $element := $pag.Pages }}
-            {{ partial "article-list/default" . }}
-        {{ end }}
+    <section class="intro">
+        <h1 class="intro__title">{{ .Site.Title }}</h1>
+        <p class="intro__desc">{{ .Site.Params.sidebar.subtitle }}</p>
     </section>
 
-    {{- partial "pagination.html" . -}}
-    {{- partial "footer/footer" . -}}
-    
-    {{/* 滚动位置记录脚本 */}}
-    {{ $scrollPosition := resources.Get "js/scroll-position.js" }}
-    {{ if $scrollPosition }}
-        <script>{{ $scrollPosition.Content | safeJS }}</script>
-    {{ end }}
-{{ end }}
+    {{ partial "hero.html" . }}
 
-{{ define "right-sidebar" }}
-    {{/* 已禁用右侧栏 */}}
+    <section class="home-list">
+        <h2 class="home-list__title">全部文章</h2>
+        {{ $pages := where .Site.RegularPages "Params.hidden" "!=" true }}
+        {{ $paginator := .Paginate $pages }}
+        <div class="home-list__grid">
+            {{ range $paginator.Pages }}
+                {{ partial "article-card.html" . }}
+            {{ end }}
+        </div>
+        {{ partial "pagination.html" $paginator }}
+    </section>
 {{ end }}
-

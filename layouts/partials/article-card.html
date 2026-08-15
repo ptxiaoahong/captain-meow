@@ -1,0 +1,34 @@
+{{/* 瀑布流卡片：图片（封面）+ 分类 + 标题 + 日期 */}}
+<article class="masonry-card">
+    {{ $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" }}
+    {{ if $image.exists }}
+        {{/* 读取封面图真实尺寸（防布局跳变 + 瀑布流错落） */}}
+        {{ $rel := strings.TrimPrefix "/" ((urls.Parse $image.permalink).Path) }}
+        {{ $cfgPath := printf "static/%s" $rel }}
+        {{ $w := "" }}
+        {{ $h := "" }}
+        {{ if fileExists $cfgPath }}
+            {{ $cfg := imageConfig $cfgPath }}
+            {{ $w = $cfg.Width }}
+            {{ $h = $cfg.Height }}
+        {{ end }}
+    <a class="masonry-card__media" href="{{ .RelPermalink }}">
+        <img class="masonry-card__image"
+             src="{{ $image.permalink }}"
+             alt="{{ .Title }}"
+             loading="lazy"
+             {{ with $w }}width="{{ . }}"{{ end }}
+             {{ with $h }}height="{{ . }}"{{ end }}>
+    </a>
+    {{ end }}
+    <div class="masonry-card__body">
+        {{ with .Params.categories }}
+        <span class="masonry-card__category">{{ index . 0 }}</span>
+        {{ end }}
+        <h3 class="masonry-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="masonry-card__date">
+            {{ partial "icon" (dict "name" "calendar") }}
+            <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006.01.02" }}</time>
+        </p>
+    </div>
+</article>
