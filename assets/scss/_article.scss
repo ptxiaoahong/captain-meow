@@ -77,6 +77,14 @@
         margin: var(--space-3) 0;
     }
 
+    /* 文字元素限宽 760px 居中（阅读宽度），图片保持全宽；
+       注意：--text-max 已在 tokens 命名修正中改为 --read-width（5864108） */
+    p, h1, h2, h3, h4, ul, ol, blockquote, pre, .article-content > div:not(.article-figure) {
+        max-width: var(--read-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     p:empty {
         display: none;
     }
