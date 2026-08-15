@@ -75,7 +75,7 @@
         {{ end }}
     </section>
 
-    {{- partial "pagination.html" . -}}
+    {{- partial "pagination.html" $paginator -}}
 
     {{ partialCached "footer/footer" . }}
     

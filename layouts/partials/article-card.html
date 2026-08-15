@@ -1,14 +1,14 @@
 {{/* 瀑布流卡片：图片（封面）+ 分类 + 标题 + 日期 */}}
 <article class="masonry-card">
+    {{ $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" }}
+    {{ if $image.exists }}
     <a class="masonry-card__media" href="{{ .RelPermalink }}">
-        {{ $image := partial "helper/image" (dict "Context" . "Type" "article") }}
-        {{ if $image.exists }}
-            <img class="masonry-card__image"
-                 src="{{ $image.permalink }}"
-                 alt="{{ .Title }}"
-                 loading="lazy">
-        {{ end }}
+        <img class="masonry-card__image"
+             src="{{ $image.permalink }}"
+             alt="{{ .Title }}"
+             loading="lazy">
     </a>
+    {{ end }}
     <div class="masonry-card__body">
         {{ with .Params.categories }}
         <span class="masonry-card__category">{{ index . 0 }}</span>
