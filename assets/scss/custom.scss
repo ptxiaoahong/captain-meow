@@ -760,3 +760,106 @@
     align-items: center !important;
     justify-content: center !important;
 }
+
+/* ============================================================
+   文章详情页：完全隐藏左侧栏
+   ============================================================ */
+.article-page {
+    .left-sidebar {
+        /* 完全隐藏左侧栏 */
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   内容区域居中显示（文章详情页无左侧栏时）
+   ============================================================ */
+.article-page .container.main-container {
+    /* 无左侧栏时，主内容区居中 */
+    justify-content: center;
+    
+    main.main {
+        /* 主内容区居中：固定宽度 + 自动边距 */
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 非文章页面保持原有布局 */
+.container.main-container {
+    justify-content: flex-start;
+    
+    .left-sidebar {
+        flex: 0 0 var(--left-sidebar-max-width);
+        max-width: var(--left-sidebar-max-width);
+    }
+    
+    main.main {
+        flex-grow: 1;
+    }
+}
+
+/* ============================================================
+   返回按钮样式
+   ============================================================ */
+.back-to-list {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--card-background);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+        background-color: var(--body-background);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: translateX(-2px);
+        
+        .back-to-list-icon {
+            color: var(--accent-color);
+        }
+    }
+    
+    &:active {
+        transform: translateX(-2px) scale(0.95);
+    }
+    
+    /* 图标 */
+    .back-to-list-icon {
+        width: 20px;
+        height: 20px;
+        color: var(--body-text-color);
+        transition: color 0.3s ease;
+    }
+}
+
+/* ============================================================
+   移动端适配
+   ============================================================ */
+@media (max-width: 767px) {
+    .article-page .container.main-container {
+        main.main {
+            max-width: 100%;
+        }
+    }
+    
+    .back-to-list {
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}

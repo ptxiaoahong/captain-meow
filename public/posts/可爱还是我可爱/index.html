@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" ">
 <title>🍅可爱还是我可爱</title>
 
-<link rel='canonical' href='https://example.org/posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/'>
+<link rel='canonical' href='http://localhost:1313/posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/'>
 
-<link rel="stylesheet" href="/scss/style.min.b3493089f9025637dead69ef93cb10a58f85592c349cbdbf77adaeeb16954ad9.css"><meta property='og:title' content="🍅可爱还是我可爱">
+<link rel="stylesheet" href="/scss/style.min.3da72718167aee10bcb207f2df8511e08cb319bfd5cf2dfc1800cd6917e3828d.css"><meta property='og:title' content="🍅可爱还是我可爱">
 <meta property='og:description' content=" ">
-<meta property='og:url' content='https://example.org/posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/'>
+<meta property='og:url' content='http://localhost:1313/posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/'>
 <meta property='og:site_name' content='猫猫船长'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='作品' /><meta property='article:tag' content='文艺' /><meta property='article:tag' content='清新' /><meta property='article:tag' content='糖水' /><meta property='article:published_time' content='2025-05-10T16:11:24&#43;08:00'/><meta property='article:modified_time' content='2025-05-10T16:11:24&#43;08:00'/><meta property='og:image' content='https://example.org/images/12/%E6%96%87%E4%BB%B6-3.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='作品' /><meta property='article:tag' content='文艺' /><meta property='article:tag' content='清新' /><meta property='article:tag' content='糖水' /><meta property='article:published_time' content='2025-05-10T16:11:24&#43;08:00'/><meta property='article:modified_time' content='2025-05-10T16:11:24&#43;08:00'/><meta property='og:image' content='http://localhost:1313/images/12/%E6%96%87%E4%BB%B6-3.jpg' />
 <meta name="twitter:title" content="🍅可爱还是我可爱">
 <meta name="twitter:description" content=" "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.org/images/12/%E6%96%87%E4%BB%B6-3.jpg' />
+    <meta name="twitter:image" content='http://localhost:1313/images/12/%E6%96%87%E4%BB%B6-3.jpg' />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L5LC1T72B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -269,6 +269,34 @@
 
 
             <main class="main full-width">
+    
+<button id="back-to-list" class="back-to-list" aria-label="返回列表" title="返回列表">
+    <svg class="back-to-list-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script>
+(function() {
+    
+    const backToListBtn = document.getElementById('back-to-list');
+    if (!backToListBtn) return;
+    
+    backToListBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        
+        if (window.history.length > 1 && document.referrer) {
+            
+            window.history.back();
+        } else {
+            
+            window.location.href = '/';
+        }
+    });
+})();
+</script>
+    
     <article class="main-article">
     <header class="article-header">
         <div class="article-image article-header-image">
@@ -1461,6 +1489,220 @@
 })();
 </script>
 
+    
+    
+    
+    
+        <script>/**
+ * 文章列表滚动位置记录与恢复
+ * 功能：在文章列表页记录滚动位置，从详情页返回时恢复
+ */
+
+(function() {
+    'use strict';
+    
+    const STORAGE_KEY = 'articleListScrollPosition';
+    const STORAGE_TIMESTAMP_KEY = 'articleListScrollTimestamp';
+    const STORAGE_PAGE_KEY = 'articleListScrollPage';
+    const EXPIRY_TIME = 5 * 60 * 1000; // 5分钟过期时间
+    
+    /**
+     * 获取当前页面类型
+     */
+    function getPageType() {
+        const body = document.body;
+        if (body.classList.contains('article-page')) {
+            return 'article';
+        }
+        // 文章列表页通常有 article-list 类或位于首页/列表页
+        if (document.querySelector('.article-list') || 
+            document.querySelector('.article-list--compact') ||
+            document.querySelector('.article-list--tile')) {
+            return 'list';
+        }
+        return 'other';
+    }
+    
+    /**
+     * 保存滚动位置
+     */
+    function saveScrollPosition() {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const pageUrl = window.location.pathname + window.location.search;
+        
+        try {
+            sessionStorage.setItem(STORAGE_KEY, scrollY.toString());
+            sessionStorage.setItem(STORAGE_TIMESTAMP_KEY, Date.now().toString());
+            sessionStorage.setItem(STORAGE_PAGE_KEY, pageUrl);
+        } catch (e) {
+            console.warn('无法保存滚动位置:', e);
+        }
+    }
+    
+    /**
+     * 恢复滚动位置
+     */
+    function restoreScrollPosition() {
+        try {
+            const savedPosition = sessionStorage.getItem(STORAGE_KEY);
+            const savedTimestamp = sessionStorage.getItem(STORAGE_TIMESTAMP_KEY);
+            const savedPage = sessionStorage.getItem(STORAGE_PAGE_KEY);
+            
+            // 检查是否有保存的位置
+            if (savedPosition === null) return;
+            
+            // 检查是否过期
+            if (savedTimestamp) {
+                const timestamp = parseInt(savedTimestamp, 10);
+                if (Date.now() - timestamp > EXPIRY_TIME) {
+                    clearScrollPosition();
+                    return;
+                }
+            }
+            
+            // 恢复滚动位置
+            const scrollY = parseInt(savedPosition, 10);
+            if (!isNaN(scrollY) && scrollY > 0) {
+                // 使用 requestAnimationFrame 确保页面渲染完成后再滚动
+                requestAnimationFrame(function() {
+                    window.scrollTo(0, scrollY);
+                    
+                    // 再次尝试，确保在图片等资源加载后也能正确滚动
+                    setTimeout(function() {
+                        window.scrollTo(0, scrollY);
+                    }, 100);
+                });
+            }
+            
+            // 恢复后清除记录（避免刷新页面时再次滚动）
+            clearScrollPosition();
+            
+        } catch (e) {
+            console.warn('无法恢复滚动位置:', e);
+        }
+    }
+    
+    /**
+     * 清除保存的滚动位置
+     */
+    function clearScrollPosition() {
+        try {
+            sessionStorage.removeItem(STORAGE_KEY);
+            sessionStorage.removeItem(STORAGE_TIMESTAMP_KEY);
+            sessionStorage.removeItem(STORAGE_PAGE_KEY);
+        } catch (e) {
+            console.warn('无法清除滚动位置:', e);
+        }
+    }
+    
+    /**
+     * 检查是否是从文章详情页返回
+     */
+    function isReturningFromArticle() {
+        // 检查 document.referrer
+        if (document.referrer) {
+            const referrerUrl = new URL(document.referrer);
+            // 如果 referrer 是文章页（路径中包含 /posts/ 或其他文章路径模式）
+            if (referrerUrl.pathname.match(/\/(posts|post|blog|article)\/.+/)) {
+                return true;
+            }
+        }
+        
+        // 检查 navigation type
+        if (window.performance && window.performance.navigation) {
+            // TYPE_BACK_FORWARD = 2
+            if (window.performance.navigation.type === 2) {
+                return true;
+            }
+        }
+        
+        // 检查 PerformanceNavigationTiming (现代浏览器)
+        if (window.performance && window.performance.getEntriesByType) {
+            const navEntries = window.performance.getEntriesByType('navigation');
+            if (navEntries.length > 0 && navEntries[0].type === 'back_forward') {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
+     * 为文章链接添加点击事件
+     */
+    function setupArticleLinks() {
+        // 选择所有文章链接
+        const articleLinks = document.querySelectorAll('.article-list a, .article-list--compact a, .article-list--tile a, article a');
+        
+        articleLinks.forEach(function(link) {
+            // 只处理站内链接
+            if (link.hostname === window.location.hostname || link.hostname === '') {
+                link.addEventListener('click', function() {
+                    saveScrollPosition();
+                });
+            }
+        });
+    }
+    
+    /**
+     * 初始化
+     */
+    function init() {
+        const pageType = getPageType();
+        
+        if (pageType === 'list') {
+            // 文章列表页
+            setupArticleLinks();
+            
+            // 如果是从详情页返回，恢复滚动位置
+            if (isReturningFromArticle()) {
+                restoreScrollPosition();
+            } else {
+                // 直接访问列表页，清除之前保存的位置
+                clearScrollPosition();
+            }
+        } else if (pageType === 'article') {
+            // 文章详情页 - 确保有返回按钮
+            setupBackButton();
+        }
+    }
+    
+    /**
+     * 设置返回按钮功能
+     */
+    function setupBackButton() {
+        const backBtn = document.getElementById('back-to-list');
+        if (!backBtn) return;
+        
+        backBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 如果有历史记录，使用 history.back()
+            if (window.history.length > 1 && document.referrer) {
+                window.history.back();
+            } else {
+                // 否则返回首页
+                window.location.href = '/';
+            }
+        });
+    }
+    
+    // DOM 加载完成后初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+    
+    // 页面完全加载后再次尝试恢复滚动位置（处理图片懒加载等情况）
+    window.addEventListener('load', function() {
+        if (getPageType() === 'list' && isReturningFromArticle()) {
+            restoreScrollPosition();
+        }
+    });
+    
+})();</script>
+    
 
             </main>
         </div>
@@ -1468,7 +1710,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.4441584ede361a326e4c7ddff6a89cdd58be4f1a53833c52f65499c6e838fc22.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.b7d0cfd5699e2c711f2c8c19885da3a6d1f9fe1da90b87dfeedbc5e232d6e0e5.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

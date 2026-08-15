@@ -1,0 +1,152 @@
+- main [ref=f1e3]:
+  - button "返回列表" [ref=f1e4] [cursor=pointer]
+  - article [ref=f1e7]:
+    - generic [ref=f1e9]:
+      - heading [level=2] [ref=f1e11]:
+        - link "去海边吧" [ref=f1e12] [cursor=pointer]:
+          - /url: /posts/%E5%8E%BB%E6%B5%B7%E8%BE%B9%E5%90%A7/
+      - generic [ref=f1e13]:
+        - link "作品" [ref=f1e15] [cursor=pointer]:
+          - /url: /categories/%E4%BD%9C%E5%93%81/
+        - generic [ref=f1e16]:
+          - time [ref=f1e23]: 2026-01-09
+          - time [ref=f1e29]: "阅读时长: 0 分钟"
+    - generic [ref=f1e31]:
+      - figure [ref=f1e32]:
+        - link [ref=f1e173] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b61.jpg
+      - figure [ref=f1e35]:
+        - link [ref=f1e175] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b62.jpg
+      - figure [ref=f1e38]:
+        - link [ref=f1e177] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b63.jpg
+      - figure [ref=f1e41]:
+        - link [ref=f1e179] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b64.jpg
+      - figure [ref=f1e44]:
+        - link [ref=f1e181] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b65.jpg
+      - figure [ref=f1e47]:
+        - link [ref=f1e183] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b66.jpg
+      - figure [ref=f1e50]:
+        - link [ref=f1e185] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b67.jpg
+      - figure [ref=f1e53]:
+        - link [ref=f1e187] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b68.jpg
+      - figure [ref=f1e56]:
+        - link [ref=f1e189] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b69.jpg
+      - figure [ref=f1e59]:
+        - link [ref=f1e191] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b610.jpg
+      - figure [ref=f1e62]:
+        - link [ref=f1e193] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b611.jpg
+      - figure [ref=f1e65]:
+        - link [ref=f1e195] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b612.jpg
+      - figure [ref=f1e68]:
+        - link [ref=f1e197] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b613.jpg
+      - figure [ref=f1e71]:
+        - link [ref=f1e199] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b614.jpg
+      - figure [ref=f1e74]:
+        - link [ref=f1e201] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/%e6%96%87%e4%bb%b615.jpg
+      - figure [ref=f1e77]:
+        - link [ref=f1e203] [cursor=pointer]:
+          - /url: http://localhost:8787/compressed/medium/17/1-16.jpg
+    - generic [ref=f1e81]:
+      - link "作品" [ref=f1e82] [cursor=pointer]:
+        - /url: /tags/%E4%BD%9C%E5%93%81/
+      - link "文艺" [ref=f1e83] [cursor=pointer]:
+        - /url: /tags/%E6%96%87%E8%89%BA/
+      - link "小清新" [ref=f1e84] [cursor=pointer]:
+        - /url: /tags/%E5%B0%8F%E6%B8%85%E6%96%B0/
+  - complementary [ref=f1e85]:
+    - heading "相关文章" [level=2] [ref=f1e86]
+    - generic [ref=f1e88]:
+      - article [ref=f1e89]:
+        - link [ref=f1e90] [cursor=pointer]:
+          - /url: /posts/%E6%88%91%E5%8F%88%E6%8B%A7%E4%B8%8D%E5%BC%80%E7%93%B6%E7%9B%96%E4%BA%86/
+          - heading "我又拧不开瓶盖了" [level=2] [ref=f1e94]
+      - article [ref=f1e95]:
+        - link [ref=f1e96] [cursor=pointer]:
+          - /url: /posts/%E5%8D%81%E4%BA%8C%E6%9C%88%E7%9A%84%E6%B5%B7%E6%BB%A8%E6%B2%A1%E6%9C%89%E9%9B%AA/
+          - heading "十二月的海滨没有雪" [level=2] [ref=f1e100]
+      - article [ref=f1e101]:
+        - link [ref=f1e102] [cursor=pointer]:
+          - /url: /posts/%E5%A4%A7%E6%B5%B7%E5%95%8A%E4%BD%A0%E6%87%82%E5%BE%97%E6%88%91%E7%9A%84%E6%B8%B4%E6%9C%9B/
+          - heading "大海啊，你懂得我的渴望" [level=2] [ref=f1e106]
+      - article [ref=f1e107]:
+        - link [ref=f1e108] [cursor=pointer]:
+          - /url: /posts/%E4%BA%91%E9%87%8C%E6%A2%A6%E9%87%8C%E6%88%91%E5%9C%A8%E8%BF%99%E7%AD%89%E4%BD%A0/
+          - heading "云里梦里，我在这等你" [level=2] [ref=f1e112]
+      - article [ref=f1e113]:
+        - link [ref=f1e114] [cursor=pointer]:
+          - /url: /posts/%E5%86%AC%E5%A6%82%E5%A4%8F%E8%8A%B1/
+          - heading "冬如夏花" [level=2] [ref=f1e118]
+  - generic [ref=f1e120]:
+    - generic [ref=f1e122]:
+      - generic [ref=f1e123]:
+        - generic [ref=f1e124]:
+          - generic [ref=f1e125]: 昵称
+          - textbox "昵称" [ref=f1e126]
+        - generic [ref=f1e127]:
+          - generic [ref=f1e128]: 邮箱
+          - textbox "邮箱" [ref=f1e129]
+        - generic [ref=f1e130]:
+          - generic [ref=f1e131]: 网址(可选)
+          - textbox "网址(可选)" [ref=f1e132]
+      - textbox "说点什么吧~" [ref=f1e133]
+      - generic [ref=f1e134]:
+        - generic [ref=f1e135]:
+          - link "Markdown is supported" [ref=f1e136] [cursor=pointer]:
+            - /url: https://guides.github.com/features/mastering-markdown/
+          - button "表情" [ref=f1e205] [cursor=pointer]
+          - button "表情包" [ref=f1e139] [cursor=pointer]
+          - generic "上传图片" [ref=f1e143] [cursor=pointer]
+          - button "预览" [ref=f1e147] [cursor=pointer]
+        - generic [ref=f1e151]:
+          - generic [ref=f1e152]: 0 字
+          - button "登录" [ref=f1e153] [cursor=pointer]
+          - button "提交" [ref=f1e154] [cursor=pointer]
+    - generic [ref=f1e155]:
+      - generic [ref=f1e156]: 评论
+      - list [ref=f1e157]:
+        - listitem [ref=f1e158] [cursor=pointer]: 按正序
+        - listitem [ref=f1e159] [cursor=pointer]: 按倒序
+        - listitem [ref=f1e160] [cursor=pointer]: 按热度
+    - generic [ref=f1e164]:
+      - text: Powered by
+      - link "Waline" [ref=f1e165] [cursor=pointer]:
+        - /url: https://github.com/walinejs/waline
+      - text: v2.15.8
+  - generic [ref=f1e166]:
+    - generic [ref=f1e167]: © 2025 - 2026 猫猫船长
+    - generic [ref=f1e168]:
+      - text: 使用
+      - link "Hugo" [ref=f1e169] [cursor=pointer]:
+        - /url: https://gohugo.io/
+      - text: 构建 主题
+      - link "Stack" [ref=f1e171] [cursor=pointer]:
+        - /url: https://github.com/CaiJimmy/hugo-theme-stack
+      - text: 由
+      - link "Jimmy" [ref=f1e172] [cursor=pointer]:
+        - /url: https://jimmycai.com
+      - text: 设计
+  - dialog [active] [ref=f1e208]:
+    - generic [ref=f1e210]:
+      - generic:
+        - generic [ref=f1e221]:
+          - generic [ref=f1e222]: 1 / 16
+          - button "Close (Esc)" [ref=f1e223] [cursor=pointer]
+          - button "Share" [ref=f1e224] [cursor=pointer]
+          - button "Toggle fullscreen" [ref=f1e225] [cursor=pointer]
+          - button "Zoom in/out" [ref=f1e226] [cursor=pointer]
+        - button "Previous (arrow left)" [ref=f1e231] [cursor=pointer]
+        - button "Next (arrow right)" [ref=f1e232] [cursor=pointer]

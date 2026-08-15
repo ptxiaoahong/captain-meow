@@ -3,7 +3,7 @@ const path = require('path');
 
 // 配置路径
 const POSTS_DIR = path.join(__dirname, '../content/posts');
-const OUTPUT_DIR = path.join(__dirname, '../../猫猫船长小程序/data');
+const OUTPUT_DIR = '/Users/hongshize/WeChatProjects/miniprogram-1/data';
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'posts.json');
 
 // 确保输出目录存在
@@ -323,11 +323,11 @@ function readAllPosts() {
         if (ext) {
           relativePath = relativePath.replace(ext, '.jpg');
         }
-        
+
         return {
           original: `original/${relativePath}`,
           medium: `medium/${relativePath}`,
-          thumbnail: `thumbnails/${relativePath}`
+          thumbnail: `medium/${relativePath}` // 使用 medium 代替 thumbnails
         };
       });
       

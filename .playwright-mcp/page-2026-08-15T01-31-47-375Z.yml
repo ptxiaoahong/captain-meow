@@ -1,0 +1,233 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - figure [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Avatar" [ref=e7]
+      - generic [ref=e8]:
+        - heading [level=1] [ref=e9]:
+          - link "猫猫船长" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - heading "这里是猫猫船长的个人网站，分享摄影回忆与作品，说说心里话，小红书id'猫猫船长'，微信1176670966，欢迎来找我玩！" [level=2] [ref=e11]
+    - list [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Email" [ref=e14] [cursor=pointer]:
+          - /url: mailto:hongshize@live.cn
+      - listitem [ref=e19]:
+        - link "微信" [ref=e20] [cursor=pointer]:
+          - /url: /wechat-qrcode.png
+    - list [ref=e25]:
+      - listitem [ref=e26]:
+        - link "首页" [ref=e27] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e29]:
+        - link "全部" [ref=e30] [cursor=pointer]:
+          - /url: /posts/
+      - listitem [ref=e32]:
+        - link "作品" [ref=e33] [cursor=pointer]:
+          - /url: /categories/%E4%BD%9C%E5%93%81/
+      - listitem [ref=e35]:
+        - link "回忆" [ref=e36] [cursor=pointer]:
+          - /url: /categories/%E5%9B%9E%E5%BF%86/
+      - listitem [ref=e38]:
+        - link "心里话" [ref=e39] [cursor=pointer]:
+          - /url: /categories/%E5%BF%83%E9%87%8C%E8%AF%9D/
+      - listitem [ref=e41]:
+        - list [ref=e42]:
+          - listitem [ref=e43] [cursor=pointer]:
+            - generic [ref=e48]: 暗色模式
+    - generic [ref=e49]:
+      - heading "标签" [level=2] [ref=e50]
+      - generic [ref=e51]:
+        - link "作品" [ref=e52] [cursor=pointer]:
+          - /url: /tags/%E4%BD%9C%E5%93%81/
+        - link "文艺" [ref=e53] [cursor=pointer]:
+          - /url: /tags/%E6%96%87%E8%89%BA/
+        - link "小清新" [ref=e54] [cursor=pointer]:
+          - /url: /tags/%E5%B0%8F%E6%B8%85%E6%96%B0/
+        - link "情绪" [ref=e55] [cursor=pointer]:
+          - /url: /tags/%E6%83%85%E7%BB%AA/
+        - link "清新" [ref=e56] [cursor=pointer]:
+          - /url: /tags/%E6%B8%85%E6%96%B0/
+        - link "大海" [ref=e57] [cursor=pointer]:
+          - /url: /tags/%E5%A4%A7%E6%B5%B7/
+        - link "心里话" [ref=e58] [cursor=pointer]:
+          - /url: /tags/%E5%BF%83%E9%87%8C%E8%AF%9D/
+        - link "文章" [ref=e59] [cursor=pointer]:
+          - /url: /tags/%E6%96%87%E7%AB%A0/
+        - link "AI" [ref=e60] [cursor=pointer]:
+          - /url: /tags/ai/
+        - link "思考" [ref=e61] [cursor=pointer]:
+          - /url: /tags/%E6%80%9D%E8%80%83/
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - article [ref=e64]:
+        - generic [ref=e65]:
+          - link [ref=e67] [cursor=pointer]:
+            - /url: /posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A526.1.19/
+            - img "Featured image of post 近况汇报（26.1.19）" [ref=e68]
+          - generic [ref=e69]:
+            - heading [level=2] [ref=e71]:
+              - link "近况汇报（26.1.19）" [ref=e72] [cursor=pointer]:
+                - /url: /posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A526.1.19/
+            - generic [ref=e73]:
+              - link "心里话" [ref=e75] [cursor=pointer]:
+                - /url: /categories/%E5%BF%83%E9%87%8C%E8%AF%9D/
+              - generic [ref=e76]:
+                - time [ref=e83]: 2026-01-19
+                - time [ref=e89]: "阅读时长: 3 分钟"
+      - article [ref=e90]:
+        - generic [ref=e91]:
+          - link [ref=e93] [cursor=pointer]:
+            - /url: /posts/%E5%8E%BB%E6%B5%B7%E8%BE%B9%E5%90%A7/
+            - img "Featured image of post 去海边吧" [ref=e94]
+          - generic [ref=e95]:
+            - heading [level=2] [ref=e97]:
+              - link "去海边吧" [ref=e98] [cursor=pointer]:
+                - /url: /posts/%E5%8E%BB%E6%B5%B7%E8%BE%B9%E5%90%A7/
+            - generic [ref=e99]:
+              - link "作品" [ref=e101] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e102]:
+                - time [ref=e109]: 2026-01-09
+                - time [ref=e115]: "阅读时长: 0 分钟"
+      - article [ref=e116]:
+        - generic [ref=e117]:
+          - link [ref=e119] [cursor=pointer]:
+            - /url: /posts/%E5%86%AC%E5%A6%82%E5%A4%8F%E8%8A%B1/
+            - img "Featured image of post 冬如夏花" [ref=e120]
+          - generic [ref=e121]:
+            - heading [level=2] [ref=e123]:
+              - link "冬如夏花" [ref=e124] [cursor=pointer]:
+                - /url: /posts/%E5%86%AC%E5%A6%82%E5%A4%8F%E8%8A%B1/
+            - generic [ref=e125]:
+              - link "作品" [ref=e127] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e128]:
+                - time [ref=e135]: 2025-12-18
+                - time [ref=e141]: "阅读时长: 0 分钟"
+      - article [ref=e142]:
+        - generic [ref=e143]:
+          - link [ref=e145] [cursor=pointer]:
+            - /url: /posts/colorful-day/
+            - img "Featured image of post Colorful Day" [ref=e146]
+          - generic [ref=e147]:
+            - heading [level=2] [ref=e149]:
+              - link "Colorful Day" [ref=e150] [cursor=pointer]:
+                - /url: /posts/colorful-day/
+            - generic [ref=e151]:
+              - link "作品" [ref=e153] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e154]:
+                - time [ref=e161]: 2025-12-15
+                - time [ref=e167]: "阅读时长: 0 分钟"
+      - article [ref=e168]:
+        - generic [ref=e169]:
+          - link [ref=e171] [cursor=pointer]:
+            - /url: /posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A5/
+            - img "Featured image of post 近况汇报" [ref=e172]
+          - generic [ref=e173]:
+            - heading [level=2] [ref=e175]:
+              - link "近况汇报" [ref=e176] [cursor=pointer]:
+                - /url: /posts/%E8%BF%91%E5%86%B5%E6%B1%87%E6%8A%A5/
+            - generic [ref=e177]:
+              - link "心里话" [ref=e179] [cursor=pointer]:
+                - /url: /categories/%E5%BF%83%E9%87%8C%E8%AF%9D/
+              - generic [ref=e180]:
+                - time [ref=e187]: 2025-12-01
+                - time [ref=e193]: "阅读时长: 5 分钟"
+      - article [ref=e194]:
+        - generic [ref=e195]:
+          - link [ref=e197] [cursor=pointer]:
+            - /url: /posts/der-doppelgaenger/
+            - img "Featured image of post Der Doppelgaenger" [ref=e198]
+          - generic [ref=e199]:
+            - heading [level=2] [ref=e201]:
+              - link "Der Doppelgaenger" [ref=e202] [cursor=pointer]:
+                - /url: /posts/der-doppelgaenger/
+            - generic [ref=e203]:
+              - link "作品" [ref=e205] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e206]:
+                - time [ref=e213]: 2025-05-12
+                - time [ref=e219]: "阅读时长: 0 分钟"
+      - article [ref=e220]:
+        - generic [ref=e221]:
+          - link [ref=e223] [cursor=pointer]:
+            - /url: /posts/%E6%9D%80%E6%AD%BB%E4%B8%80%E6%9E%9A%E8%BD%A6%E5%8E%98%E5%AD%90/
+            - img "Featured image of post 杀死一枚车厘子" [ref=e224]
+          - generic [ref=e225]:
+            - heading [level=2] [ref=e227]:
+              - link "杀死一枚车厘子" [ref=e228] [cursor=pointer]:
+                - /url: /posts/%E6%9D%80%E6%AD%BB%E4%B8%80%E6%9E%9A%E8%BD%A6%E5%8E%98%E5%AD%90/
+            - generic [ref=e229]:
+              - link "作品" [ref=e231] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e232]:
+                - time [ref=e239]: 2025-05-11
+                - time [ref=e245]: "阅读时长: 0 分钟"
+      - article [ref=e246]:
+        - generic [ref=e247]:
+          - link [ref=e249] [cursor=pointer]:
+            - /url: /posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/
+            - img "Featured image of post 🍅可爱还是我可爱" [ref=e250]
+          - generic [ref=e251]:
+            - heading [level=2] [ref=e253]:
+              - link "🍅可爱还是我可爱" [ref=e254] [cursor=pointer]:
+                - /url: /posts/%E5%8F%AF%E7%88%B1%E8%BF%98%E6%98%AF%E6%88%91%E5%8F%AF%E7%88%B1/
+            - generic [ref=e255]:
+              - link "作品" [ref=e257] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e258]:
+                - time [ref=e265]: 2025-05-10
+                - time [ref=e271]: "阅读时长: 0 分钟"
+      - article [ref=e272]:
+        - generic [ref=e273]:
+          - link [ref=e275] [cursor=pointer]:
+            - /url: /posts/%E8%9D%B6/
+            - img "Featured image of post 蝶" [ref=e276]
+          - generic [ref=e277]:
+            - heading [level=2] [ref=e279]:
+              - link "蝶" [ref=e280] [cursor=pointer]:
+                - /url: /posts/%E8%9D%B6/
+            - generic [ref=e281]:
+              - link "作品" [ref=e283] [cursor=pointer]:
+                - /url: /categories/%E4%BD%9C%E5%93%81/
+              - generic [ref=e284]:
+                - time [ref=e291]: 2025-05-07
+                - time [ref=e297]: "阅读时长: 0 分钟"
+      - article [ref=e298]:
+        - generic [ref=e299]:
+          - link [ref=e301] [cursor=pointer]:
+            - /url: /posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/
+            - img "Featured image of post 救赎、逃避、现实、理想：为什么我又选择了离开" [ref=e302]
+          - generic [ref=e303]:
+            - heading [level=2] [ref=e305]:
+              - link "救赎、逃避、现实、理想：为什么我又选择了离开" [ref=e306] [cursor=pointer]:
+                - /url: /posts/%E6%95%91%E8%B5%8E%E9%80%83%E9%81%BF%E7%8E%B0%E5%AE%9E%E7%90%86%E6%83%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%8F%88%E9%80%89%E6%8B%A9%E4%BA%86%E7%A6%BB%E5%BC%80/
+            - generic [ref=e307]:
+              - link "心里话" [ref=e309] [cursor=pointer]:
+                - /url: /categories/%E5%BF%83%E9%87%8C%E8%AF%9D/
+              - generic [ref=e310]:
+                - time [ref=e317]: 2025-05-04
+                - time [ref=e323]: "阅读时长: 7 分钟"
+    - navigation [ref=e324]:
+      - generic [ref=e325]: "1"
+      - link "2" [ref=e326] [cursor=pointer]:
+        - /url: /page/2/
+      - link "3" [ref=e327] [cursor=pointer]:
+        - /url: /page/3/
+    - generic [ref=e328]:
+      - generic [ref=e329]: © 2025 - 2026 猫猫船长
+      - generic [ref=e330]:
+        - text: 使用
+        - link "Hugo" [ref=e331] [cursor=pointer]:
+          - /url: https://gohugo.io/
+        - text: 构建 主题
+        - link "Stack" [ref=e333] [cursor=pointer]:
+          - /url: https://github.com/CaiJimmy/hugo-theme-stack
+        - text: 由
+        - link "Jimmy" [ref=e334] [cursor=pointer]:
+          - /url: https://jimmycai.com
+        - text: 设计

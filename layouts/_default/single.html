@@ -3,6 +3,8 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ partial "article/components/back-to-list.html" . }}
+    
     {{ partial "article/article.html" . }}
 
     {{ if .Params.links }}
@@ -18,6 +20,12 @@
     {{ partialCached "footer/footer" . }}
 
     {{ partialCached "article/components/photoswipe" . }}
+    
+    {{/* 滚动位置管理脚本 */}}
+    {{ $scrollPosition := resources.Get "js/scroll-position.js" }}
+    {{ if $scrollPosition }}
+        <script>{{ $scrollPosition.Content | safeJS }}</script>
+    {{ end }}
 {{ end }}
 
 {{ define "right-sidebar" }}
