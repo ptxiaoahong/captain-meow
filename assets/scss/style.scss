@@ -1,6 +1,7 @@
 /* 入口：按依赖顺序导入 */
 @import "tokens";
 @import "base";
+@import "header";
 /* 后续 Task 依次追加：
 @import "header";
 @import "footer";

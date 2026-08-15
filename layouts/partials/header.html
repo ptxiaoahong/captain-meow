@@ -1,0 +1,37 @@
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="site-header__brand" href="/">{{ .Site.Title }}</a>
+
+        <nav class="site-header__nav" id="site-nav" aria-label="主导航">
+            {{ range .Site.Menus.main }}
+            <a class="site-header__link{{ if $.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                {{ .Name }}
+            </a>
+            {{ end }}
+        </nav>
+
+        <button class="site-header__toggle" id="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav">
+            {{ partial "icon" (dict "name" "menu") }}
+        </button>
+    </div>
+</header>
+
+<script>
+(function () {
+    var toggle = document.getElementById('nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    });
+    // 点击链接后自动收起（移动端）
+    nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+</script>
