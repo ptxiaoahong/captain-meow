@@ -1,0 +1,27 @@
+{{/* 自建分页。兼容调用方上下文：_default/list.html / index.html 传入 page，
+    此处取其 .Paginator；若调用方已传入 pager 则直接使用。 */}}
+{{ if isset . "TotalPages" }}
+    {{ template "pagination-core" . }}
+{{ else }}
+    {{ template "pagination-core" .Paginator }}
+{{ end }}
+
+{{ define "pagination-core" }}
+{{ if gt .TotalPages 1 }}
+<nav class="pagination" aria-label="分页">
+    {{ if .HasPrev }}
+    <a class="pagination__link" href="{{ .Prev.URL }}">← 上一页</a>
+    {{ else }}
+    <span class="pagination__link is-disabled">← 上一页</span>
+    {{ end }}
+
+    <span class="pagination__info">{{ .PageNumber }} / {{ .TotalPages }}</span>
+
+    {{ if .HasNext }}
+    <a class="pagination__link" href="{{ .Next.URL }}">下一页 →</a>
+    {{ else }}
+    <span class="pagination__link is-disabled">下一页 →</span>
+    {{ end }}
+</nav>
+{{ end }}
+{{ end }}
