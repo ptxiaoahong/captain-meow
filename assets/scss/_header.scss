@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     z-index: var(--z-header);
-    background-color: rgba(250, 249, 247, 0.92);
+    background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
@@ -57,7 +57,7 @@
     padding: var(--space-1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp-mobile - 1px) {
     .site-header__toggle {
         display: block;
     }
