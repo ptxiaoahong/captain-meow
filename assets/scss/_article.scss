@@ -153,6 +153,14 @@
         font-size: var(--text-xl);
     }
 
+    /* 移动端：图片沉浸到边，但文字保持左右边距（不贴屏幕边缘） */
+    .article-content {
+        p, h1, h2, h3, h4, ul, ol, blockquote, pre {
+            padding-left: var(--space-3);
+            padding-right: var(--space-3);
+        }
+    }
+
     .article-figure {
         margin: var(--space-2) 0;
 
