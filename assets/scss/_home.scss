@@ -1,3 +1,31 @@
+/* 首页简介条 */
+.intro {
+    padding: var(--space-5) 0 var(--space-2);
+    text-align: center;
+
+    &__title {
+        font-size: var(--text-3xl);
+        margin-bottom: var(--space-2);
+    }
+
+    &__desc {
+        font-size: var(--text-lg);
+        color: var(--color-text-secondary);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+        padding: var(--space-3) 0 var(--space-2);
+
+        &__title { font-size: var(--text-2xl); }
+        &__desc { font-size: var(--text-base); }
+    }
+}
+
 /* Hero 区 */
 .hero {
     display: grid;
